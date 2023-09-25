@@ -1,39 +1,8 @@
 
 function Test() {
   // カメラ映像の大きさ
-      const cameraWidth = 390;
-      const cameraHeight = 840;
-
-function cameraInitSmartphoneSupport() {
-
-const der = document.querySelectorAll('.der');
-der[0].classList.remove("hidden");
-der[1].classList.remove("hidden");
-
-const video = document.getElementById("camera");
-
-//スマホからの閲覧か　ここら辺は気にしなくていいと思う（パソコンとスマホだとどっちが幅でどっちが高さかが違うみたい　知りたかったら聞いてくれ）
-const isMobile = navigator.userAgent.match(/iPhone|Android/);
-
-// カメラ映像関連
-const cameraSetting = {
-audio: false,
-video: {
-//スマホの場合は縦横を逆に設定する
-width: isMobile ? cameraHeight : cameraWidth,
-height: isMobile ? cameraWidth : cameraHeight,
-facingMode: "environment",
-}
-}
-
-navigator.mediaDevices.getUserMedia(cameraSetting)
-.then((mediaStream) => {
-video.srcObject = mediaStream;
-})
-.catch((err) => {
-console.log(err.toString());
-});
-}
+    const cameraWidth = 390;
+    const cameraHeight = 840;
 
       // canvas に描画する
       function canvas_input() {
@@ -202,48 +171,6 @@ console.log(err.toString());
           )
       }
 
-      // img タグに入れる
-      function photo_view() {
-
-          const der = Array.from(document.querySelectorAll('.der'));
-          der[0].classList.add("hidden");
-          der[1].classList.add("hidden");
-
-          const UI = document.querySelector(".UI");
-
-          const canvas = document.getElementById("canvas");
-          //描画用オブジェクトを取得
-          const ctx = canvas.getContext("2d");
-
-          // JPGにする場合 (第2引数は品質)
-          var dataURI = canvas.toDataURL("image/jpeg", 0.75);
-          console.log(dataURI)
-
-          // img タグの生成
-          const img_area = document.getElementById("content_area");
-          const img_element = document.createElement("img")
-
-          img_area.appendChild(img_element)
-
-          // データURIは直接img要素のsrc属性に指定できる
-          img_element.src = dataURI;
-          img_element.classList.add("absolute");
-          img_element.classList.add("z-[95]")
-          img_element.classList.add("w-[50%]");
-          img_element.classList.add("h-[40%]");
-          img_element.classList.toggle('left-1/2');
-          img_element.classList.toggle('top-1/2');
-          img_element.classList.toggle('translate-x-[-50%]');
-          img_element.classList.toggle('translate-y-[-50%]');
-
-          // canvas の削除
-          ctx.clearRect(0, 0, 600, 600);
-          canvas.classList.add("hidden");
-          // const video = document.getElementById("camera");
-          // video.classList.add("hidden");
-          UI.classList.remove("hidden");
-      }
-
       // img タグを削除
       function img_remove() {
           const element = document.querySelector('img');
@@ -355,7 +282,6 @@ console.log(err.toString());
     return (
       <>
               <input type="button" value="真ん中切り取り" onClick={() => canvas_input() }/>
-              <input type="button" value="imgタグにいれる" onClick={() => photo_view() }/>
               <input type="button" value="img削除" onClick={() => img_remove() }/>
               <input type="button" value="やりなおし" onClick={() => retry()}/>
               <input type="button" value="ボタン" onClick={() => onWatchAdvertisementsButtonClick() }/>

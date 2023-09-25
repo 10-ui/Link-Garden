@@ -1,5 +1,6 @@
 function Start() {
 
+  
   function cameraInitSmartphoneSupport() {
 
     const der = document.querySelectorAll('.der');
@@ -8,7 +9,7 @@ function Start() {
     
     const video = document.getElementById("camera");
     
-    //スマホからの閲覧か　ここら辺は気にしなくていいと思う（パソコンとスマホだとどっちが幅でどっちが高さかが違うみたい　知りたかったら聞いてくれ）
+    //スマホからの閲覧かここら辺は気にしなくていいと思う（パソコンとスマホだとどっちが幅でどっちが高さかが違うみたい　知りたかったら聞いてくれ）
     const isMobile = navigator.userAgent.match(/iPhone|Android/);
     
     // カメラ映像関連
@@ -30,7 +31,6 @@ function Start() {
     console.log(err.toString());
     });
   }
-
 
   return (
     <>
