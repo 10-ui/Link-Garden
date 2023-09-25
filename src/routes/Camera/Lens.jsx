@@ -4,36 +4,36 @@ function Test() {
       const cameraWidth = 390;
       const cameraHeight = 840;
 
-      function cameraInitSmartphoneSupport() {
+function cameraInitSmartphoneSupport() {
 
-          const der = document.querySelectorAll('.der');
-          der[0].classList.remove("hidden");
-          der[1].classList.remove("hidden");
+const der = document.querySelectorAll('.der');
+der[0].classList.remove("hidden");
+der[1].classList.remove("hidden");
 
-          const video = document.getElementById("camera");
+const video = document.getElementById("camera");
 
-          //スマホからの閲覧か　ここら辺は気にしなくていいと思う（パソコンとスマホだとどっちが幅でどっちが高さかが違うみたい　知りたかったら聞いてくれ）
-          const isMobile = navigator.userAgent.match(/iPhone|Android/);
+//スマホからの閲覧か　ここら辺は気にしなくていいと思う（パソコンとスマホだとどっちが幅でどっちが高さかが違うみたい　知りたかったら聞いてくれ）
+const isMobile = navigator.userAgent.match(/iPhone|Android/);
 
-          // カメラ映像関連
-          const cameraSetting = {
-              audio: false,
-              video: {
-                  //スマホの場合は縦横を逆に設定する
-                  width: isMobile ? cameraHeight : cameraWidth,
-                  height: isMobile ? cameraWidth : cameraHeight,
-                  facingMode: "environment",
-              }
-          }
-          
-          navigator.mediaDevices.getUserMedia(cameraSetting)
-              .then((mediaStream) => {
-                  video.srcObject = mediaStream;
-              })
-              .catch((err) => {
-                  console.log(err.toString());
-              });
-      }
+// カメラ映像関連
+const cameraSetting = {
+audio: false,
+video: {
+//スマホの場合は縦横を逆に設定する
+width: isMobile ? cameraHeight : cameraWidth,
+height: isMobile ? cameraWidth : cameraHeight,
+facingMode: "environment",
+}
+}
+
+navigator.mediaDevices.getUserMedia(cameraSetting)
+.then((mediaStream) => {
+video.srcObject = mediaStream;
+})
+.catch((err) => {
+console.log(err.toString());
+});
+}
 
       // canvas に描画する
       function canvas_input() {
@@ -354,7 +354,6 @@ function Test() {
 
     return (
       <>
-              <input type="button" value="カメラ起動" onClick={() => cameraInitSmartphoneSupport() }/>
               <input type="button" value="真ん中切り取り" onClick={() => canvas_input() }/>
               <input type="button" value="imgタグにいれる" onClick={() => photo_view() }/>
               <input type="button" value="img削除" onClick={() => img_remove() }/>

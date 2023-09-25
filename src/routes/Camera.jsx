@@ -1,5 +1,6 @@
 import UI from './Camera/UI.jsx';
 import Test from './Camera/Lens.jsx';
+import Start from './Camera/Start.jsx';
 function Camera() {
 
   return (
@@ -24,6 +25,7 @@ function Camera() {
   
       <div className="btns z-[100] fixed z-2 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
         {/* <Lens/> */}
+        <Start/>
         <Test/>
       </div>
       <UI/>
