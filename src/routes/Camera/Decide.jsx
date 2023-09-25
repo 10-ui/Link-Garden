@@ -44,3 +44,5 @@ function Decide() {
     </>
   )
 }
+
+export default Decide
