@@ -1,6 +1,9 @@
 function Start() {
 
   
+  const cameraWidth = 390;
+  const cameraHeight = 840;
+  
   function cameraInitSmartphoneSupport() {
 
     const der = document.querySelectorAll('.der');

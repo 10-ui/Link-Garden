@@ -173,7 +173,7 @@ function Test() {
 
       // img タグを削除
       function img_remove() {
-          const element = document.querySelector('img');
+          const element = document.querySelector('#Nurie');
           element.remove();
         
           const der = document.querySelector('.der');

@@ -21,6 +21,7 @@ function Decide() {
     
     // データURIは直接img要素のsrc属性に指定できる
     img_element.src = dataURI;
+    img_element.id = 'Nurie';
     img_element.classList.add("absolute");
     img_element.classList.add("z-[95]")
     img_element.classList.add("w-[50%]");
