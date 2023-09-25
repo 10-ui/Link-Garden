@@ -12,7 +12,7 @@ function Bluetooth() {
           <h1 className='text-[24px] font-bold text-center font-main mb-[24px]'>BluetoothをONにしよう！</h1>
           <p className='h-[71px] font-bold text-center mb-[56px] font-main'>お持ちのスマートフォンのBluetoothがONになっているか確認をし、OFFになっている場合はONに切り替えてください。</p>
           <img className='block mx-auto mb-[24px]' src={pn} alt="pagenation" />
-          <Link to='/Getitem' className='text-[20px] w-[320px] block mx-auto text-center py-[13px] bg-accent font-main font-bold text-btntext rounded'>ONにした！</Link>
+          <Link to='/Getitem' className='text-[20px] w-[320px] block mx-auto text-center py-[13px] bg-accent font-main font-bold rounded'>ONにした！</Link>
         </div>
       </div>
     </>
