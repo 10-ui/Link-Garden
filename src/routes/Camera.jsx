@@ -4,6 +4,7 @@ import Start from './Camera/Begin.jsx';
 import Decide from './Camera/Decide.jsx';
 import Delete from './Camera/Delete.jsx';
 import Retry from './Camera/Retry.jsx';
+import Pickup from './Camera/Pickup.jsx';
 function Camera() {
 
   return (
@@ -29,6 +30,7 @@ function Camera() {
       <div className="btns z-[100] fixed z-2 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
         <Start/>
         <Decide/>
+        <Pickup/>
         <Delete/>
         <Retry/>
         <Test/>
