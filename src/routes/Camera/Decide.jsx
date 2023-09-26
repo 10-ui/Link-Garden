@@ -43,6 +43,7 @@ function Decide() {
     // canvas の削除
     ctx.clearRect(0, 0, cameraWidth, cameraHeight);
     canvas.classList.add("hidden");
+    canvas.style.display = "none";
     UI.classList.remove("hidden");
   }
   
