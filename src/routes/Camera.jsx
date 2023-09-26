@@ -3,7 +3,6 @@ import Test from './Camera/Lens.jsx';
 import Begin from './Camera/Begin.jsx';
 import Decide from './Camera/Decide.jsx';
 import Delete from './Camera/Delete.jsx';
-import Retry from './Camera/Retry.jsx';
 import Pickup from './Camera/Pickup.jsx';
 function Camera() {
 
@@ -32,7 +31,6 @@ function Camera() {
         <Decide/>
         <Pickup/>
         <Delete/>
-        <Retry/>
         <Test/>
       </div>
       <UI/>
