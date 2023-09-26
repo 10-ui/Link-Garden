@@ -1,3 +1,5 @@
+import Decide from "./Decide";
+
 function Delete() {
 
     // img タグを削除
@@ -6,7 +8,8 @@ function Delete() {
     element.classList.remove();
     const canvas = document.getElementById("canvas");
     canvas.classList.add("fixed");
-    canvas.style.display = "none"
+    canvas.style.display = "none";
+    Decide();
   }
 
 
