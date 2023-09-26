@@ -32,10 +32,8 @@ function Decide() {
     img_element.classList.toggle('translate-y-[-50%]');
     
     // canvas の削除
-    ctx.clearRect(0, 0, 600, 600);
+    ctx.clearRect(0, 0, 1000, 1000);
     canvas.classList.add("hidden");
-    // const video = document.getElementById("camera");
-    // video.classList.add("hidden");
     UI.classList.remove("hidden");
   }
   
