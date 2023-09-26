@@ -9,10 +9,10 @@ function Beacon() {
     navigator.bluetooth.requestDevice({
     filters: [
     {
-    name: 'FSC_BP103_2'
+      name: 'FSC_BP103_2'
     },
     {
-    name: 'FSC_BP103_3'
+      name: 'FSC_BP103_3'
     }],  //< - Prefer filters to save energy & show relevant devices.
     
     })
@@ -33,8 +33,8 @@ function Beacon() {
     console.log('  TX Power: ' + event.txPower);
     console.log('  UUIDs: ' + event.uuids);
     if (event.rssi > -57) {
-    console.log('近いよ！！');
-    text_yellow.style.background = 'green';
+      console.log('近いよ！！');
+      text_yellow.style.background = 'green';
     }
     event.manufacturerData.forEach((valueDataView, key) => {
     logDataView('Manufacturer', key, valueDataView);
@@ -45,7 +45,7 @@ function Beacon() {
     
     
     var elm = document.getElementById('test_line');
-    elm.textContent = event.device.name;
+      elm.textContent = event.device.name;
     });
     
     
@@ -71,8 +71,8 @@ function Beacon() {
     return device.watchAdvertisements();
     })
     .catch(error => {
-    console.log('Argh! ' + error);
-    alert(error);
+      console.log('Argh! ' + error);
+      alert(error);
     });
     
     }
