@@ -74,6 +74,26 @@ function UI() {
     };
   };
 
+  function Check(pro) {
+    const animalnum = pro;
+    console.log(animalnum);
+    let animal = document.querySelector(".check");
+    let fun = document.querySelector(".fanimal");
+    let sad = document.querySelector(".sanimal");
+    console.log(fun,sad)
+    animal.classList.add("hidden");
+
+    if((name==="かがみ") && (now_env==="水辺")){
+      fun.classList.remove("hidden");
+    }
+    else if(name==="かがみ"){
+      sad.classList.remove("hidden");
+    }
+    else if(now_env==="水辺"){
+      sad.classList.remove("hidden");
+    }
+    else sad.classList.remove("hidden");
+  }
 
   return (
     <>
@@ -85,7 +105,7 @@ function UI() {
       after:block after:w-3 after:y-3 after:rotate-45 after:absolute after:bottom-[-20px] after:bg-main after:left-[50%] after:translate-x-[-50%]'
       >動物をタップ！</p> */}
       <div className="hidden UI">
-        <img onClick={() => Check()} id='animals' className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ" />
+        <img onClick={() => Check(choose)} id='animals' className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ" />
         <div className='fixed z-[40] h-screen w-auto grid items-center'>
           <img className='fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flafav} alt="喜ぶフラミンゴ" />
           <img className='sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flasick} alt="悲しむフラミンゴ" />

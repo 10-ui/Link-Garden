@@ -128,6 +128,7 @@ function Pickup() {
   }
   };
 
+  let choose = null;
   if (brown > blue && brown > red && brown > green && brown > yellow) {
   // 茶色が一番多い
   text_brown.style.background = 'brown';
@@ -135,7 +136,7 @@ function Pickup() {
   } else if (blue > red && blue > green && blue > yellow) {
   // 青色が一番多い
   text_blue.style.background = 'blue';
-  Check();
+  choose = 1;
   console.log('青色が一番多い');
   } else if (red > green && red > yellow) {
   // 赤色が一番多い
@@ -166,25 +167,6 @@ function Pickup() {
   if (min.b > current.b || current.b > max.b) return;
   return true;
   };
-
-  function Check() {
-    let animal = document.querySelector(".check");
-    let fun = document.querySelector(".fanimal");
-    let sad = document.querySelector(".sanimal");
-    console.log(fun,sad)
-    animal.classList.add("hidden");
-
-    if((name==="かがみ") && (now_env==="水辺")){
-      fun.classList.remove("hidden");
-    }
-    else if(name==="かがみ"){
-      sad.classList.remove("hidden");
-    }
-    else if(now_env==="水辺"){
-      sad.classList.remove("hidden");
-    }
-    else sad.classList.remove("hidden");
-  }
 
   // この下のやつが範囲指定！！
   ctx.drawImage(
