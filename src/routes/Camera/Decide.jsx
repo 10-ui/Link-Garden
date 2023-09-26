@@ -36,11 +36,10 @@ function Decide() {
 
     const animal = document.getElementById('animals');
     animal.setAttribute('src',dataURI);
-    
+
     // canvas の削除
     ctx.clearRect(0, 0, cameraWidth, cameraHeight);
     canvas.classList.add("hidden");
-
     UI.classList.remove("hidden");
   }
   

@@ -4,7 +4,8 @@ function Delete() {
   function img_remove() {
     const element = document.querySelector('#Nurie');
     element.remove();
-    
+    const canvas = document.getElementById("canvas");
+    canvas.classList.add("hidden");
   }
 
 
