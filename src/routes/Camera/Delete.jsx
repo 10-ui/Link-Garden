@@ -9,7 +9,6 @@ function Delete() {
     const canvas = document.getElementById("canvas");
     canvas.classList.add("fixed");
     canvas.style.display = "none";
-    photo_view();
   }
 
 

@@ -13,7 +13,7 @@ function Decide() {
     canvas.style.display = 'block'
     //描画用オブジェクトを取得
     const ctx = canvas.getContext("2d",{
-      willReadFrequently: true, 
+      willReadFrequently: true
     });
     // JPGにする場合 (第2引数は品質)
     let dataURI = canvas.toDataURL("image/jpeg", 0.75);
