@@ -10,6 +10,7 @@ function Decide() {
     
     const UI = document.querySelector(".UI");
     const canvas = document.getElementById("canvas");
+    canvas.style.display = 'block'
     //描画用オブジェクトを取得
     const ctx = canvas.getContext("2d");
     // JPGにする場合 (第2引数は品質)
