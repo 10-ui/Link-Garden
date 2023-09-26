@@ -1,6 +1,6 @@
 import UI from './Camera/UI.jsx';
 import Test from './Camera/Lens.jsx';
-import Start from './Camera/Begin.jsx';
+import Begin from './Camera/Begin.jsx';
 import Decide from './Camera/Decide.jsx';
 import Delete from './Camera/Delete.jsx';
 import Retry from './Camera/Retry.jsx';
@@ -28,7 +28,7 @@ function Camera() {
       </ul>
   
       <div className="btns z-[100] fixed z-2 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-        <Start/>
+        <Begin/>
         <Decide/>
         <Pickup/>
         <Delete/>

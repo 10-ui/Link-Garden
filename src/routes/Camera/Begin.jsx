@@ -1,4 +1,4 @@
-function Start() {
+function Begin() {
 
   
   const cameraWidth = 390;
@@ -42,4 +42,4 @@ function Start() {
   )
 };
 
-export default Start
+export default Begin
