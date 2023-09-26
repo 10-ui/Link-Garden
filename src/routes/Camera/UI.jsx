@@ -74,24 +74,6 @@ function UI() {
     };
   };
 
-  function Check() {
-    let animal = document.querySelector(".check");
-    let fun = document.querySelector(".fanimal");
-    let sad = document.querySelector(".sanimal");
-    console.log(fun,sad)
-    animal.classList.add("hidden");
-
-    if((name==="かがみ") && (now_env==="水辺")){
-      fun.classList.remove("hidden");
-    }
-    else if(name==="かがみ"){
-      sad.classList.remove("hidden");
-    }
-    else if(now_env==="水辺"){
-      sad.classList.remove("hidden");
-    }
-    else sad.classList.remove("hidden");
-  }
 
   return (
     <>
