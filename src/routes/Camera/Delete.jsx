@@ -3,7 +3,7 @@ function Delete() {
     // img タグを削除
   function img_remove() {
     const element = document.querySelector('#animals');
-    element.remove();
+    element.classList.remove();
     const canvas = document.getElementById("canvas");
     canvas.classList.add("hidden");
   }
