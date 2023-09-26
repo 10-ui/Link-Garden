@@ -171,14 +171,6 @@ function Test() {
           )
       }
 
-      // img タグを削除
-      function img_remove() {
-          const element = document.querySelector('#Nurie');
-          element.remove();
-        
-          const der = document.querySelector('.der');
-          der.classList.remove("hidden");
-      }
       function retry() {
 
           const canvas = document.getElementById("canvas");
@@ -282,7 +274,6 @@ function Test() {
     return (
       <>
               <input type="button" value="真ん中切り取り" onClick={() => canvas_input() }/>
-              <input type="button" value="img削除" onClick={() => img_remove() }/>
               <input type="button" value="やりなおし" onClick={() => retry()}/>
               <input type="button" value="ボタン" onClick={() => onWatchAdvertisementsButtonClick() }/>
       </>
