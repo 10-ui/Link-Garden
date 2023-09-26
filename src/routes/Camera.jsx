@@ -1,9 +1,11 @@
 import UI from './Camera/UI.jsx';
-import Test from './Camera/Lens.jsx';
 import Begin from './Camera/Begin.jsx';
 import Decide from './Camera/Decide.jsx';
 import Delete from './Camera/Delete.jsx';
 import Pickup from './Camera/Pickup.jsx';
+import Beacon from './Camera/Beacon.jsx';
+
+
 function Camera() {
 
   return (
@@ -24,6 +26,7 @@ function Camera() {
         <li><p id="text_red">赤色</p></li>
         <li><p id="text_green">緑色</p></li>
         <li><p id="text_yellow">黄色</p></li>
+        <li><p id="test_line"></p></li>
       </ul>
   
       <div className="btns z-[100] fixed z-2 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
@@ -31,7 +34,7 @@ function Camera() {
         <Decide/>
         <Pickup/>
         <Delete/>
-        <Test/>
+        <Beacon/>
       </div>
       <UI/>
     </>
