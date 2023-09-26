@@ -37,6 +37,8 @@ function Decide() {
     // canvas の削除
     ctx.clearRect(0, 0, cameraWidth, cameraHeight);
     canvas.classList.add("hidden");
+    const animal = document.getElementById('animals');
+    animal.setAttribute('src',dataURI);
     UI.classList.remove("hidden");
   }
   
