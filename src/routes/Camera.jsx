@@ -31,8 +31,8 @@ function Camera() {
   
       <div className="btns z-[100] fixed z-2 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
         <Begin/>
-        <Decide/>
         <Pickup/>
+        <Decide/>
         <Delete/>
         <Beacon/>
       </div>
