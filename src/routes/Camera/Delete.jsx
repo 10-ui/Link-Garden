@@ -5,8 +5,6 @@ function Delete() {
     const element = document.querySelector('#Nurie');
     element.remove();
     
-    const der = document.querySelector('.der');
-    der.classList.remove("hidden");
   }
 
 
