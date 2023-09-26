@@ -5,7 +5,8 @@ function Delete() {
     const element = document.querySelector('#animals');
     element.classList.remove();
     const canvas = document.getElementById("canvas");
-    canvas.classList.add("hidden");
+    canvas.classList.add("fixed");
+    canvas.style.display = "none"
   }
 
 

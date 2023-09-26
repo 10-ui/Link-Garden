@@ -25,6 +25,9 @@ function Begin() {
       facingMode: "environment",
       }
     }
+
+    const reset = document.getElementById('content_area');
+    reset.classList.add('fixed');
     
     navigator.mediaDevices.getUserMedia(cameraSetting)
     .then((mediaStream) => {
