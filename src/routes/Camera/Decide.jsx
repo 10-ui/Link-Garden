@@ -34,8 +34,8 @@ function Decide() {
     // canvas の削除
     ctx.clearRect(0, 0, 600, 600);
     canvas.classList.add("hidden");
-    // const video = document.getElementById("camera");
-    // video.classList.add("hidden");
+    const video = document.getElementById("camera");
+    video.classList.add("hidden");
     UI.classList.remove("hidden");
   }
   

@@ -15,6 +15,7 @@ function Pickup() {
   //canvas要素の大きさを変更
   canvas.width = cameraWidth;
   canvas.height = cameraHeight;
+  const ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, 600, 600);
   canvas.classList.add("hidden");
   canvas.classList.toggle('fixed');
@@ -24,7 +25,7 @@ function Pickup() {
   canvas.classList.toggle('translate-x-[-50%]');
   canvas.classList.toggle('translate-y-[-50%]');
   //描画用オブジェクトを取得
-  const ctx = canvas.getContext("2d");
+
 
   canvas.style.display = 'block'
   const der = document.querySelectorAll('.der');
