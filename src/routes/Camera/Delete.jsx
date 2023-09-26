@@ -1,4 +1,4 @@
-import Decide from "./Decide";
+
 
 function Delete() {
 
