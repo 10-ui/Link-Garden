@@ -49,7 +49,7 @@ function Decide() {
   
   return (
     <>
-      <input type="button" value="imgタグにいれる" onClick={() => photo_view() }/>
+      <input type="button" value="/決定/" onClick={() => photo_view() }/>
     </>
   )
 }

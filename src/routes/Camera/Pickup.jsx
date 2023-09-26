@@ -183,7 +183,7 @@ function Pickup() {
 
   return (
     <>
-      <input type="button" value="真ん中切り取り" onClick={() => canvas_input() }/>
+      <input type="button" value="/撮影/" onClick={() => canvas_input() }/>
     </>
   )
 }

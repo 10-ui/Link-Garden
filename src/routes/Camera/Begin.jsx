@@ -1,5 +1,4 @@
 function Begin() {
-
   
   const cameraWidth = 390;
   const cameraHeight = 840;
@@ -40,7 +39,7 @@ function Begin() {
 
   return (
     <>
-      <input type="button" value="カメラ起動" onClick={() => cameraInitSmartphoneSupport() }/>
+      <input type="button" value="/起動/" onClick={() => cameraInitSmartphoneSupport() }/>
     </>
   )
 };

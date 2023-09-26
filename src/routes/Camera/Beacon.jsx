@@ -94,7 +94,7 @@ function Beacon() {
 
   return (
     <>
-      <input type="button" value="ボタン" onClick={() => onWatchAdvertisementsButtonClick() }/>
+      <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
     </>
   )
 }
