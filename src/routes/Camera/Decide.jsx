@@ -1,4 +1,7 @@
 function Decide() {
+    // カメラ映像の大きさ
+    const cameraWidth = 390;
+    const cameraHeight = 840;
   // img タグに入れる
   function photo_view() {
     const der = Array.from(document.querySelectorAll('.der'));
@@ -32,7 +35,7 @@ function Decide() {
     img_element.classList.toggle('translate-y-[-50%]');
     
     // canvas の削除
-    ctx.clearRect(0, 0, 1000, 1000);
+    ctx.clearRect(0, 0, cameraWidth, cameraHeight);
     canvas.classList.add("hidden");
     UI.classList.remove("hidden");
   }
