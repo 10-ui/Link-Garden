@@ -1,5 +1,19 @@
 function Beacon() {
 
+  const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
+
+  async function Timer(device) {
+    device.watchAdvertisements()
+    const num = document.getElementById('num');
+    let percent = null
+    await sleep(1500);
+    for(let i = 0; i < 101; i++){
+      await sleep(100);
+      percent = `${i}%`;
+      num.innerHTML = percent;
+    }
+  }
+
 
   function onWatchAdvertisementsButtonClick() {
 
@@ -21,8 +35,10 @@ function Beacon() {
     
     console.log('検知したよ！！');
     
+
     device.gatt.connect()
-    
+  
+
     device.addEventListener("advertisementreceived", (event) => {
     i++;
     console.log(i);
@@ -68,13 +84,13 @@ function Beacon() {
     
     console.log(device.id);
     console.log('Watching advertisements from "' + device.name + '"...');
-    return device.watchAdvertisements();
+    return  Timer(device);
     })
+    
     .catch(error => {
       console.log('Argh! ' + error);
       alert(error);
     });
-    
     }
     
     /* Utils */
@@ -95,6 +111,7 @@ function Beacon() {
   return (
     <>
       <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
+      <p id="num">0%</p>
     </>
   )
 }
