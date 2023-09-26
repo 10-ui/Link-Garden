@@ -7,7 +7,7 @@ function Items() {
   return (
     <>
       <div className='h-screen w-auto mx-[35px] grid items-center'>
-        <div className="container">
+        <div>
           <img className='mx-auto mb-[58px]' src={link} alt="アイテム送受信" />
           <h1 className='text-[24px] font-bold text-center font-main mb-[24px]'>集めてきたアイテムを<br/>スマートフォンに移そう！</h1>
           <p className='h-[69px] font-bold text-center mb-[56px] font-main'>スタンプをスマートフォンの近くに置き、アイテムの取得開始ボタンを押してください。</p>
