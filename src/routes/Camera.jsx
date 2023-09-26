@@ -27,7 +27,6 @@ function Camera() {
       </ul>
   
       <div className="btns z-[100] fixed z-2 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-        {/* <Lens/> */}
         <Start/>
         <Decide/>
         <Delete/>
