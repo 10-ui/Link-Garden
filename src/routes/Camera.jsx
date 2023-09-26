@@ -1,6 +1,6 @@
 import UI from './Camera/UI.jsx';
 import Test from './Camera/Lens.jsx';
-import Start from './Camera/Start.jsx';
+import Start from './Camera/Begin.jsx';
 import Decide from './Camera/Decide.jsx';
 import Delete from './Camera/Delete.jsx';
 import Retry from './Camera/Retry.jsx';
