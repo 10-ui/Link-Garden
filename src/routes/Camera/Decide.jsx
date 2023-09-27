@@ -7,6 +7,8 @@ function Decide() {
     const der = Array.from(document.querySelectorAll('.der'));
       der[0].classList.add("hidden");
       der[1].classList.add("hidden");
+      der[2].classList.add("hidden");
+      der[3].classList.add("hidden");
     
     const shatter = document.querySelector('.sha');
     shatter.style.display = 'none';
