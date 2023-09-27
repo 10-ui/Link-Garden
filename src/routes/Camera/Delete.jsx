@@ -2,8 +2,10 @@
 
 function Delete() {
 
-    // img タグを削除
+    // imgを削除
   function img_remove() {
+    const retry = document.querySelector('.retry');
+    retry.classList.add('hidden');
     const shoot = document.querySelector('.shoot');
     shoot.classList.remove('hidden');
 
@@ -14,10 +16,9 @@ function Delete() {
     canvas.style.display = "none";
   }
 
-
   return (
     <>
-      <input type="button" value="やり直し" onClick={() => img_remove() }/>
+      <input className="hidden retry" type="button" value="やり直し" onClick={() => img_remove() }/>
     </>
   )
 }

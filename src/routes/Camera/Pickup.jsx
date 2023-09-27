@@ -10,6 +10,9 @@ function Pickup() {
   // canvas に描画する
   function canvas_input() {
 
+  const retry = document.querySelector('.retry');
+  retry.classList.remove('hidden');
+
   const shoot = document.querySelector('.shoot');
   shoot.classList.add('hidden');
 
@@ -192,7 +195,7 @@ function Pickup() {
 
   return (
     <>
-      <img  className='shoot hidden w-[70px] h-[70px] fixed left-1/2 top-[90%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
+      <img  className='hidden shoot w-[70px] h-[70px] fixed left-1/2 top-[90%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
     </>
   )
 }

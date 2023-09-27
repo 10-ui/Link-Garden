@@ -18,8 +18,10 @@ function Begin() {
       audio: false,
       video: {
       //スマホの場合は縦横を逆に設定する
-      width: cameraHeight,
-      height: cameraWidth,
+      // width: cameraHeight,
+      // height: cameraWidth,
+      width: cameraWidth,
+      height: cameraHeight,
       facingMode: "environment",
       }
     }
@@ -32,10 +34,11 @@ function Begin() {
     console.log(err.toString());
     });
 
-    const back = [...document.querySelectorAll('.backs')];
-    back[0].classList.add('hidden');
-    back[1].classList.add('hidden');
-    back[2].classList.add('hidden');
+    const backs = [...document.querySelectorAll('.backs')];
+    for(let i = 0; i < backs.length; i++){
+      backs[i].classList.add('hidden');
+    }
+    
     const reset = document.getElementById('content_area');
     reset.classList.add('fixed');
     const shoot = document.querySelector('.shoot');
