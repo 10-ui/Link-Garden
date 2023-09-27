@@ -1,3 +1,5 @@
+import shatter from '../../assets/icon/mark_shatter.svg'
+
 function Pickup() {
   
 
@@ -184,7 +186,7 @@ function Pickup() {
 
   return (
     <>
-      <input type="button" value="/撮影/" onClick={() => canvas_input() }/>
+      <img  className='w-[40px] h-[40px] fixed left-1/2 top-[90%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
     </>
   )
 }

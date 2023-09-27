@@ -99,7 +99,7 @@ function UI() {
   return (
     <>
 
-      <p className='fixed top-0 left-0 current'>現在の環境：{now_env} , 環境番号：{area.num} ,<br/>選ばれてるアイテム：{name} , アイテム番号：{num}</p>
+      {/* <p className='fixed top-0 left-0 current'>現在の環境：{now_env} , 環境番号：{area.num} ,<br/>選ばれてるアイテム：{name} , アイテム番号：{num}</p> */}
       
       {/* <p 
       className='bg-main w-fit rounded-lg px-4 py-2 relative 
