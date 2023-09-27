@@ -76,7 +76,7 @@ function UI() {
 
   function Check(pro) {
     const animalnum = pro;
-    console.log(animalnum);
+    alert(animalnum);
     let animal = document.querySelector(".check");
     let fun = document.querySelector(".fanimal");
     let sad = document.querySelector(".sanimal");

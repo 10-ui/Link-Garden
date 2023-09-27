@@ -128,19 +128,21 @@ function Pickup() {
   }
   };
 
-  let choose = null;
+  var choose = null;
   if (brown > blue && brown > red && brown > green && brown > yellow) {
   // 茶色が一番多い
   text_brown.style.background = 'brown';
   console.log('茶色が一番多い');
+  choose = 1;
   } else if (blue > red && blue > green && blue > yellow) {
   // 青色が一番多い
   text_blue.style.background = 'blue';
-  choose = 1;
+  choose = 2;
   console.log('青色が一番多い');
   } else if (red > green && red > yellow) {
   // 赤色が一番多い
   text_red.style.background = 'red';
+  choose = 3;
   console.log('赤色が一番多い');
   } else if (green > yellow) {
   // 緑色が一番多い
