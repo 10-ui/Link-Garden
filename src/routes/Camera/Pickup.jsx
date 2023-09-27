@@ -9,6 +9,7 @@ function Pickup() {
 
   // canvas に描画する
   function canvas_input() {
+
   //video要素
   const video = document.getElementById("camera");
   //canvas要素
@@ -21,7 +22,7 @@ function Pickup() {
   ctx.clearRect(0, 0, 600, 600);
   canvas.classList.add("hidden");
   canvas.classList.add('fixed');
-  canvas.classList.add('z-[90]');
+  canvas.classList.add('z-[210]');
   canvas.classList.add('left-1/2');
   canvas.classList.add('top-1/2');
   canvas.classList.add('translate-x-[-50%]');
@@ -31,8 +32,8 @@ function Pickup() {
 
   canvas.style.display = 'block'
   const der = document.querySelectorAll('.der');
-  der[0].classList.remove("hidden");
-  der[1].classList.remove("hidden");
+  der[0].classList.add("hidden");
+  der[1].classList.add("hidden");
 
   ctx.fillStyle = 'rgb(200, 200, 200)'
 
