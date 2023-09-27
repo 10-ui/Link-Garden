@@ -8,6 +8,9 @@ function Decide() {
       der[0].classList.add("hidden");
       der[1].classList.add("hidden");
     
+    const shatter = document.querySelector('.sha');
+    shatter.style.display = 'none';
+    
     const UI = document.querySelector(".UI");
     const canvas = document.getElementById("canvas");
     canvas.style.display = 'block'
