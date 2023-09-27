@@ -38,7 +38,8 @@ function Begin() {
     back[2].classList.add('hidden');
     const reset = document.getElementById('content_area');
     reset.classList.add('fixed');
-    
+    const shoot = document.querySelector('.shoot');
+    shoot.classList.remove('hidden');
   }
 
   return (

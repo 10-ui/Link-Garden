@@ -10,6 +10,9 @@ function Pickup() {
   // canvas に描画する
   function canvas_input() {
 
+  const shoot = document.querySelector('.shoot');
+  shoot.classList.add('hidden');
+
   //video要素
   const video = document.getElementById("camera");
   //canvas要素
@@ -189,7 +192,7 @@ function Pickup() {
 
   return (
     <>
-      <img  className='sha w-[70px] h-[70px] fixed left-1/2 top-[90%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
+      <img  className='shoot hidden w-[70px] h-[70px] fixed left-1/2 top-[90%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
     </>
   )
 }

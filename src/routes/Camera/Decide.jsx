@@ -10,8 +10,6 @@ function Decide() {
       der[2].classList.add("hidden");
       der[3].classList.add("hidden");
     
-    const shatter = document.querySelector('.sha');
-    shatter.style.display = 'none';
     const next = document.querySelector('.next');
     next.classList.add('hidden');
     
@@ -57,7 +55,7 @@ function Decide() {
   
   return (
     <>
-      <input className="next fixed top-[800%] right-[-80%]" type="button" value="続ける" onClick={() => photo_view() }/>
+      <input className="next fixed top-[90%] right-[-80%]" type="button" value="続ける" onClick={() => photo_view() }/>
     </>
   )
 }
