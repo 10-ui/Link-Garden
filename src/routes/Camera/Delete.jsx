@@ -14,7 +14,7 @@ function Delete() {
 
   return (
     <>
-      <input type="button" value="/やり直し/" onClick={() => img_remove() }/>
+      <input type="button" value="やり直し" onClick={() => img_remove() }/>
     </>
   )
 }
