@@ -12,7 +12,7 @@ function Camera() {
     <>
       <div className="camera_img fixed z-[-1]">
         <video id="camera" autoPlay muted playsInline width="390" height="840"></video>
-        <canvas id="canvas" wcrossorigin="anonymous"></canvas>
+        <canvas className='hidden' id="canvas" wcrossorigin="anonymous"></canvas>
       </div>
 
       {/* この中にimgがはいる */}
@@ -31,14 +31,11 @@ function Camera() {
 
       <p className='text-btntext w-[70%] der font-bold text-lg fixed left-1/2 top-[30%] translate-x-[-50%]'>ワクの中にぬりえをおさめてね！</p>
       <p className='text-btntext w-[90%] der text-center font-bold text-lg fixed left-1/2 top-[80%] translate-x-[-50%]'>上手く読み込めない場合は、<br/>お近くのスタッフにお声がけください。</p>
-  
-      <div className="btns z-[100] fixed z-2 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-        <Begin/>
-        <Pickup/>
-        <Decide/>
-        <Delete/>
-        <Beacon/>
-      </div>
+      <Begin/>
+      <Pickup/>
+      <Decide/>
+      <Delete/>
+      <Beacon/>
       <UI/>
     </>
   );
