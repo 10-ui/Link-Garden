@@ -7,6 +7,11 @@ function Delete() {
     const retry = document.querySelector('.retry');
     retry.classList.add('hidden');
 
+    const borders = [...document.querySelectorAll('.borders')];
+    for(let i = 0; i < borders.length; i++){
+      borders[i].classList.remove("hidden");
+    }
+
     const shoot = document.querySelector('.shoot');
     shoot.classList.remove('hidden');
 

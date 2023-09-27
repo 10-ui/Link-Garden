@@ -37,6 +37,7 @@ function Pickup() {
   canvas.classList.add('translate-y-[-50%]');
   canvas.classList.add('w-[50%]');
   canvas.classList.add('h-[50%]');
+  canvas.style.display = 'block';
   //描画用オブジェクトを取得
 
   const borders = [...document.querySelectorAll('.borders')];
@@ -98,8 +99,8 @@ function Pickup() {
   // ここに現在のピクセル情報を入れていく
   const currentColor = {};
 
-  const text_brown = document.getElementById("text_brown");
-  const text_blue = document.getElementById("text_blue");
+  // const text_brown = document.getElementById("text_brown");
+  // const text_blue = document.getElementById("text_blue");
 
   // 1ピクセルずつ確認していく
   for (let i = 0, len = data.length; i < len; i += 4) {
@@ -164,12 +165,12 @@ function Pickup() {
   console.log('色が検出されませんでした');
   }
 
-  console.log('茶色 ' + brown);
-  console.log('青色 ' + blue);
-  console.log('赤色 ' + red);
-  console.log('緑色 ' + green);
-  console.log('黄色 ' + yellow);
-  console.log(' ');
+  // console.log('茶色 ' + brown);
+  // console.log('青色 ' + blue);
+  // console.log('赤色 ' + red);
+  // console.log('緑色 ' + green);
+  // console.log('黄色 ' + yellow);
+  // console.log(' ');
 
   function _checkTargetColor(current, min, max) {
   if (min.r > current.r || current.r > max.r) return;
