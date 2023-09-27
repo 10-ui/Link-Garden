@@ -29,22 +29,20 @@ function Pickup() {
   canvas.height = cameraHeight;
   const ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, 600, 600);
-  canvas.classList.add("hidden");
   canvas.classList.add('fixed');
   canvas.classList.add('z-[210]');
   canvas.classList.add('left-1/2');
   canvas.classList.add('top-1/2');
   canvas.classList.add('translate-x-[-50%]');
   canvas.classList.add('translate-y-[-50%]');
+  canvas.classList.add('w-[50%]');
+  canvas.classList.add('h-[50%]');
   //描画用オブジェクトを取得
 
-
-  canvas.style.display = 'block'
-  const der = document.querySelectorAll('.der');
-  der[0].classList.add("hidden");
-  der[1].classList.add("hidden");
-  der[2].classList.add("hidden");
-  der[3].classList.add("hidden");
+  const borders = [...document.querySelectorAll('.borders')];
+  for(let i = 0; i < borders.length; i++){
+    borders[i].classList.add("hidden");
+  }
 
   ctx.fillStyle = 'rgb(200, 200, 200)'
 
@@ -61,7 +59,6 @@ function Pickup() {
   cameraWidth,    // 描画横サイズ
   cameraHeight    // 描画縦サイズ
   );
-  canvas.classList.add("hidden");
 
 
   let count = 0;

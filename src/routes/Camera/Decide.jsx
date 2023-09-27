@@ -4,11 +4,10 @@ function Decide() {
     const cameraHeight = 840;
   // img タグに入れる
   function photo_view() {
-    const der = Array.from(document.querySelectorAll('.der'));
-      der[0].classList.add("hidden");
-      der[1].classList.add("hidden");
-      der[2].classList.add("hidden");
-      der[3].classList.add("hidden");
+    const borders = [...document.querySelectorAll('.borders')];
+    for(let i = 0; i < borders.length; i++){
+      borders[i].classList.add("hidden");
+    }
     
     const next = document.querySelector('.next');
     next.classList.add('hidden');

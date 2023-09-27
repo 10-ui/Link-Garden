@@ -7,9 +7,10 @@ function Begin() {
   
   function cameraInitSmartphoneSupport() {
 
-    const der = document.querySelectorAll('.der');
-      der[0].classList.remove("hidden");
-      der[1].classList.remove("hidden");
+    const borders = [...document.querySelectorAll('.borders')];
+    for(let i = 0; i < borders.length; i++){
+      borders[i].classList.remove("hidden");
+    }
     
     const video = document.getElementById("camera");
     
@@ -38,7 +39,7 @@ function Begin() {
     for(let i = 0; i < backs.length; i++){
       backs[i].classList.add('hidden');
     }
-    
+
     const reset = document.getElementById('content_area');
     reset.classList.add('fixed');
     const shoot = document.querySelector('.shoot');
