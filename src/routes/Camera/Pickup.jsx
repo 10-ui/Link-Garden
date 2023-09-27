@@ -187,7 +187,7 @@ function Pickup() {
 
   return (
     <>
-      <img  className='sha w-[70px] h-[70px] fixed left-1/2 bottom-[-760%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
+      <img  className='sha w-[70px] h-[70px] fixed left-1/2 bottom-[-660%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
     </>
   )
 }
