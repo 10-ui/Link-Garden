@@ -4,6 +4,7 @@ import rope from '../../assets/icon/tool_rope.svg';
 import mirror from '../../assets/icon/tool_mirror.svg';
 import branch from '../../assets/icon/tool_branch.svg';
 import bag from '../../assets/icon/tool_bag.svg';
+import Fla from '../../assets/icon/animal_normalflamingo'
 import Flafav from '../../assets/icon/animal_funflamingo.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
 
@@ -74,9 +75,9 @@ function UI() {
     };
   };
 
-  function Check(pro) {
-    const animalnum = pro;
-    alert(animalnum);
+  function Check() {
+    // const animalnum = pro;
+    // alert(animalnum);
     let animal = document.querySelector(".check");
     let fun = document.querySelector(".fanimal");
     let sad = document.querySelector(".sanimal");
@@ -105,7 +106,7 @@ function UI() {
       after:block after:w-3 after:y-3 after:rotate-45 after:absolute after:bottom-[-20px] after:bg-main after:left-[50%] after:translate-x-[-50%]'
       >動物をタップ！</p> */}
       <div className="hidden UI">
-        <img onClick={() => Check(choose)} id='animals' className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ" />
+        <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ" />
         <div className='fixed z-[40] h-screen w-auto grid items-center'>
           <img className='fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flafav} alt="喜ぶフラミンゴ" />
           <img className='sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flasick} alt="悲しむフラミンゴ" />

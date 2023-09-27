@@ -37,8 +37,8 @@ function Decide() {
     img_element.classList.toggle('translate-x-[-50%]');
     img_element.classList.toggle('translate-y-[-50%]');
 
-    const animal = document.getElementById('animals');
-    animal.setAttribute('src',dataURI);
+    // const animal = document.getElementById('animals');
+    // animal.setAttribute('src',dataURI);
 
     // canvas の削除
     ctx.clearRect(0, 0, cameraWidth, cameraHeight);
