@@ -29,7 +29,7 @@ function Camera() {
         <li><p id="test_line"></p></li>
       </ul>
 
-      <p className='text-btntext w-[70%] der font-bold text-base fixed left-1/2 top-1/2 translate-y-[-50%] translate-x-[-50%]'>ワクの中にぬりえをおさめてね！</p>
+      <p className='text-btntext w-[70%] der font-bold text-base fixed left-1/2 top-[40%] translate-x-[-50%]'>ワクの中にぬりえをおさめてね！</p>
       <p className='text-btntext w-[90%] der text-center font-bold text-lg fixed left-1/2 top-[80%] translate-x-[-50%]'>上手く読み込めない場合は、<br/>お近くのスタッフにお声がけください。</p>
       <Begin/>
       <Pickup/>
