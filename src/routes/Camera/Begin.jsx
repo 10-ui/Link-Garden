@@ -31,6 +31,7 @@ function Begin() {
     const back = [...document.querySelectorAll('.backs')];
     back[0].classList.add('hidden');
     back[1].classList.add('hidden');
+    back[2].classList.add('hidden');
     const reset = document.getElementById('content_area');
     reset.classList.add('fixed');
     
@@ -46,6 +47,7 @@ function Begin() {
   return (
     <>
     <div className="bg-btntext h-[844px] w-[390px] backs"></div>
+    <p className='backs fixed left-1/2 top-[30%] translate-x-[-50%]'><span className='text-xl font-sans'>\</span>タップしてカメラを起動<span className='font-sans text-xl'>/</span></p>
     <img className='fixed z-[200] backs left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={shatter} alt='撮影ボタン' onClick={() => cameraInitSmartphoneSupport() }/>
     </>
   )

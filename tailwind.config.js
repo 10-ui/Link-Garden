@@ -15,6 +15,7 @@ const colors = require('tailwindcss/colors')
       },
       fontFamily: {
         main: ['Noto Sans JP'],
+        sans: ['Verdana'],
       },
     },
     plugins: [],
