@@ -18,8 +18,8 @@ function Begin() {
       audio: false,
       video: {
       //スマホの場合は縦横を逆に設定する
-      width: cameraWidth,
-      height: cameraHeight,
+      width: cameraHeight,
+      height: cameraWidth,
       facingMode: "environment",
       }
     }
