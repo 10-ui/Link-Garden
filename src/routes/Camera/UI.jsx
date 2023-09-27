@@ -4,7 +4,7 @@ import rope from '../../assets/icon/tool_rope.svg';
 import mirror from '../../assets/icon/tool_mirror.svg';
 import branch from '../../assets/icon/tool_branch.svg';
 import bag from '../../assets/icon/tool_bag.svg';
-import Fla from '../../assets/icon/animal_normalflamingo'
+import Fla from '../../assets/icon/animal_normalflamingo.svg'
 import Flafav from '../../assets/icon/animal_funflamingo.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
 

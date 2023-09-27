@@ -5,12 +5,6 @@ import { Link } from "react-router-dom";
 function Items() {
 
 
-  Leafony(){
-    Leafony.sendCommand()
-  }
-
-
-
   return (
     <>
       <div className='h-screen w-auto mx-[35px] grid items-center'>

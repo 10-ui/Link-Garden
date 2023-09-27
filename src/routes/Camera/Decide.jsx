@@ -36,6 +36,7 @@ function Decide() {
     img_element.classList.toggle('top-1/2');
     img_element.classList.toggle('translate-x-[-50%]');
     img_element.classList.toggle('translate-y-[-50%]');
+    img_element.style.display = 'none'
 
     // const animal = document.getElementById('animals');
     // animal.setAttribute('src',dataURI);
