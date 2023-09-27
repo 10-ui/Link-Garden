@@ -15,6 +15,18 @@ function Beacon() {
   }
 
 
+                // ビーコンの名前
+                const name02 = 'FSC_BP103_2';
+                const name03 = 'FSC_BP103_3';
+        
+                // ビーコンのRSSI
+                let RSSI02 = 0;
+                let RSSI03 = 0;
+                
+                // 近いカウント
+                let count02 = 0;
+                let count03 = 0;
+
   function onWatchAdvertisementsButtonClick() {
 
     let i = 0;
@@ -40,18 +52,42 @@ function Beacon() {
   
 
     device.addEventListener("advertisementreceived", (event) => {
-    i++;
-    console.log(i);
-    console.log('Advertisement received.');
-    console.log('  Device Name: ' + event.device.name);
-    console.log('  Device ID: ' + event.device.id);
-    console.log('  RSSI: ' + event.rssi);
-    console.log('  TX Power: ' + event.txPower);
-    console.log('  UUIDs: ' + event.uuids);
-    if (event.rssi > -57) {
-      console.log('近いよ！！');
-      text_yellow.style.background = 'green';
-    }
+      // ビーコンの情報をHTMLで表示するためのやつ
+      var elm02 = document.getElementById('test_line02');
+      var elm03 = document.getElementById('test_line03');
+
+      // 名前で条件分岐
+      if (event.device.name == name02) {
+
+      // 2番のRSSI取得
+      RSSI02 = event.rssi;
+      elm02.textContent = event.device.name + ' ' + RSSI02 + ' 近いよカウント= ' +  count02;
+      }
+
+      if (event.device.name == name03) {
+
+      // 3番のRSSI取得
+      RSSI03 = event.rssi;
+      elm03.textContent = event.device.name + ' '  + RSSI03 + ' 近いよカウント= ' + count03;
+      }
+
+
+      // RSSI の比較 条件式ここに書く～～～～～～～～～～～～～～～～～～～～～～
+      if ( RSSI02 > RSSI03) {
+      // 2番の距離のほうが近い
+
+        elm02.style.background = 'yellow';
+        elm03.style.background = 'white';
+        count02 += 1;
+
+      } else {
+      // 3番の距離のほうが近い
+
+        elm03.style.background = 'yellow';
+        elm02.style.background = 'white';
+        count03 += 1;
+
+      }
     event.manufacturerData.forEach((valueDataView, key) => {
     logDataView('Manufacturer', key, valueDataView);
     });
