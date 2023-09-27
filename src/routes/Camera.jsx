@@ -17,8 +17,8 @@ function Camera() {
 
       {/* この中にimgがはいる */}
       <article className="fixed top-0 left-0 h-[754px] w-screen" id="content_area"></article>
-      <div className="der hidden absolute top-[9%] left-[15%] w-[270px] h-[450px] border-solid border-[1px]" id="border"></div>
-      <div className="der hidden absolute top-[4%] left-[5%] w-[40px] h-[35px] border-solid border-[1px]" id="border_marker"></div>
+      <div className="border-btntext der hidden absolute top-[9%] left-[15%] w-[270px] h-[450px] border-solid border-[4px]" id="border"></div>
+      <div className="border-btntext der hidden absolute top-[4%] left-[5%] w-[40px] h-[35px] border-solid border-[4px]" id="border_marker"></div>
 
       <ul>
         <li><p id="text_brown">茶色</p></li>
