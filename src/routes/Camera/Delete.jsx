@@ -4,6 +4,9 @@ function Delete() {
 
     // img タグを削除
   function img_remove() {
+    const der = document.querySelectorAll('.der');
+    der[0].classList.remove("hidden");
+    der[1].classList.remove("hidden");
     const element = document.querySelector('#animals');
     element.classList.remove();
     const canvas = document.getElementById("canvas");
