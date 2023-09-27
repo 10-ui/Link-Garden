@@ -149,9 +149,9 @@ function Beacon() {
       <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
       <p id="num">0%</p>
 
-      <p id="test_name">接続するデバイスの名前</p>
+      {/* <p id="test_name">接続するデバイスの名前</p>
       <p id="test_line02">02デバイスの名前とrssi</p>        
-      <p id="test_line03">03デバイスの名前とrssi</p>
+      <p id="test_line03">03デバイスの名前とrssi</p> */}
     </>
   )
 }
