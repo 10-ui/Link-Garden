@@ -55,7 +55,7 @@ function Decide() {
   
   return (
     <>
-      <input className="fixed top-[740%] right-[-80%]" type="button" value="続ける" onClick={() => photo_view() }/>
+      <input className="fixed top-[800%] right-[-80%]" type="button" value="続ける" onClick={() => photo_view() }/>
     </>
   )
 }

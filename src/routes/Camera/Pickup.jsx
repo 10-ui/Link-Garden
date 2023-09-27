@@ -34,6 +34,8 @@ function Pickup() {
   const der = document.querySelectorAll('.der');
   der[0].classList.add("hidden");
   der[1].classList.add("hidden");
+  der[2].classList.add("hidden");
+  der[3].classList.add("hidden");
 
   ctx.fillStyle = 'rgb(200, 200, 200)'
 
