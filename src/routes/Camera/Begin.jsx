@@ -28,7 +28,7 @@ function Begin() {
       }
     }
 
-    const back = [...document.querySelectorAll('backs')];
+    const back = [...document.querySelectorAll('.backs')];
     back[0].classList.add('hidden');
     back[1].classList.add('hidden');
     const reset = document.getElementById('content_area');
