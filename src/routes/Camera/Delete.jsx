@@ -6,8 +6,12 @@ function Delete() {
   function img_remove() {
     const retry = document.querySelector('.retry');
     retry.classList.add('hidden');
+
     const shoot = document.querySelector('.shoot');
     shoot.classList.remove('hidden');
+
+    const img_area = document.getElementById("content_area");
+    img_area.classList.remove('hidden');
 
     const element = document.querySelector('#animals');
     element.classList.remove();

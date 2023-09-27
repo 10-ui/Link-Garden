@@ -16,6 +16,9 @@ function Pickup() {
   const shoot = document.querySelector('.shoot');
   shoot.classList.add('hidden');
 
+  const img_area = document.getElementById("content_area");
+  img_area.classList.add('hidden');
+
   //video要素
   const video = document.getElementById("camera");
   //canvas要素
