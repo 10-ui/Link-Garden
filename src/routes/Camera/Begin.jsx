@@ -1,5 +1,8 @@
+  import shatter from '../../assets/icon/mark_shatter.svg'
+
 function Begin() {
-  
+
+
   const cameraWidth = 390;
   const cameraHeight = 840;
   
@@ -25,6 +28,8 @@ function Begin() {
       }
     }
 
+    const back = document.getElementById('back');
+    back.classList.add('hidden');
     const reset = document.getElementById('content_area');
     reset.classList.add('fixed');
     
@@ -39,7 +44,8 @@ function Begin() {
 
   return (
     <>
-      <input type="button" value="/起動/" onClick={() => cameraInitSmartphoneSupport() }/>
+    <div className="back bg-btntext h-[844px] w-[390px]"></div>
+    <img  className='fixed z-[200] left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={shatter} alt='撮影ボタン' onClick={() => cameraInitSmartphoneSupport() }/>
     </>
   )
 };
