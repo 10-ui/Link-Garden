@@ -12,6 +12,8 @@ function Decide() {
     
     const shatter = document.querySelector('.sha');
     shatter.style.display = 'none';
+    const next = document.querySelector('.next');
+    next.classList.add('hidden');
     
     const UI = document.querySelector(".UI");
     const canvas = document.getElementById("canvas");
@@ -55,7 +57,7 @@ function Decide() {
   
   return (
     <>
-      <input className="fixed top-[800%] right-[-80%]" type="button" value="続ける" onClick={() => photo_view() }/>
+      <input className="next fixed top-[800%] right-[-80%]" type="button" value="続ける" onClick={() => photo_view() }/>
     </>
   )
 }
