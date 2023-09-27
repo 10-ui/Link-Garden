@@ -86,6 +86,7 @@ function UI() {
 
     if((name==="かがみ") && (now_env==="水辺")){
       fun.classList.remove("hidden");
+      
     }
     else if(name==="かがみ"){
       sad.classList.remove("hidden");
