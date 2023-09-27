@@ -44,7 +44,7 @@ function Begin() {
 
   return (
     <>
-    <div className="back bg-btntext h-[844px] w-[390px]"></div>
+    <div id="back" className="bg-btntext h-[844px] w-[390px]"></div>
     <img  className='fixed z-[200] left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={shatter} alt='撮影ボタン' onClick={() => cameraInitSmartphoneSupport() }/>
     </>
   )
