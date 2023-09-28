@@ -18,5 +18,15 @@ const colors = require('tailwindcss/colors')
         sans: ['Verdana'],
       },
     },
+    keyframes: {
+      yurayura: {
+        "0%":{ rotate:-10 },
+        "50%":{rotate:10},
+        "100%":{rotate:-10},          
+      }
+    },
+    animation: {
+      yurayura: "yurayura 2s linear infinite",
+    },
     plugins: [],
   }
