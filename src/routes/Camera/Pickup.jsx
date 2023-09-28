@@ -54,8 +54,8 @@ function Pickup() {
   //描画する
   ctx.drawImage(
   video,          // データソース 
-  10,              // 描画開始x座標  
-  10,              // 描画開始y座標
+  0,              // 描画開始x座標  
+  0,              // 描画開始y座標
   cameraWidth,    // 描画横サイズ
   cameraHeight,    // 描画縦サイズ
   330,              // 描画開始x座標  

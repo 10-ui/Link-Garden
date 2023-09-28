@@ -11,7 +11,7 @@ function Camera() {
   return (
     <>
       <div className="camera_img fixed z-[-1]">
-        <video id="camera" autoPlay muted playsInline width="390" height="840"></video>
+        <video id="camera" autoPlay muted playsInline width="280" height="653"></video>
         <canvas className='hidden' id="canvas" wcrossorigin="anonymous"></canvas>
       </div>
 
