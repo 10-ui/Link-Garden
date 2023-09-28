@@ -90,6 +90,7 @@ function UI() {
     animal.classList.add("hidden");
 
     if((name==="かがみ") && (now_env==="水辺")){
+      document.querySelector('.mirror').classList.remove('hidden');
       fun.classList.remove("hidden");
       funs.classList.add('animate-yurayura')
       
@@ -125,10 +126,9 @@ function UI() {
       >動物をタップ！</p> */}
       <div className="hidden UI">
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
-        
+        <img  className='mirror w-screen fixed left-1/2 top-[40%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-            <img  className='mirror fixed left-1/2 top-[40%] translate-x-[-50%]' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
             <img className='fananimal origin-[center-bottom]' src={Flafav} alt="喜ぶフラミンゴ" />
           </div>
           <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
