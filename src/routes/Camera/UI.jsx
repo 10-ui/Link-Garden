@@ -138,14 +138,14 @@ function UI() {
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
         <img className='mirror w-screen fixed left-1/2 top-[20%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
         <div className="comment w-screen fixed left-1/2 top-[70%] translate-x-[-50%] hidden">
-          <p className='z-[50] w-4/5 fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' >わたしはたくさんの<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>といるのが
+          <p className='z-[50] w-[]90% fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' >わたしはたくさんの<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>といるのが
           <ruby>好<rp>(</rp><rt>す</rt><rp>)</rp> </ruby>きな<br/>の。
           <ruby>自分<rp>(</rp><rt>じぶん</rt><rp>)</rp> </ruby>の<ruby>姿<rp>(</rp><rt>すがた</rt><rp>)</rp> </ruby>が
           <ruby>写<rp>(</rp><rt>うつ</rt><rp>)</rp> </ruby>っていると
           <ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>がいるよう<br/>で
           <ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
           あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？</p>
-          <img className='z-[49] w-4/5 fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Comment} alt="喜んでるときの吹き出し" />
+          <img className='z-[49] w-[95%] fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
