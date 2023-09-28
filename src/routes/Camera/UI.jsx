@@ -8,6 +8,7 @@ import Fla from '../../assets/icon/animal_normalflamingo.svg'
 import Flafav from '../../assets/icon/animal_funflamingo.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
 import Flamirror from '../../assets/icon/animal_mirror.svg';
+import Comment from '../../assets/icon/animal_comment.svg';
 
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
 
@@ -86,17 +87,20 @@ function UI() {
     let sad = document.querySelector(".sanimal");
     let funs = document.querySelector(".fananimal");
     let sads = document.querySelector(".sadanimal");
+    let mirror = document.querySelector('.mirror');
+    let holder = document.querySelector('.itemholder');
     console.log(fun,sad)
     animal.classList.add("hidden");
 
     if((name==="かがみ") && (now_env==="水辺")){
-      document.querySelector('.mirror').classList.remove('hidden');
+      holder.classList.add('hidden');
+      mirror.classList.remove('hidden');
       fun.classList.remove("hidden");
       funs.classList.add('animate-yurayura')
       
-      await sleep(3000);
+      await sleep(8000);
       funs.classList.remove('animate-yurayura')
-      document.querySelector('.mirror').classList.add('hidden');
+      mirror.classList.add('hidden');
     }
     else if(name==="かがみ"){
       sad.classList.remove("hidden");
@@ -130,12 +134,13 @@ function UI() {
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img className='fananimal origin-[center-bottom]' src={Flafav} alt="喜ぶフラミンゴ" />
+            <img src={Comment} alt="喜んでるときの吹き出し" />
           </div>
           <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img className='sadanimal origin-[center-bottom]' src={Flasick} alt="悲しむフラミンゴ" />
           </div>
         </div>
-        <div className="h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
+        <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px]">
               <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-18px] w-[55px] h-[115px] object-cover' />
               <img onClick={() => render(1,"ロープ")} src={rope} alt="ロープ" className='items mt-[-10px] w-[90px]  h-[105px] object-right-bottom object-cover' />
