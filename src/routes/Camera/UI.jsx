@@ -87,20 +87,20 @@ function UI() {
     let sad = document.querySelector(".sanimal");
     let funs = document.querySelector(".fananimal");
     let sads = document.querySelector(".sadanimal");
-    let mirror = document.querySelector('.mirror');
+    let flamingo = document.querySelector('.flamingo');
     let holder = document.querySelector('.itemholder');
     console.log(fun,sad)
     animal.classList.add("hidden");
 
     if((name==="かがみ") && (now_env==="水辺")){
       holder.classList.add('hidden');
-      mirror.classList.remove('hidden');
+      flamingo.classList.remove('hidden');
       fun.classList.remove("hidden");
       funs.classList.add('animate-yurayura')
       
       await sleep(8000);
       funs.classList.remove('animate-yurayura')
-      mirror.classList.add('hidden');
+      flamingo.classList.add('hidden');
     }
     else if(name==="かがみ"){
       sad.classList.remove("hidden");
@@ -130,11 +130,12 @@ function UI() {
       >動物をタップ！</p> */}
       <div className="hidden UI">
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
-        <img  className='mirror w-screen fixed left-1/2 top-[20%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
+        <img className='flamingo mirror w-screen fixed left-1/2 top-[20%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
+        <img className='flamingo w-4/5 fixed left-1/2 top-[50%] translate-x-[-50%] hidden' src={Comment} alt="喜んでるときの吹き出し" />
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img className='fananimal origin-[center-bottom]' src={Flafav} alt="喜ぶフラミンゴ" />
-            <img src={Comment} alt="喜んでるときの吹き出し" />
+            
           </div>
           <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img className='sadanimal origin-[center-bottom]' src={Flasick} alt="悲しむフラミンゴ" />
