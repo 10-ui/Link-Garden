@@ -139,7 +139,7 @@ function UI() {
         <img className='mirror w-screen fixed left-1/2 top-[20%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
         <div className="comment w-4/5 fixed left-1/2 top-[70%] translate-x-[-50%] hidden">
           <p>わたしはたくさんの<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>といるのが
-          <ruby>好き<rp>(</rp><rt>すき</rt><rp>)</rp> </ruby>な<br/>の。
+          <ruby>好<rp>(</rp><rt>す</rt><rp>)</rp> </ruby>きな<br/>の。
           <ruby>自分<rp>(</rp><rt>じぶん</rt><rp>)</rp> </ruby>の<ruby>姿<rp>(</rp><rt>すがた</rt><rp>)</rp> </ruby>が
           <ruby>写<rp>(</rp><rt>うつ</rt><rp>)</rp> </ruby>っていると
           <ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>がいるよう<br/>で
