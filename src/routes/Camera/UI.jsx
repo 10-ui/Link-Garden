@@ -143,7 +143,6 @@ function UI() {
             <img className='fananimal hidden' src={Flafav1} alt="喜ぶフラミンゴ" />
             <img className='fananimal hidden' src={Flafav2} alt="喜ぶフラミンゴ" />
             <img className='fananimal hidden' src={Flafav3} alt="喜ぶフラミンゴ" />
-            
           </div>
           <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img className='sadanimal' src={Flasick} alt="悲しむフラミンゴ" />
