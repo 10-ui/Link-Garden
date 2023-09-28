@@ -16,7 +16,7 @@ function Camera() {
       </div>
 
       {/* この中にimgがはいる */}
-      <article className="fixed top-0 left-0 h-[754px] w-screen" id="content_area"></article>
+      <article className="fixed top-0 left-0 h-[754px] w-[calc(100dvw)]" id="content_area"></article>
       <div className="border-btntext borders hidden absolute top-[9%] left-[15%] w-[270px] h-[450px] border-solid border-[4px]" id="border"></div>
       <div className="border-btntext borders hidden absolute top-[4%] left-[5%] w-[40px] h-[35px] border-solid border-[4px]" id="border_marker"></div>
 
