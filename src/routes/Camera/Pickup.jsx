@@ -142,27 +142,25 @@ function Pickup() {
   }
   }
   };
-
-  var choose = null;
   if (brown > blue && brown > red && brown > green && brown > yellow) {
   // 茶色が一番多い
-  text_brown.style.background = 'brown';
+  // text_brown.style.background = 'brown';
   console.log('茶色が一番多い');
   } else if (blue > red && blue > green && blue > yellow) {
   // 青色が一番多い
-  text_blue.style.background = 'blue';
+  // text_blue.style.background = 'blue';
   console.log('青色が一番多い');
   } else if (red > green && red > yellow) {
   // 赤色が一番多い
-  text_red.style.background = 'red';
+  // text_red.style.background = 'red';
   console.log('赤色が一番多い');
   } else if (green > yellow) {
   // 緑色が一番多い
-  text_green.style.background = 'green';
+  // text_green.style.background = 'green';
   console.log('緑色が一番多い');
   } else if (yellow > green) {
   // 黄色が一番多い
-  text_yellow.style.background = 'yellow';
+  // text_yellow.style.background = 'yellow';
   console.log('黄色が一番多い');
   } else {
   console.log('色が検出されませんでした');
