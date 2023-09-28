@@ -20,7 +20,7 @@ function UI() {
     num:999
   };
   switch(Beacon_num){
-    case 21:
+    case 22:
       area.name = "水辺";
       area.num = Beacon_num;
       break;
