@@ -12,10 +12,15 @@ const colors = require('tailwindcss/colors')
           yurayura: {
             '0%, 100%': { transform: 'rotate(-10deg)' },
             '50%': { transform: 'rotate(10deg)' },         
+          },
+          sayu: {
+            '0%, 100%': { transform: 'translateX(-5%)' },
+            '50%': { transform: 'translateX(5%)' },
           }
         },
         animation: {
           yurayura: "yurayura 2s linear infinite",
+          sayu: "sayu 2s linear infinite",
         },
       },
       colors: {

@@ -7,6 +7,7 @@ import bag from '../../assets/icon/tool_bag.svg';
 import Fla from '../../assets/icon/animal_normalflamingo.svg'
 import Flafav from '../../assets/icon/animal_funflamingo.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
+import Flamirror from '../../assets/icon/animal_mirror.svg';
 
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
 
@@ -83,29 +84,33 @@ function UI() {
     let animal = document.querySelector(".check");
     let fun = document.querySelector(".fanimal");
     let sad = document.querySelector(".sanimal");
+    let funs = document.querySelector(".fananimal");
+    let sads = document.querySelector(".sadanimal");
     console.log(fun,sad)
     animal.classList.add("hidden");
 
     if((name==="かがみ") && (now_env==="水辺")){
       fun.classList.remove("hidden");
-      fun.classList.add('animate-yurayura')
+      funs.classList.add('animate-yurayura')
+      
       await sleep(3000);
-      fun.classList.remove('animate-yurayura')
+      funs.classList.remove('animate-yurayura')
+      document.querySelector('mirror').classList.add('hidden');
     }
     else if(name==="かがみ"){
       sad.classList.remove("hidden");
-      sad.classList.add('animate-bounce');
+      sads.classList.add('animate-sayu');
       await sleep(3000);
-      sad.classList.remove('animate-bounce');
+      sads.classList.remove('animate-sayu');
     }
     else if(now_env==="水辺"){
       sad.classList.remove("hidden");
     }
     else {
       sad.classList.remove("hidden");
-      sad.classList.add('animate-bounce');
+      sads.classList.add('animate-sayu');
       await sleep(3000);
-      sad.classList.remove('animate-bounce');
+      sads.classList.remove('animate-sayu');
     }
   }
 
@@ -120,9 +125,15 @@ function UI() {
       >動物をタップ！</p> */}
       <div className="hidden UI">
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
+        
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
-          <img className='origin-[center-bottom] fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flafav} alt="喜ぶフラミンゴ" />
-          <img className='origin-[center-bottom] sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flasick} alt="悲しむフラミンゴ" />
+          <div className="happy fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
+            <img  className='mirror fixed left-1/2 top-[40%] translate-x-[-50%]' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
+            <img className='fananimal origin-[center-bottom]' src={Flafav} alt="喜ぶフラミンゴ" />
+          </div>
+          <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
+            <img className='sadanimal origin-[center-bottom]' src={Flasick} alt="悲しむフラミンゴ" />
+          </div>
         </div>
         <div className="h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px]">
