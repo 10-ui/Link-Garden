@@ -7,7 +7,17 @@ const colors = require('tailwindcss/colors')
       "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-      extend: {},
+      extend: {
+        keyframes: {
+          yurayura: {
+            '0%, 100%': { transform: 'rotate(-10deg)' },
+            '50%': { transform: 'rotate(10deg)' },         
+          }
+        },
+        animation: {
+          yurayura: "yurayura 2s linear infinite",
+        },
+      },
       colors: {
         "main": "#F89797",
         "accent": "#FFD027",
@@ -17,16 +27,6 @@ const colors = require('tailwindcss/colors')
         main: ['Noto Sans JP'],
         sans: ['Verdana'],
       },
-    },
-    keyframes: {
-      yurayura: {
-        "0%":{ rotate:-10 },
-        "50%":{rotate:10},
-        "100%":{rotate:-10},          
-      }
-    },
-    animation: {
-      yurayura: "yurayura 2s linear infinite",
     },
     plugins: [],
   }
