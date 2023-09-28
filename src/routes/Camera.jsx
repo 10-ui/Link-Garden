@@ -21,12 +21,12 @@ function Camera() {
       <div className="border-btntext borders hidden absolute top-[4%] left-[5%] w-[40px] h-[35px] border-solid border-[4px]" id="border_marker"></div>
 
       <ul>
-        <li><p id="text_brown">茶色</p></li>
+        {/* <li><p id="text_brown">茶色</p></li>
         <li><p id="text_blue">水色</p></li>
         <li><p id="text_red">赤色</p></li>
         <li><p id="text_green">緑色</p></li>
         <li><p id="text_yellow">黄色</p></li>
-        <li><p id="test_line"></p></li>
+        <li><p id="test_line"></p></li> */}
       </ul>
 
       <p className='text-btntext text-center w-[68%] borders font-bold text-base fixed left-1/2 top-[45%] translate-x-[-50%]'>ワクの中にぬりえをおさめてね！</p>
