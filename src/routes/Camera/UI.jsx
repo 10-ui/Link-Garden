@@ -14,13 +14,13 @@ function UI() {
 
   const [num, setNum] = useState(null);
   const [name, setName] = useState(null);
-  let Beacon_num = 21;
+  let Beacon_num = 22;
   let area = {
     name:"初期値",
     num:999
   };
   switch(Beacon_num){
-    case 22:
+    case 21:
       area.name = "水辺";
       area.num = Beacon_num;
       break;
