@@ -5,7 +5,9 @@ import mirror from '../../assets/icon/tool_mirror.svg';
 import branch from '../../assets/icon/tool_branch.svg';
 import bag from '../../assets/icon/tool_bag.svg';
 import Fla from '../../assets/icon/animal_normalflamingo.svg'
-import Flafav from '../../assets/icon/animal_funflamingo.svg';
+import Flafav1 from '../../assets/icon/animal_funflamingo1.svg';
+import Flafav2 from '../../assets/icon/animal_funflamingo2.svg';
+import Flafav3 from '../../assets/icon/animal_funflamingo3.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
 import Flamirror from '../../assets/icon/animal_mirror.svg';
 import Comment from '../../assets/icon/animal_comment.svg';
@@ -53,7 +55,6 @@ function UI() {
   function Clicked(props) {
 
     let imgs = Array.from(document.querySelectorAll('.items'));
-    console.log(imgs);
     let fun = document.querySelector(".fanimal");
     let sad = document.querySelector(".sanimal");
     let animal = document.querySelector(".check");
@@ -85,12 +86,11 @@ function UI() {
     let animal = document.querySelector(".check");
     let fun = document.querySelector(".fanimal");
     let sad = document.querySelector(".sanimal");
-    let funs = document.querySelector(".fananimal");
+    let funs = [...document.querySelectorAll(".fananimal")];
     let sads = document.querySelector(".sadanimal");
     let mirror = document.querySelector('.mirror');
     let holder = document.querySelector('.itemholder');
     let comment = document.querySelector('.comment');
-    console.log(fun,sad)
     animal.classList.add("hidden");
 
     if((name==="かがみ") && (now_env==="水辺")){
@@ -98,10 +98,13 @@ function UI() {
       mirror.classList.remove('hidden');
       comment.classList.remove('hidden');
       fun.classList.remove("hidden");
-      funs.classList.add('animate-yurayura')
-      
-      await sleep(8000);
-      funs.classList.remove('animate-yurayura')
+      for (let i = 0; i < funs.length; i++) {
+        funs[i].classList.remove('hidden');
+        funs[i].classList.add('animate-yurayura');
+        await sleep(2000);
+        funs[i].classList.add('hidden');
+        funs[i].classList.remove('animate-yurayura');
+      }
       mirror.classList.add('hidden');
       comment.classList.add('hidden');
     }
@@ -134,14 +137,16 @@ function UI() {
       <div className="hidden UI">
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
         <img className='mirror w-screen fixed left-1/2 top-[20%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
-        <img className='comment w-4/5 fixed left-1/2 top-[50%] translate-x-[-50%] hidden' src={Comment} alt="喜んでるときの吹き出し" />
+        <img className='comment w-4/5 fixed left-1/2 top-[70%] translate-x-[-50%] hidden' src={Comment} alt="喜んでるときの吹き出し" />
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-            <img className='fananimal origin-[center-bottom]' src={Flafav} alt="喜ぶフラミンゴ" />
+            <img className='fananimal hidden' src={Flafav1} alt="喜ぶフラミンゴ" />
+            <img className='fananimal hidden' src={Flafav2} alt="喜ぶフラミンゴ" />
+            <img className='fananimal hidden' src={Flafav3} alt="喜ぶフラミンゴ" />
             
           </div>
           <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-            <img className='sadanimal origin-[center-bottom]' src={Flasick} alt="悲しむフラミンゴ" />
+            <img className='sadanimal' src={Flasick} alt="悲しむフラミンゴ" />
           </div>
         </div>
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
