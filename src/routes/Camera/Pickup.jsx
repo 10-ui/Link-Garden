@@ -31,7 +31,7 @@ function Pickup() {
   canvas.width = cameraWidth;
   canvas.height = cameraHeight;
   const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, 600, 600);
+  ctx.clearRect(0, 0, 1000, 1000);
   canvas.classList.add('fixed');
   canvas.classList.add('z-[210]');
   canvas.classList.add('left-1/2');
@@ -187,8 +187,8 @@ function Pickup() {
   video, //描画する映像
   50, //x こっから描画する対象
   60, //y
-  370 - 100,  //横
-  550 - 110, //縦
+  370,  //横
+  550, //縦
   0, //x 実際に表示するやつ
   0, //y
   cameraWidth, //横
