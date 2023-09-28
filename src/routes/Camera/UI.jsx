@@ -95,7 +95,7 @@ function UI() {
       
       await sleep(3000);
       funs.classList.remove('animate-yurayura')
-      document.querySelector('mirror').classList.add('hidden');
+      document.querySelector('.mirror').classList.add('hidden');
     }
     else if(name==="かがみ"){
       sad.classList.remove("hidden");
