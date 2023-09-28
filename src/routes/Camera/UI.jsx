@@ -8,6 +8,8 @@ import Fla from '../../assets/icon/animal_normalflamingo.svg'
 import Flafav from '../../assets/icon/animal_funflamingo.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
 
+const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
+
 function UI() {
 
   const [num, setNum] = useState(null);
@@ -75,7 +77,7 @@ function UI() {
     };
   };
 
-  function Check() {
+  async function Check() {
     // const animalnum = pro;
     // alert(animalnum);
     let animal = document.querySelector(".check");
@@ -86,16 +88,25 @@ function UI() {
 
     if((name==="かがみ") && (now_env==="水辺")){
       fun.classList.remove("hidden");
-      fun.classList.add('animation-yurayura')
-      
+      fun.classList.add('animate-yurayura')
+      await sleep(3000);
+      fun.classList.remove('animate-yurayura')
     }
     else if(name==="かがみ"){
       sad.classList.remove("hidden");
+      sad.classList.add('animate-bounce');
+      await sleep(3000);
+      sad.classList.remove('animate-bounce');
     }
     else if(now_env==="水辺"){
       sad.classList.remove("hidden");
     }
-    else sad.classList.remove("hidden");
+    else {
+      sad.classList.remove("hidden");
+      sad.classList.add('animate-bounce');
+      await sleep(3000);
+      sad.classList.remove('animate-bounce');
+    }
   }
 
   return (
