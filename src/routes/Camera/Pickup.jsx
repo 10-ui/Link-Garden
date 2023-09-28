@@ -13,6 +13,9 @@ function Pickup() {
   const retry = document.querySelector('.retry');
   retry.classList.remove('hidden');
 
+  const decide = document.querySelector('.decide');
+  decide.classList.remove('hidden');
+
   const shoot = document.querySelector('.shoot');
   shoot.classList.add('hidden');
 

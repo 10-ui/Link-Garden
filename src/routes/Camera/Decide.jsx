@@ -9,8 +9,8 @@ function Decide() {
       borders[i].classList.add("hidden");
     }
     
-    const next = document.querySelector('.next');
-    next.classList.add('hidden');
+    const decide = document.querySelector('.decide');
+    decide.classList.add('hidden');
     
     const UI = document.querySelector(".UI");
     const canvas = document.getElementById("canvas");
@@ -54,7 +54,7 @@ function Decide() {
   
   return (
     <>
-      <input className="next fixed top-[90%] right-[-80%]" type="button" value="続ける" onClick={() => photo_view() }/>
+      <input className="fixed decide top-[93%] right-[5%] hidden" type="button" value="続ける" onClick={() => photo_view() }/>
     </>
   )
 }
