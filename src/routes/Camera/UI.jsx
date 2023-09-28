@@ -14,7 +14,7 @@ function UI() {
 
   const [num, setNum] = useState(null);
   const [name, setName] = useState(null);
-  let Beacon_num = 22;
+  let Beacon_num = 21;
   let area = {
     name:"初期値",
     num:999
@@ -121,8 +121,8 @@ function UI() {
       <div className="hidden UI">
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
-          <img className='fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flafav} alt="喜ぶフラミンゴ" />
-          <img className='sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flasick} alt="悲しむフラミンゴ" />
+          <img className='origin-[center-bottom] fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flafav} alt="喜ぶフラミンゴ" />
+          <img className='origin-[center-bottom] sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Flasick} alt="悲しむフラミンゴ" />
         </div>
         <div className="h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px]">
