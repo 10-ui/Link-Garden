@@ -126,7 +126,7 @@ function UI() {
       >動物をタップ！</p> */}
       <div className="hidden UI">
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
-        <img  className='mirror w-screen fixed left-1/2 top-[40%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
+        <img  className='mirror w-screen fixed left-1/2 top-[20%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img className='fananimal origin-[center-bottom]' src={Flafav} alt="喜ぶフラミンゴ" />
