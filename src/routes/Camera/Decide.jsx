@@ -4,6 +4,11 @@ function Decide() {
     const cameraHeight = 840;
   // img タグに入れる
   function photo_view() {
+
+    const box = document.querySelector('.animalbox');
+    box.classList.remove('hidden');
+    box.classList.add('grid');
+
     const borders = [...document.querySelectorAll('.borders')];
     for(let i = 0; i < borders.length; i++){
       borders[i].classList.add("hidden");
