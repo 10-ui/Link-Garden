@@ -11,6 +11,9 @@ function Decide() {
     
     const decide = document.querySelector('.decide');
     decide.classList.add('hidden');
+
+    const retry = document.querySelector('.retry');
+    retry.classList.add('hidden');
     
     const UI = document.querySelector(".UI");
     const canvas = document.getElementById("canvas");

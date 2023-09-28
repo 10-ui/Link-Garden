@@ -199,7 +199,7 @@ function Pickup() {
 
   return (
     <>
-      <img  className='hidden shoot w-[70px] h-[70px] fixed left-1/2 top-[88%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
+      <img  className='hidden shoot w-[70px] h-[70px] fixed left-1/2 top-[89%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
     </>
   )
 }
