@@ -283,12 +283,12 @@ function UIs() {
             わたしはたくさんの<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>といるのが
             <ruby>好<rp>(</rp><rt>す</rt><rp>)</rp> </ruby>きな
           </p>
-          <p className='z-[50] w-[95%] fixed left-1/2 top-[65%] translate-x-[-50%] translate-y-[-65%]'>
+          <p className='z-[50] w-[95%] fixed left-1/2 top-[60%] translate-x-[-50%] translate-y-[-60%]'>
             の。<ruby>自分<rp>(</rp><rt>じぶん</rt><rp>)</rp> </ruby>の<ruby>姿<rp>(</rp><rt>すがた</rt><rp>)</rp> </ruby>が
             <ruby>写<rp>(</rp><rt>うつ</rt><rp>)</rp> </ruby>っていると
             <ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>がいるよう
           </p>
-          <p className='z-[50] w-[95%] fixed left-1/2 top-[65%] translate-x-[-50%] translate-y-[-65%]'>
+          <p className='z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
             で<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
             あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？
           </p>
