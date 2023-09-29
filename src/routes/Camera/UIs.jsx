@@ -106,9 +106,9 @@ function UIs() {
         funs[i].classList.remove('hidden');
         funs[i].classList.add('animate-yurayura');
         await sleep(2000);
-        if(i === 2){
-          document.querySelector('seemore').classList.remove('hidden');
-          document.querySelector('seemore').classList.add('block');
+        if(i == 2){
+          document.querySelector('.seemore').classList.remove('hidden');
+          document.querySelector('.seemore').classList.add('block');
         } else funs[i].classList.add('hidden');
         funs[i].classList.remove('animate-yurayura');
       }
