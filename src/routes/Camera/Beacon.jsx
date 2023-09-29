@@ -2,6 +2,8 @@ function Beacon() {
 
   const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
 
+  let choose = 1;
+
   async function Timer(device) {
     device.watchAdvertisements()
     const num = document.getElementById('num');
@@ -141,8 +143,6 @@ function Beacon() {
     '\n    (Hex) ' + hexString +
     '\n    (ASCII) ' + asciiString);
     };
-    
-
 
   return (
     <>
