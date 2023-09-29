@@ -65,7 +65,7 @@ function Decide() {
   
   return (
     <>
-      <input className=" fixed decide top-[93%] right-[5%] hidden" type="button" value="続ける" onClick={() => photo_view() }/>
+      <input className="rounded border-main border-2 px-2 py-1 border-solid fixed decide top-[93%] right-[5%] hidden" type="button" value="続ける" onClick={() => photo_view() }/>
     </>
   )
 }
