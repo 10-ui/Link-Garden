@@ -13,6 +13,7 @@ import Flasick from '../../assets/icon/animal_sadflamingo.svg';
 import Flamirror from '../../assets/icon/animal_mirror.svg';
 import Comment from '../../assets/icon/animal_comment.svg';
 import Found from './Found';
+import { comment } from 'postcss';
 
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
 
@@ -332,7 +333,13 @@ elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1
 
       function Found(){
         const nice = document.querySelector('.nice');
+        const comments = document.querySelector('.comment');
+        const mirrors = document.querySelector('.mirror');
+        const lotfun = document.querySelector('.lotfun')
         nice.classList.remove('hidden');
+        lotfun.classList.add('hidden');
+        mirrors.classList.add('hidden');
+        comments.classList.add('hidden');
       }
 
 
@@ -372,7 +379,7 @@ elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1
           <div className="happy fanimal hidden fixed left-[45%] top-[20%] translate-x-[-45%] translate-y-[-20%]">
             <img className='fananimal hidden' src={Flafav1} alt="喜ぶフラミンゴ" />
             <img className='fananimal hidden' src={Flafav2} alt="喜ぶフラミンゴ" />
-            <img className='fananimal hidden' src={Flafav3} alt="喜ぶフラミンゴ" />
+            <img className='fananimal hidden lotfun' src={Flafav3} alt="喜ぶフラミンゴ" />
           </div>
           <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img className='sadanimal' src={Flasick} alt="悲しむフラミンゴ" />
