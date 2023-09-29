@@ -5,3 +5,5 @@ function Found(){
     </>
   )
 }
+
+export default Found
