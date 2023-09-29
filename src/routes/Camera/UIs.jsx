@@ -295,7 +295,7 @@ function UIs() {
             あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？
           </p>
           <p className='text-accent block z-[50] w-[25%] fixed right-[10%] top-[95%] translate-x-[-10%] translate-y-[-95%]'>もっと見る</p>
-          <img className='z-[49] w-[95%] fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Comment} alt="喜んでるときの吹き出し" />
+          <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-1/2 top-[20%] translate-x-[-50%] translate-y-[-20%]">
