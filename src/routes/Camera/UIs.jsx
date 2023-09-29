@@ -279,16 +279,19 @@ function UIs() {
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
         <img className='mirror w-screen fixed left-1/2 top-[20%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
         <div className="comment w-screen fixed left-1/2 top-[70%] translate-x-[-50%] hidden">
-          <p className='z-[50] w-[95%] fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]'>
+          <p className='z-[50] w-[95%] fixed left-1/2 top-[35%] translate-x-[-50%] translate-y-[-35%]'>
             わたしはたくさんの<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>といるのが
-          <ruby>好<rp>(</rp><rt>す</rt><rp>)</rp> </ruby>きな
-          <p className='mt-[15px]'>
+            <ruby>好<rp>(</rp><rt>す</rt><rp>)</rp> </ruby>きな
+          </p>
+          <p className='z-[50] w-[95%] fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]'>
             の。<ruby>自分<rp>(</rp><rt>じぶん</rt><rp>)</rp> </ruby>の<ruby>姿<rp>(</rp><rt>すがた</rt><rp>)</rp> </ruby>が
             <ruby>写<rp>(</rp><rt>うつ</rt><rp>)</rp> </ruby>っていると
             <ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>がいるよう
           </p>
-          で<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
-          あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？</p>
+          <p className='z-[50] w-[95%] fixed left-1/2 top-[65%] translate-x-[-50%] translate-y-[-65%]'>
+            で<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
+            あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？
+          </p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
@@ -301,7 +304,7 @@ function UIs() {
             <img className='sadanimal' src={Flasick} alt="悲しむフラミンゴ" />
           </div>
         </div>
-        <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
+        {/* <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/> */}
         <p id="num">0%</p>
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px]">
