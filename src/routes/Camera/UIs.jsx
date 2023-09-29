@@ -146,14 +146,26 @@ function UIs() {
                   const name02 = 'FSC_BP103_2';
                   const name03 = 'FSC_BP103_3';
           
-                  // ビーコンのRSSI
-                  let RSSI02 = 0;
-                  let RSSI03 = 0;
+                  const beacon_array = [
+                    { name: name02, rssi: 0, count: 0 },
+                    { name: name03, rssi: 0, count: 0 },
+                    
+                  ]
                   
-                  // 近いカウント
-                  let count02 = 0;
-                  let count03 = 0;
-  
+                  // 初期値設定
+                  let beacon_check = beacon_array[0];
+                  let beacon = beacon_array[0];
+                  
+                  // beacon_distance よりも値が小さい（ビーコンとの距離が近い）時が beacon_count 回あったときに判定させる
+                  const beacon_count = 5;
+            
+                  // ビーコンの数
+                  const beacon_num = 2;
+            
+                  // beacon_distance よりも値が小さい時に判定させる
+                  const beacon_distance = -67;
+                  
+      
     function onWatchAdvertisementsButtonClick() {
   
       let i = 0;
@@ -183,38 +195,84 @@ function UIs() {
         var elm02 = document.getElementById('test_line02');
         var elm03 = document.getElementById('test_line03');
   
-        // 名前で条件分岐
-        if (event.device.name == name02) {
+        // // 名前で条件分岐
+        // if (event.device.name == name02) {
   
-        // 2番のRSSI取得
-        RSSI02 = event.rssi;
-        elm02.textContent = event.device.name + ' ' + RSSI02 + ' 近いよカウント= ' +  count02;
-        }
+        // // 2番のRSSI取得
+        // RSSI02 = event.rssi;
+        // elm02.textContent = event.device.name + ' ' + RSSI02 + ' 近いよカウント= ' +  count02;
+        // }
   
-        if (event.device.name == name03) {
+        // if (event.device.name == name03) {
   
-        // 3番のRSSI取得
-        RSSI03 = event.rssi;
-        elm03.textContent = event.device.name + ' '  + RSSI03 + ' 近いよカウント= ' + count03;
-        }
+        // // 3番のRSSI取得
+        // RSSI03 = event.rssi;
+        // elm03.textContent = event.device.name + ' '  + RSSI03 + ' 近いよカウント= ' + count03;
+        // }
   
   
-        // RSSI の比較 条件式ここに書く～～～～～～～～～～～～～～～～～～～～～～
-        if ( RSSI02 > RSSI03) {
-        // 2番の距離のほうが近い
+        // // RSSI の比較 条件式ここに書く～～～～～～～～～～～～～～～～～～～～～～
+        // if ( RSSI02 > RSSI03) {
+        // // 2番の距離のほうが近い
   
-          elm02.style.background = 'yellow';
-          elm03.style.background = 'white';
-          count02 += 1;
+        //   elm02.style.background = 'yellow';
+        //   elm03.style.background = 'white';
+        //   count02 += 1;
   
-        } else {
-        // 3番の距離のほうが近い
+        // } else {
+        // // 3番の距離のほうが近い
   
-          elm03.style.background = 'yellow';
-          elm02.style.background = 'white';
-          count03 += 1;
+        //   elm03.style.background = 'yellow';
+        //   elm02.style.background = 'white';
+        //   count03 += 1;
   
-        }
+        // }
+
+                             
+                      // ビーコンの名前で条件判定　（ビーコンの名前が 2番だったら2番の配列の電波強度を更新）
+                      if (event.device.name == name02) {
+                        beacon_array[0].rssi = event.rssi;
+                        
+                      } else if (event.device.name == name03) {
+                        beacon_array[1].rssi = event.rssi;
+                        
+                      }
+                      
+                      // どのビーコンが一番近いか判定して beacon_selectにいれる
+                      beacon_select = beacon_array[0];
+                      for (let i = 1; i < 2; i++) {
+                        if (beacon_select.rssi < beacon_array[i].rssi) {
+                          beacon_select = beacon_array[i];
+                        }
+                      }
+                      
+                      // ビーコンの値が -67よりも小さいときにカウントアップ
+                      if (beacon_select.rssi > beacon_distance) {
+                        beacon_select.count++;
+                      }
+                      
+                      // 一番近いビーコン　かつ　ビーコンの電波強度が -67よりも小さい時が beacon_count(今は5回)よりも多いとき
+                      if (beacon_select.name == beacon_check.name && beacon_select.count > beacon_count ) {
+                        console.log("選ばれたのは君だ！！" + beacon_select.name);
+                        beacon = beacon_select;
+                        
+                        // すべてのビーコンの中にある count を 0 にリセット
+                        for (let i = 0; i < beacon_num; i++) {
+                          beacon_array[i].count = 0;
+                        }
+                        
+                      }
+                      
+                      beacon_check = beacon_select;
+
+                      
+                      console.log(beacon_array[0]);
+                      console.log(beacon_array[1]);
+                      console.log(beacon_select);
+
+                      elm02.textContent = beacon_array[0].name + beacon_array[0].rssi + beacon_array[0].count + beacon.name;                                    
+            elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1].count;                                
+
       event.manufacturerData.forEach((valueDataView, key) => {
       logDataView('Manufacturer', key, valueDataView);
       });
@@ -310,8 +368,8 @@ function UIs() {
             <img className='sadanimal' src={Flasick} alt="悲しむフラミンゴ" />
           </div>
         </div>
-        {/* <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/> */}
-        {/* <p id="num">0%</p> */}
+        <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
+        <p id="num">0%</p>
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px]">
               <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-18px] w-[55px] h-[115px] object-cover' />

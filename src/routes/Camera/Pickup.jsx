@@ -1,5 +1,9 @@
 import shatter from '../../assets/icon/mark_shatter.svg';
 
+
+//結果に応じてbodyに data-animalを作って getAttributeで行き先を選ばせる？かな
+
+
 function Pickup() {
   
 
@@ -68,32 +72,41 @@ function Pickup() {
   );
 
 
-  let count = 0;
+  // let count = 0;
+
+// 色情報の配列作成
+  const color_array = [
+    { name: 'brown', count: 0 },
+    { name: 'blue', count: 0 },
+    { name: 'red', count: 0 },
+    { name: 'green', count: 0 },
+    { name: 'yellow', count: 0 },
+  ]
 
   // 茶色の範囲
   const brown_minColor = { r: 102, g: 51, b: 0 };
   const brown_maxColor = { r: 255, g: 178, b: 102 };
-  let brown = 0;
+  // let brown = 0;
 
   // 青色の範囲
   const blue_minColor = { r: 0, g: 0, b: 153 };
   const blue_maxColor = { r: 51, g: 153, b: 255 };
-  let blue = 0;
+  // let blue = 0;
 
   // 赤色の範囲
   const red_minColor = { r: 255, g: 0, b: 0 };
   const red_maxColor = { r: 255, g: 102, b: 102 };
-  let red = 0;
+  // let red = 0;
 
   // 緑色の範囲
   const green_minColor = { r: 0, g: 153, b: 0 };
   const green_maxColor = { r: 153, g: 255, b: 153 };
-  let green = 0;
+  // let green = 0;
 
   // 黄色の範囲
   const yellow_minColor = { r: 204, g: 204, b: 0 };
   const yellow_maxColor = { r: 255, g: 255, b: 153 };
-  let yellow = 0;
+  // let yellow = 0;
 
   _changePixelColor();
 
@@ -110,64 +123,80 @@ function Pickup() {
 
   // 1ピクセルずつ確認していく
   for (let i = 0, len = data.length; i < len; i += 4) {
-  currentColor.r = data[i];
-  currentColor.g = data[i + 1];
-  currentColor.b = data[i + 2];
+    currentColor.r = data[i];
+    currentColor.g = data[i + 1];
+    currentColor.b = data[i + 2];
 
-  // 指定したrgb内であれば以下の処理をする
-  if (_checkTargetColor(currentColor, brown_minColor, brown_maxColor)) {
-  brown += 1;
-  //茶色
-  }
+    // 指定したrgb内であれば以下の処理をする
+    if (_checkTargetColor(currentColor, brown_minColor, brown_maxColor)) {
+        // brown += 1;
+      color_array[0].count++; 
+        //茶色
+    }
 
-  // 指定したrgb内であれば以下の処理をする
-  if (_checkTargetColor(currentColor, blue_minColor, blue_maxColor)) {
-  blue += 1;
-  //青色
-  }
+    // 指定したrgb内であれば以下の処理をする
+    if (_checkTargetColor(currentColor, blue_minColor, blue_maxColor)) {
+        // blue += 1;
+      color_array[1].count++; 
+        //青色
+    }
 
-  // 指定したrgb内であれば以下の処理をする
-  if (_checkTargetColor(currentColor, red_minColor, red_maxColor)) {
-  red += 1;
-  //赤色
-  }
+    // 指定したrgb内であれば以下の処理をする
+    if (_checkTargetColor(currentColor, red_minColor, red_maxColor)) {
+        // red += 1;
+      color_array[2].count++; 
+        //赤色
+    }
 
-  // 指定したrgb内であれば以下の処理をする
-  if (_checkTargetColor(currentColor, green_minColor, green_maxColor)) {
-  green += 1;
-  //緑色
-  }
+    // 指定したrgb内であれば以下の処理をする
+    if (_checkTargetColor(currentColor, green_minColor, green_maxColor)) {
+        // green += 1;
+      color_array[3].count++; 
+        //緑色
+    }
 
-  // 指定したrgb内であれば以下の処理をする
-  if (_checkTargetColor(currentColor, yellow_minColor, yellow_maxColor)) {
-  yellow += 1;
-  //黄色
-  }
+    // 指定したrgb内であれば以下の処理をする
+    if (_checkTargetColor(currentColor, yellow_minColor, yellow_maxColor)) {
+        // yellow += 1;
+      color_array[4].count++; 
+        //黄色
+    }
   }
   };
-  if (brown > blue && brown > red && brown > green && brown > yellow) {
-  // 茶色が一番多い
-  // text_brown.style.background = 'brown';
-  console.log('茶色が一番多い');
-  } else if (blue > red && blue > green && blue > yellow) {
-  // 青色が一番多い
-  // text_blue.style.background = 'blue';
-  console.log('青色が一番多い');
-  } else if (red > green && red > yellow) {
-  // 赤色が一番多い
-  // text_red.style.background = 'red';
-  console.log('赤色が一番多い');
-  } else if (green > yellow) {
-  // 緑色が一番多い
-  // text_green.style.background = 'green';
-  console.log('緑色が一番多い');
-  } else if (yellow > green) {
-  // 黄色が一番多い
-  // text_yellow.style.background = 'yellow';
-  console.log('黄色が一番多い');
-  } else {
-  console.log('色が検出されませんでした');
+
+  let color_select = color_array[0];
+          
+  for (let i = 1; i < 5; i++) {
+    if (color_select.count < color_array[i].count) {
+      color_select = color_array[i];
+    }
   }
+  console.log ('color_select =' + color_select.name);
+  console.log(color_array); 
+
+  // if (brown > blue && brown > red && brown > green && brown > yellow) {
+  // // 茶色が一番多い
+  // // text_brown.style.background = 'brown';
+  // console.log('茶色が一番多い');
+  // } else if (blue > red && blue > green && blue > yellow) {
+  // // 青色が一番多い
+  // // text_blue.style.background = 'blue';
+  // console.log('青色が一番多い');
+  // } else if (red > green && red > yellow) {
+  // // 赤色が一番多い
+  // // text_red.style.background = 'red';
+  // console.log('赤色が一番多い');
+  // } else if (green > yellow) {
+  // // 緑色が一番多い
+  // // text_green.style.background = 'green';
+  // console.log('緑色が一番多い');
+  // } else if (yellow > green) {
+  // // 黄色が一番多い
+  // // text_yellow.style.background = 'yellow';
+  // console.log('黄色が一番多い');
+  // } else {
+  // console.log('色が検出されませんでした');
+  // }
 
   // console.log('茶色 ' + brown);
   // console.log('青色 ' + blue);
