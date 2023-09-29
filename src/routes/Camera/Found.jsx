@@ -2,9 +2,9 @@ function Found(){
   return (
     <>
       <div className='bg-screen nice relative h-screen w-screen z-[0] hidden'>
-        <div className="mx-[30px] mt-[60px]">
-          <h1 className="text-btntext mt-[40px] text-[24px] text-left">フラミンゴと<ruby>鏡<rp>(</rp><rt>かがみ</rt><rp>)</rp></ruby></h1>
-          <p className="text-btntext"><ruby>自然界<rp>(</rp><rt>しぜんかい</rt><rp>)</rp></ruby>にいる
+        <div className="mx-[30px] pt-[60px]">
+          <h1 className="text-btntext pt-[40px] text-[24px] text-left">フラミンゴと<ruby>鏡<rp>(</rp><rt>かがみ</rt><rp>)</rp></ruby></h1>
+          <p className="text-btntext mb-[20px] leading-4"><ruby>自然界<rp>(</rp><rt>しぜんかい</rt><rp>)</rp></ruby>にいる
             フラミンゴは<ruby>数百<rp>(</rp><rt>すうひゃく</rt><rp>)</rp> </ruby>～<ruby>数千羽<rp>(</rp><rt>すうせんわ</rt><rp>)</rp></ruby>の
             <ruby>群<rp>(</rp><rt>む</rt><rp>)</rp></ruby>れをつくり、
             <ruby>湖<rp>(</rp><rt>みずうみ</rt><rp>)</rp> </ruby>や<ruby>干潟<rp>(</rp><rt>ひがた</rt><rp>)</rp></ruby>に
@@ -24,7 +24,7 @@ function Found(){
             <ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>てみましょう！
           </p>
           <iframe 
-            className="w-[80%] h-auto" 
+            className="w-screen h-auto block mx-auto" 
             src="https://www.youtube.com/embed/u2TRshJ51jg?si=DmwS5jLo-m2vlyZ8" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
