@@ -103,11 +103,13 @@ function UIs() {
         funs[i].classList.remove('hidden');
         funs[i].classList.add('animate-yurayura');
         await sleep(2000);
-        funs[i].classList.add('hidden');
+        if(i === 2){
+          console.log('成功')
+        } else funs[i].classList.add('hidden');
         funs[i].classList.remove('animate-yurayura');
       }
-      mirror.classList.add('hidden');
-      comment.classList.add('hidden');
+      // mirror.classList.add('hidden');
+      // comment.classList.add('hidden');
     }
     else if(name==="かがみ"){
       sad.classList.remove("hidden");
@@ -292,7 +294,7 @@ function UIs() {
             で<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
             あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？
           </p>
-          <p className='text-accent block text-center z-[50] w-[10%] fixed right[15%] top-[90%] translate-x-[-15%] translate-y-[-90%]'>もっと見る</p>
+          <p className='text-accent block z-[50] w-[10%] fixed right[15%] top-[90%] translate-x-[-15%] translate-y-[-90%]'>もっと見る</p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
