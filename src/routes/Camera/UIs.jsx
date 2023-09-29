@@ -278,7 +278,7 @@ function UIs() {
       <div className="hidden UI">
         <img onClick={() => Check()} id='animals' src={Fla} className='w-1/2 h-1/2 check fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' alt="普通のフラミンゴ"  />
         <img className='mirror w-screen fixed left-1/2 top-[20%] translate-x-[-50%] hidden' src={Flamirror} alt="フラミンゴがたくさん映る鏡" />
-        <div className="comment w-screen h-[190px] fixed left-1/2 top-[70%] translate-x-[-50%] translate-y-[70%] hidden">
+        <div className="comment w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
           <p className='z-[50] w-[95%] fixed left-1/2 top-[35%] translate-x-[-50%] translate-y-[-35%]'>
             わたしはたくさんの<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>といるのが
             <ruby>好<rp>(</rp><rt>す</rt><rp>)</rp> </ruby>きな
