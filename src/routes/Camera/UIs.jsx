@@ -164,6 +164,8 @@ function UIs() {
             
                   // beacon_distance よりも値が小さい時に判定させる
                   const beacon_distance = -67;
+
+                  let beacon_select;
                   
       
     function onWatchAdvertisementsButtonClick() {
@@ -228,50 +230,49 @@ function UIs() {
   
         // }
 
-                             
-                      // ビーコンの名前で条件判定　（ビーコンの名前が 2番だったら2番の配列の電波強度を更新）
-                      if (event.device.name == name02) {
-                        beacon_array[0].rssi = event.rssi;
-                        
-                      } else if (event.device.name == name03) {
-                        beacon_array[1].rssi = event.rssi;
-                        
-                      }
-                      
-                      // どのビーコンが一番近いか判定して beacon_selectにいれる
-                      beacon_select = beacon_array[0];
-                      for (let i = 1; i < 2; i++) {
-                        if (beacon_select.rssi < beacon_array[i].rssi) {
-                          beacon_select = beacon_array[i];
-                        }
-                      }
-                      
-                      // ビーコンの値が -67よりも小さいときにカウントアップ
-                      if (beacon_select.rssi > beacon_distance) {
-                        beacon_select.count++;
-                      }
-                      
-                      // 一番近いビーコン　かつ　ビーコンの電波強度が -67よりも小さい時が beacon_count(今は5回)よりも多いとき
-                      if (beacon_select.name == beacon_check.name && beacon_select.count > beacon_count ) {
-                        console.log("選ばれたのは君だ！！" + beacon_select.name);
-                        beacon = beacon_select;
-                        
-                        // すべてのビーコンの中にある count を 0 にリセット
-                        for (let i = 0; i < beacon_num; i++) {
-                          beacon_array[i].count = 0;
-                        }
-                        
-                      }
-                      
-                      beacon_check = beacon_select;
+      // ビーコンの名前で条件判定　（ビーコンの名前が 2番だったら2番の配列の電波強度を更新）
+      if (event.device.name == name02) {
+        beacon_array[0].rssi = event.rssi;
+        
+      } else if (event.device.name == name03) {
+        beacon_array[1].rssi = event.rssi;
+        
+      }
+      
+      // どのビーコンが一番近いか判定して beacon_selectにいれる
+      beacon_select = beacon_array[0];
+      for (let i = 1; i < 2; i++) {
+        if (beacon_select.rssi < beacon_array[i].rssi) {
+          beacon_select = beacon_array[i];
+        }
+      }
+      
+      // ビーコンの値が -67よりも小さいときにカウントアップ
+      if (beacon_select.rssi > beacon_distance) {
+        beacon_select.count++;
+      }
+      
+      // 一番近いビーコン　かつ　ビーコンの電波強度が -67よりも小さい時が beacon_count(今は5回)よりも多いとき
+      if (beacon_select.name == beacon_check.name && beacon_select.count > beacon_count ) {
+        console.log("選ばれたのは君だ！！" + beacon_select.name);
+        beacon = beacon_select;
+        
+        // すべてのビーコンの中にある count を 0 にリセット
+        for (let i = 0; i < beacon_num; i++) {
+          beacon_array[i].count = 0;
+        }
+        
+      }
+      
+      beacon_check = beacon_select;
 
-                      
-                      console.log(beacon_array[0]);
-                      console.log(beacon_array[1]);
-                      console.log(beacon_select);
+      
+      console.log(beacon_array[0]);
+      console.log(beacon_array[1]);
+      console.log(beacon_select);
 
-                      elm02.textContent = beacon_array[0].name + beacon_array[0].rssi + beacon_array[0].count + beacon.name;                                    
-            elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1].count;                                
+      elm02.textContent = beacon_array[0].name + beacon_array[0].rssi + beacon_array[0].count + beacon.name;                                    
+elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1].count;                                
 
       event.manufacturerData.forEach((valueDataView, key) => {
       logDataView('Manufacturer', key, valueDataView);
@@ -359,7 +360,7 @@ function UIs() {
           <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
-          <div className="happy fanimal hidden fixed left-1/2 top-[20%] translate-x-[-50%] translate-y-[-20%]">
+          <div className="happy fanimal hidden fixed left-[45%] top-[20%] translate-x-[-45%] translate-y-[-20%]">
             <img className='fananimal hidden' src={Flafav1} alt="喜ぶフラミンゴ" />
             <img className='fananimal hidden' src={Flafav2} alt="喜ぶフラミンゴ" />
             <img className='fananimal hidden' src={Flafav3} alt="喜ぶフラミンゴ" />
