@@ -292,6 +292,7 @@ function UIs() {
             で<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
             あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？
           </p>
+          <p className='text-accent block text-center z-[50] w-[10%] fixed right[15%] top-[90%] translate-x-[-15%] translate-y-[-90%]'>もっと見る</p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
@@ -305,7 +306,7 @@ function UIs() {
           </div>
         </div>
         {/* <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/> */}
-        <p id="num">0%</p>
+        {/* <p id="num">0%</p> */}
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px]">
               <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-18px] w-[55px] h-[115px] object-cover' />
