@@ -12,6 +12,7 @@ import Flafav3 from '../../assets/icon/animal_funflamingo3.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
 import Flamirror from '../../assets/icon/animal_mirror.svg';
 import Comment from '../../assets/icon/animal_comment.svg';
+import Found from './Found';
 
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
 
@@ -328,6 +329,13 @@ elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1
       '\n    (ASCII) ' + asciiString);
       };
 
+
+      function Found(){
+        const nice = document.querySelector('.nice');
+        nice.classList.remove('hidden');
+      }
+
+
   return (
     <>
 
@@ -354,9 +362,10 @@ elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1
             で<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
             あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？
           </p>
-          <p className='text-accent block z-[50] w-[25%] fixed right-[10%] top-[95%] translate-x-[-10%] translate-y-[-95%]'>
-            <Link to='/Found'>もっと見る</Link>
-            </p>
+          <p className='text-accent block z-[50] w-[25%] fixed right-[10%] top-[95%] translate-x-[-10%] translate-y-[-95%]'
+              onClick={() => Found()}>
+            もっと見る
+          </p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
