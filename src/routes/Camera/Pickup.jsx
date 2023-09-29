@@ -200,7 +200,7 @@ function Pickup() {
 
   return (
     <>
-      <div className='bg-screen relative backscreen h-screen w-screen z-[-2] hidden'></div>
+      <div className='bg-screen relative backscreen h-screen w-screen z-[0] hidden'></div>
       <img  className='hidden shoot w-[70px] h-[70px] fixed left-1/2 top-[89%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
     </>
   )
