@@ -33,7 +33,7 @@ function Delete() {
 
   return (
     <>
-      <input className="fixed top-[93%] right-[23%] hidden retry" type="button" value="やり直し" onClick={() => img_remove() }/>
+      <p className="text-btntext font-bold fixed top-[91%] right-[23%] hidden retry text-[18px]"  onClick={() => img_remove() }>やり直し</p>
     </>
   )
 }
