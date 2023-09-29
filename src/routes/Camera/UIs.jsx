@@ -196,8 +196,8 @@ function UIs() {
   
       device.addEventListener("advertisementreceived", (event) => {
         // ビーコンの情報をHTMLで表示するためのやつ
-        var elm02 = document.getElementById('test_line02');
-        var elm03 = document.getElementById('test_line03');
+        // var elm02 = document.getElementById('test_line02');
+        // var elm03 = document.getElementById('test_line03');
   
         // // 名前で条件分岐
         // if (event.device.name == name02) {
@@ -273,8 +273,8 @@ function UIs() {
       console.log(beacon_array[1]);
       console.log(beacon_select);
 
-      elm02.textContent = beacon_array[0].name + beacon_array[0].rssi + beacon_array[0].count + beacon.name;                                    
-elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1].count;                                
+      // elm02.textContent = beacon_array[0].name + beacon_array[0].rssi + beacon_array[0].count + beacon.name;                                    
+      // elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1].count;                                
 
       event.manufacturerData.forEach((valueDataView, key) => {
       logDataView('Manufacturer', key, valueDataView);
@@ -385,11 +385,11 @@ elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1
             <img className='sadanimal' src={Flasick} alt="悲しむフラミンゴ" />
           </div>
         </div>
-        <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
+        {/* <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
         <p id="num">0%</p>
         <p id="test_name">接続するデバイスの名前</p>
         <p id="test_line02">02デバイス</p>        
-        <p id="test_line03">03デバイス</p>
+        <p id="test_line03">03デバイス</p> */}
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px]">
               <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-18px] w-[55px] h-[115px] object-cover' />
