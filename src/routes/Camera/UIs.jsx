@@ -294,7 +294,7 @@ function UIs() {
             で<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
             あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？
           </p>
-          <p className='text-accent block z-[50] w-[25%] fixed right-[10%] top-[94%] translate-x-[-10%] translate-y-[-94%]'>もっと見る</p>
+          <p className='text-accent block z-[50] w-[25%] fixed right-[10%] top-[95%] translate-x-[-10%] translate-y-[-95%]'>もっと見る</p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
