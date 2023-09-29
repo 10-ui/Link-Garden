@@ -1,9 +1,19 @@
+import close from '../../assets/icon/mark_close.svg';
+
 function Found(){
+
+
+  function Choosenext() {
+    const nice = document.querySelector('.nice');
+    nice.classList.add('hidden');
+  }
+
+
   return (
     <>
       <div className='bg-screen nice relative h-screen w-screen z-[0] hidden'>
         <div className="mx-[30px] pt-[60px]">
-          <h1 className="text-btntext pt-[40px] text-[24px] text-left">フラミンゴと<ruby>鏡<rp>(</rp><rt>かがみ</rt><rp>)</rp></ruby></h1>
+          <h1 className="text-btntext text-[24px] text-left">フラミンゴと<ruby>鏡<rp>(</rp><rt>かがみ</rt><rp>)</rp></ruby></h1>
           <p className="text-btntext pt-[40px] mb-[20px] leading-6"><ruby>自然界<rp>(</rp><rt>しぜんかい</rt><rp>)</rp></ruby>にいる
             フラミンゴは<ruby>数百<rp>(</rp><rt>すうひゃく</rt><rp>)</rp> </ruby>～<ruby>数千羽<rp>(</rp><rt>すうせんわ</rt><rp>)</rp></ruby>の
             <ruby>群<rp>(</rp><rt>む</rt><rp>)</rp></ruby>れをつくり、
@@ -30,9 +40,9 @@ function Found(){
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
           </iframe>
+          <img className='block mx-auto pt-[20px]' src={close} alt="閉じるボタン" onClick={() => Choosenext}/>
         </div>
       </div>
-
     </>
   )
 }
