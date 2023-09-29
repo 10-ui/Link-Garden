@@ -17,6 +17,9 @@ function Decide() {
     const decide = document.querySelector('.decide');
     decide.classList.add('hidden');
 
+    const screen = document.querySelector('.backscreen');
+    screen.classList.add('hidden');
+
     const retry = document.querySelector('.retry');
     retry.classList.add('hidden');
     

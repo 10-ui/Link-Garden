@@ -19,6 +19,9 @@ function Pickup() {
   const shoot = document.querySelector('.shoot');
   shoot.classList.add('hidden');
 
+  const screen = document.querySelector('.backscreen');
+  screen.classList.remove('hidden');
+
   const img_area = document.getElementById("content_area");
   img_area.classList.add('hidden');
 
@@ -197,6 +200,7 @@ function Pickup() {
 
   return (
     <>
+      <div className='bg-screen backscreen h-screen w-screen z-[1] hidden'></div>
       <img  className='hidden shoot w-[70px] h-[70px] fixed left-1/2 top-[89%] translate-x-[-50%]' src={shatter} alt="撮影ボタン" onClick={() => canvas_input() }/>
     </>
   )

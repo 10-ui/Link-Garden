@@ -18,6 +18,9 @@ function Delete() {
     const shoot = document.querySelector('.shoot');
     shoot.classList.remove('hidden');
 
+    const screen = document.querySelector('.backscreen');
+    screen.classList.add('hidden');
+
     const img_area = document.getElementById("content_area");
     img_area.classList.remove('hidden');
 

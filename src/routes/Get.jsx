@@ -1,5 +1,5 @@
-import link from '../assets/icon/mark_link.svg'
-import pn from '../assets/icon/pagenation_2.svg'
+import link from '../assets/icon/mark_link.svg';
+import pn from '../assets/icon/pagenation_2.svg';
 import { Link } from "react-router-dom";
 
 function Items() {

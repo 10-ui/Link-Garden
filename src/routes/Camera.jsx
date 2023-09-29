@@ -3,6 +3,7 @@ import Begin from './Camera/Begin.jsx';
 import Decide from './Camera/Decide.jsx';
 import Delete from './Camera/Delete.jsx';
 import Pickup from './Camera/Pickup.jsx';
+import Found from './Camera/Found.jsx';
 // import Beacon from './Camera/Beacon.jsx';
 
 
@@ -29,7 +30,8 @@ function Camera() {
       <Delete/>
       {/* <Beacon/> */}
       <UIs/>
-    </>
+      <Found/>
+      </>
   );
 }
 

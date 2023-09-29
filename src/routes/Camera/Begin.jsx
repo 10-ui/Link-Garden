@@ -1,4 +1,4 @@
-import shatter from '../../assets/icon/mark_shatter.svg'
+import shatter from '../../assets/icon/mark_shatter.svg';
 
 function Begin() {
 
