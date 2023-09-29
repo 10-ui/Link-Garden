@@ -107,7 +107,8 @@ function UIs() {
         funs[i].classList.add('animate-yurayura');
         await sleep(2000);
         if(i === 2){
-          console.log('成功')
+          document.querySelector('seemore').classList.remove('hidden');
+          document.querySelector('seemore').classList.add('block');
         } else funs[i].classList.add('hidden');
         funs[i].classList.remove('animate-yurayura');
       }
@@ -369,7 +370,7 @@ function UIs() {
             で<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp> </ruby>する！
             あなたも<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp> </ruby>になってくれる？
           </p>
-          <p className='text-accent block z-[50] w-[25%] fixed right-[10%] top-[95%] translate-x-[-10%] translate-y-[-95%]'
+          <p className='text-accent seemore z-[50] w-[25%] fixed right-[10%] top-[95%] translate-x-[-10%] translate-y-[-95%] hidden'
               onClick={() => Found()}>
             もっと見る
           </p>

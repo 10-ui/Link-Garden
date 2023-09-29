@@ -24,7 +24,7 @@ function Found(){
             <ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>てみましょう！
           </p>
           <iframe 
-            className="w-screen h-auto block mx-auto" 
+            className="w-[85%] block mx-auto" 
             src="https://www.youtube.com/embed/u2TRshJ51jg?si=DmwS5jLo-m2vlyZ8" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
