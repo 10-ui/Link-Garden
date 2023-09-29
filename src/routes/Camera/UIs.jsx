@@ -370,6 +370,9 @@ function UIs() {
         </div>
         <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
         <p id="num">0%</p>
+        <p id="test_name">接続するデバイスの名前</p>
+        <p id="test_line02">02デバイス</p>        
+        <p id="test_line03">03デバイス</p>
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px]">
               <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-18px] w-[55px] h-[115px] object-cover' />

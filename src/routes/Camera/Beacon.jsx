@@ -351,7 +351,7 @@
 //     <div id="border_marker"></div>
 
   
-
+// // 
 //     <ul>
 //         <li><p id="text_brown">茶色</p></li>
 //         <li><p id="text_blue">水色</p></li>
