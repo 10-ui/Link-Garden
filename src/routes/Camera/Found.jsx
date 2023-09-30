@@ -16,7 +16,7 @@ function Found(){
 
   return (
     <>
-      <div className='bg-screen nice relative items-center h-screen w-screen z-[0] hidden'>
+      <div className='bg-screen nice relative items-center h-screen w-screen z-[0] hidden mt-[-20px]'>
         <div className="mx-[20px] pt-[30px]">
           <h1 className="text-btntext text-[24px] text-left">フラミンゴと<ruby>鏡<rp>(</rp><rt>かがみ</rt><rp>)</rp></ruby></h1>
           <p className="text-btntext pt-[30px] mb-[20px] leading-[32px] text-[16px]"><ruby>自然界<rp>(</rp><rt>しぜんかい</rt><rp>)</rp></ruby>にいるフラミンゴは<ruby>数百<rp>(</rp><rt>すうひゃく</rt><rp>)</rp> </ruby>～<ruby>数千羽<rp>(</rp><rt>すうせんわ</rt><rp>)</rp></ruby>
@@ -45,7 +45,7 @@ function Found(){
           <img className='block mx-auto pt-[20px]' src={close} alt="閉じるボタン" onClick={() => Choosenext()}/>
         </div>
       </div>
-      <div className='whatNextDo h-screen hidden items-center mx-[calc(100%-97%)]'>
+      <div className='whatNextDo h-screen hidden items-center mx-[calc(100%-97%)] mt-[-20px]'>
         <div>
           <h1 className='text-btntext  font-bold font-main text-[24px] mb-[24px]'>フラミンゴの一番好きな場所と<br/>アイテムを見つけられたよ！</h1>
           <img className='w-[50%] block ml-[calc(100%-80%)] mr-auto mb-[34px]' src={flamingo} alt="喜んでるフラミンゴ" />
