@@ -5,7 +5,7 @@ function Home() {
 
   return (
     <>
-      <div className='h-screen mx-[30px] grid items-center'>
+      <div className='h-screen px-[30px] grid items-center'>
         <div>
           <img className='mx-auto mb-[70px]' src={logo} alt="ロゴアイコン" />
           <h1 className='mb-[24px] text-[24px] font-main font-bold text-center'>Link&&Gardenへようこそ！</h1>

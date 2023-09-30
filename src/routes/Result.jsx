@@ -31,7 +31,7 @@ function Result() {
   return(
     <>
       <div className='w-auto'>
-        <div className="h-screen w-auto  mx-[26px] grid items-center">
+        <div className="h-screen w-auto  px-[26px] grid items-center">
           <div>
             <p className=" text-white font-main font-bold text-[20px] text-center mb-[48px]">{num}つのアイテムを取得しました！</p>
             <div className="wrapper grid grid-cols-3 items-center justify-center w-fit gap-4 mx-auto mb-[55px]">

@@ -7,7 +7,7 @@ function Items() {
 
   return (
     <>
-      <div className='h-screen w-auto mx-[35px] grid items-center'>
+      <div className='h-screen w-auto px-[35px] grid items-center'>
         <div>
           <img className='mx-auto mb-[58px]' src={link} alt="アイテム送受信" />
           <h1 className='text-[24px] font-bold text-center font-main mb-[24px]'>集めてきたアイテムを<br/>スマートフォンに移そう！</h1>

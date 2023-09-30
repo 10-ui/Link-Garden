@@ -6,7 +6,7 @@ function Bluetooth() {
 
   return (
     <>
-      <div className='h-screen w-auto mx-[35px] grid items-center'>
+      <div className='h-screen w-auto px-[35px] grid items-center'>
         <div>
           <img className='mx-auto mb-[42px]' src={bluetooth} alt="Bloetoothアイコン" />
           <h1 className='text-[24px] font-bold text-center font-main mb-[24px]'>BluetoothをONにしよう！</h1>
