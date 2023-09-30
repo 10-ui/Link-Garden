@@ -439,7 +439,7 @@ function UIs() {
           わたしは、きれい<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きなの！<ruby>羽<rp>(</rp><rt>はね</rt><rp>)</rp></ruby>を<ruby>綺麗<rp>(</rp><rt>きれい</rt><rp>)</rp></ruby>にする
           </p>
           <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]'>
-          ためによく<ruby>水浴<rp>(</rp><rt>みずあ</rt><rp>)</rp></ruby>びをするの。<ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>のある<ruby>場所<rp>(</rp><rt>ばしょ</rt><rp>)</rp></ruby>に
+          ためによく<ruby>水浴<rp>(</rp><rt>みずあ</rt><rp>)</rp></ruby>びをするの。<ruby><span className='text-blue'>水</span><rp>(</rp><rt>みず</rt><rp>)</rp></ruby>のある<ruby>場所<rp>(</rp><rt>ばしょ</rt><rp>)</rp></ruby>に
           </p>
           <p className='block text-left z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
           &nbsp;&nbsp;&thinsp;<ruby>連<rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れてきてくれてありがとう！
