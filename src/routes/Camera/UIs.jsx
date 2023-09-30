@@ -377,7 +377,7 @@ function UIs() {
           <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
-          <div className="happy fanimal hidden fixed left-[45%] top-[20%] translate-x-[-45%] translate-y-[-20%]">
+          <div className="happy fanimal hidden fixed left-[40%] top-[20%] translate-x-[-45%] translate-y-[-20%]">
             <img className='fananimal hidden' src={Flafav1} alt="喜ぶフラミンゴ" />
             <img className='fananimal hidden' src={Flafav2} alt="喜ぶフラミンゴ" />
             <img className='fananimal hidden lotfun' src={Flafav3} alt="喜ぶフラミンゴ" />
