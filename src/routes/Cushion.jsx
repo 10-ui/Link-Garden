@@ -3,9 +3,11 @@ import logo from '../assets/icon/mark_logo.svg';
 
 function Cushion() {
 
+  const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
 
-  function jump(){
-    setTimeout(location.href='/Nuriecamera',3000)
+  async function jump(){
+    await sleep(6000);
+    location.href='/NurieCamera';
   }
 
   window.addEventListener('load',jump());
