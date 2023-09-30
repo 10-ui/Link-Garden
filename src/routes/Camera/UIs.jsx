@@ -10,10 +10,9 @@ import Flafav1 from '../../assets/icon/animal_funflamingo1.svg';
 import Flafav2 from '../../assets/icon/animal_funflamingo2.svg';
 import Flafav3 from '../../assets/icon/animal_funflamingo3.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
+import Flakomaru from '../../assets/icon/animal_komarufulamingo.svg';
 import Flamirror from '../../assets/icon/animal_mirror.svg';
 import Comment from '../../assets/icon/animal_comment.svg';
-import Found from './Found';
-import { comment } from 'postcss';
 
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
 
@@ -68,7 +67,7 @@ function UIs() {
     sad.classList.add("hidden");
     animal.classList.remove("hidden");
 
-    for(let i = 0; i <=4; i++){
+    for(let i = 0; i < imgs.length; i++){
       imgs[i].classList.remove('scale-125');
       imgs[i].classList.remove('scale-90');
       imgs[i].classList.remove('opacity-90');
@@ -84,19 +83,33 @@ function UIs() {
     };
   };
 
+  function resets(){
+    const imgs = Array.from(document.querySelectorAll('.items'));
+    for(let i = 0; i < imgs.length; i++){
+      imgs[i].classList.remove('scale-125');
+      imgs[i].classList.remove('scale-90');
+      imgs[i].classList.remove('opacity-90');
+    };
+  }
+
   async function Check() {
     // const animalnum = pro;
     // alert(animalnum);
-    let animal = document.querySelector(".check");
-    let fun = document.querySelector(".fanimal");
-    let sad = document.querySelector(".sanimal");
-    let funs = [...document.querySelectorAll(".fananimal")];
-    let sads = document.querySelector(".sadanimal");
-    let mirror = document.querySelector('.mirror');
-    let holder = document.querySelector('.itemholder');
-    let comment = document.querySelector('.comment');
+    const normal = document.getElementById('animals')
+    const animal = document.querySelector(".check");
+    const fun = document.querySelector(".fanimal");
+    const sad = document.querySelector(".sanimal");
+    const koma = document.querySelector('.koma');
+    const komaru = document.querySelector('.komaru');
+    const cardcomment = document.querySelector('.cardboard')
+    const funs = [...document.querySelectorAll(".fananimal")];
+    const sads = document.querySelector(".sadanimal");
+    const mirror = document.querySelector('.mirror');
+    const holder = document.querySelector('.itemholder');
+    const comment = document.querySelector('.comment');
     animal.classList.add("hidden");
 
+    //どっちもあってる
     if((name==="かがみ") && (now_env==="水辺")){
       holder.classList.add('hidden');
       mirror.classList.remove('hidden');
@@ -112,18 +125,43 @@ function UIs() {
         } else funs[i].classList.add('hidden');
         funs[i].classList.remove('animate-yurayura');
       }
-      // mirror.classList.add('hidden');
-      // comment.classList.add('hidden');
     }
-    else if(name==="かがみ"){
+    //道具違うとき
+    else if(now_env==="水辺" && name === "ダンボール"){
+      holder.classList.add('hidden');
+      komaru.classList.remove("hidden");
+      cardcomment.classList.remove('hidden');
+      koma.classList.add('animate-sayu');
+      await sleep(5000);
+      koma.classList.remove('animate-sayu');
+      komaru.classList.add('hidden');
+      cardcomment.classList.add('hidden');
+      holder.classList.remove('hidden');
+      normal.classList.remove('hidden');
+      resets();
+    }
+    //サバンナのとき
+    else if(now_env === "サバンナ" ){
       sad.classList.remove("hidden");
       sads.classList.add('animate-sayu');
       await sleep(3000);
       sads.classList.remove('animate-sayu');
     }
-    else if(now_env==="水辺"){
+    //森のとき
+    else if(now_env === "森" ){
       sad.classList.remove("hidden");
+      sads.classList.add('animate-sayu');
+      await sleep(3000);
+      sads.classList.remove('animate-sayu');
     }
+    //洞窟のとき
+    else if(now_env === "洞窟" ){
+      sad.classList.remove("hidden");
+      sads.classList.add('animate-sayu');
+      await sleep(3000);
+      sads.classList.remove('animate-sayu');
+    }
+    //どっちも違う
     else {
       sad.classList.remove("hidden");
       sads.classList.add('animate-sayu');
@@ -144,32 +182,32 @@ function UIs() {
       }
     }
   
-  
-                  // ビーコンの名前
-                  const name02 = 'FSC_BP103_2';
-                  const name03 = 'FSC_BP103_3';
-          
-                  const beacon_array = [
-                    { name: name02, rssi: 0, count: 0 },
-                    { name: name03, rssi: 0, count: 0 },
-                    
-                  ]
-                  
-                  // 初期値設定
-                  let beacon_check = beacon_array[0];
-                  let beacon = beacon_array[0];
-                  
-                  // beacon_distance よりも値が小さい（ビーコンとの距離が近い）時が beacon_count 回あったときに判定させる
-                  const beacon_count = 5;
-            
-                  // ビーコンの数
-                  const beacon_num = 2;
-            
-                  // beacon_distance よりも値が小さい時に判定させる
-                  const beacon_distance = -67;
 
-                  let beacon_select;
-                  
+      // ビーコンの名前
+      const name02 = 'FSC_BP103_2';
+      const name03 = 'FSC_BP103_3';
+
+      const beacon_array = [
+        { name: name02, rssi: 0, count: 0 },
+        { name: name03, rssi: 0, count: 0 },
+        
+      ]
+      
+      // 初期値設定
+      let beacon_check = beacon_array[0];
+      let beacon = beacon_array[0];
+      
+      // beacon_distance よりも値が小さい（ビーコンとの距離が近い）時が beacon_count 回あったときに判定させる
+      const beacon_count = 5;
+
+      // ビーコンの数
+      const beacon_num = 2;
+
+      // beacon_distance よりも値が小さい時に判定させる
+      const beacon_distance = -67;
+
+      let beacon_select;
+      
       
     function onWatchAdvertisementsButtonClick() {
   
@@ -196,42 +234,6 @@ function UIs() {
     
   
       device.addEventListener("advertisementreceived", (event) => {
-        // ビーコンの情報をHTMLで表示するためのやつ
-        // var elm02 = document.getElementById('test_line02');
-        // var elm03 = document.getElementById('test_line03');
-  
-        // // 名前で条件分岐
-        // if (event.device.name == name02) {
-  
-        // // 2番のRSSI取得
-        // RSSI02 = event.rssi;
-        // elm02.textContent = event.device.name + ' ' + RSSI02 + ' 近いよカウント= ' +  count02;
-        // }
-  
-        // if (event.device.name == name03) {
-  
-        // // 3番のRSSI取得
-        // RSSI03 = event.rssi;
-        // elm03.textContent = event.device.name + ' '  + RSSI03 + ' 近いよカウント= ' + count03;
-        // }
-  
-  
-        // // RSSI の比較 条件式ここに書く～～～～～～～～～～～～～～～～～～～～～～
-        // if ( RSSI02 > RSSI03) {
-        // // 2番の距離のほうが近い
-  
-        //   elm02.style.background = 'yellow';
-        //   elm03.style.background = 'white';
-        //   count02 += 1;
-  
-        // } else {
-        // // 3番の距離のほうが近い
-  
-        //   elm03.style.background = 'yellow';
-        //   elm02.style.background = 'white';
-        //   count03 += 1;
-  
-        // }
 
       // ビーコンの名前で条件判定　（ビーコンの名前が 2番だったら2番の配列の電波強度を更新）
       if (event.device.name == name02) {
@@ -377,6 +379,18 @@ function UIs() {
           </p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="喜んでるときの吹き出し" />
         </div>
+        <div className="cardboard w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]'>
+          わたしはたくさんの<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp></ruby>といるのが<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きな
+          </p>
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]'>
+            の。こんなものがあっても<ruby>足<rp>(</rp><rt>あし</rt><rp>)</rp></ruby>をケガするだけ
+          </p>
+          <p className='block text-left z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
+          だわ。<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うものが<ruby>欲<rp>(</rp><rt>ほ</rt><rp>)</rp></ruby>しいわ。
+          </p>
+          <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="困ってるときの吹き出し" />
+        </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-[40%] top-[20%] translate-x-[-45%] translate-y-[-20%]">
             <img className='fananimal hidden' src={Flafav1} alt="喜ぶフラミンゴ" />
@@ -386,6 +400,9 @@ function UIs() {
           <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img className='sadanimal' src={Flasick} alt="悲しむフラミンゴ" />
           </div>
+          <div className="komaru hidden w-[65%] fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+            <img className='koma' src={Flakomaru} alt="困るフラミンゴ" />
+          </div>
         </div>
         {/* <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
         <p id="num">0%</p>
@@ -393,12 +410,12 @@ function UIs() {
         <p id="test_line02">02デバイス</p>        
         <p id="test_line03">03デバイス</p> */}
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
-            <div className="flex justify-between mt-[-35px]">
-              <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-18px] w-[55px] h-[115px] object-cover' />
-              <img onClick={() => render(1,"ロープ")} src={rope} alt="ロープ" className='items mt-[-10px] w-[90px]  h-[105px] object-right-bottom object-cover' />
-              <img onClick={() => render(2,"ダンボール")} src={cardboard} className='items' alt="ダンボール" />
-              <img onClick={() => render(3,"ふくろ")} src={bag} alt="ふくろ" className='items mt-[-6px] w-[95px] h-[100px] object-left-bottom object-cover' />
-              <img onClick={() => render(4,"かがみ")} src={mirror} alt="かがみ" className='items mt-[-10px] w-[60px] h-[110px]' />
+            <div className="flex justify-between mt-[-35px] w-[100%]">
+              <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-20px] w-[17%] h-[115px]' />
+              <img onClick={() => render(1,"ロープ")} src={rope} alt="ロープ" className='items mt-[-8px] w-[20%] h-[105px]' />
+              <img onClick={() => render(2,"ダンボール")} src={cardboard} className='items w-[21%] mt-[-5px]' alt="ダンボール" />
+              <img onClick={() => render(3,"ふくろ")} src={bag} alt="ふくろ" className='items mt-[-11px] w-[21%] h-[100px]' />
+              <img onClick={() => render(4,"かがみ")} src={mirror} alt="かがみ" className='items mt-[-18px] w-[16%] h-[110px]' />
             </div>
           </div>
       </div>
