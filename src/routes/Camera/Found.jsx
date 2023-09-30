@@ -45,7 +45,7 @@ function Found(){
           <img className='block mx-auto pt-[20px]' src={close} alt="閉じるボタン" onClick={() => Choosenext()}/>
         </div>
       </div>
-      <div className='whatNextDo h-screen hidden items-center mx-[calc(100%-97%)] mt-[-20px]'>
+      <div className='whatNextDo h-100% hidden items-center mx-[calc(100%-97%)] mt-[-20px]'>
         <div>
           <h1 className='text-btntext  font-bold font-main text-[24px] mb-[24px]'>フラミンゴの一番好きな場所と<br/>アイテムを見つけられたよ！</h1>
           <img className='w-[50%] block ml-[calc(100%-80%)] mr-auto mb-[34px]' src={flamingo} alt="喜んでるフラミンゴ" />
