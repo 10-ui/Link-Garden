@@ -28,6 +28,7 @@ const colors = require('tailwindcss/colors')
         "accent": "#FFD027",
         "btntext": colors.white,
         "screen": "rgba(0,0,0,0.5)",
+        "blue":"#42BBFF",
       },
       fontFamily: {
         main: ['Noto Sans JP'],

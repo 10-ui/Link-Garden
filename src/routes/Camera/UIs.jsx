@@ -11,6 +11,7 @@ import Flafav2 from '../../assets/icon/animal_funflamingo2.svg';
 import Flafav3 from '../../assets/icon/animal_funflamingo3.svg';
 import Flasick from '../../assets/icon/animal_sadflamingo.svg';
 import Flakomaru from '../../assets/icon/animal_komarufulamingo.svg';
+import Flazannen from '../../assets/icon/animal_zannenflamingo.svg';
 import Flamirror from '../../assets/icon/animal_mirror.svg';
 import Comment from '../../assets/icon/animal_comment.svg';
 
@@ -20,7 +21,7 @@ function UIs() {
 
   const [num, setNum] = useState(null);
   const [name, setName] = useState(null);
-  let Beacon_num = 21;
+  let Beacon_num = 24 ;
   // let choose = 1;
   let area = {
     name:"初期値",
@@ -107,6 +108,9 @@ function UIs() {
     const mirror = document.querySelector('.mirror');
     const holder = document.querySelector('.itemholder');
     const comment = document.querySelector('.comment');
+    const sabanna = document.querySelector('.sabanna');
+    const doukutsu = document.querySelector('.doukutsu');
+    const mori = document.querySelector('.mori');
     animal.classList.add("hidden");
 
     //どっちもあってる
@@ -126,6 +130,48 @@ function UIs() {
         funs[i].classList.remove('animate-yurayura');
       }
     }
+    //サバンナのとき
+    else if(now_env === "サバンナ" ){
+      holder.classList.add('hidden');
+      sad.classList.remove("hidden");
+      sabanna.classList.remove('hidden');
+      sads.classList.add('animate-sayu');
+      await sleep(5000);
+      sads.classList.remove('animate-sayu');
+      sad.classList.add('hidden');
+      sabanna.classList.add('hidden');
+      holder.classList.remove('hidden');
+      normal.classList.remove('hidden');
+      resets();
+    }
+    //森のとき
+    else if(now_env === "森" ){
+      holder.classList.add('hidden');
+      sad.classList.remove("hidden");
+      mori.classList.remove('hidden');
+      sads.classList.add('animate-sayu');
+      await sleep(5000);
+      sads.classList.remove('animate-sayu');
+      sad.classList.add('hidden');
+      mori.classList.add('hidden');
+      holder.classList.remove('hidden');
+      normal.classList.remove('hidden');
+      resets();
+    }
+    //洞窟のとき
+    else if(now_env === "洞窟" ){
+      holder.classList.add('hidden');
+      sad.classList.remove("hidden");
+      doukutsu.classList.remove('hidden');
+      sads.classList.add('animate-sayu');
+      await sleep(5000);
+      sads.classList.remove('animate-sayu');
+      sad.classList.add('hidden');
+      doukutsu.classList.add('hidden');
+      holder.classList.remove('hidden');
+      normal.classList.remove('hidden');
+      resets();
+    }
     //道具違うとき
     else if(now_env==="水辺" && name === "ダンボール"){
       holder.classList.add('hidden');
@@ -139,27 +185,6 @@ function UIs() {
       holder.classList.remove('hidden');
       normal.classList.remove('hidden');
       resets();
-    }
-    //サバンナのとき
-    else if(now_env === "サバンナ" ){
-      sad.classList.remove("hidden");
-      sads.classList.add('animate-sayu');
-      await sleep(3000);
-      sads.classList.remove('animate-sayu');
-    }
-    //森のとき
-    else if(now_env === "森" ){
-      sad.classList.remove("hidden");
-      sads.classList.add('animate-sayu');
-      await sleep(3000);
-      sads.classList.remove('animate-sayu');
-    }
-    //洞窟のとき
-    else if(now_env === "洞窟" ){
-      sad.classList.remove("hidden");
-      sads.classList.add('animate-sayu');
-      await sleep(3000);
-      sads.classList.remove('animate-sayu');
     }
     //どっちも違う
     else {
@@ -387,9 +412,45 @@ function UIs() {
           の。こんなものがあっても<ruby>足<rp>(</rp><rt>あし</rt><rp>)</rp></ruby>をケガするだけ
           </p>
           <p className='block text-left z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
-          &emsp;だわ。<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うものが<ruby>欲<rp>(</rp><rt>ほ</rt><rp>)</rp></ruby>しいわ。
+          &nbsp;&nbsp;&thinsp;だわ。<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うものが<ruby>欲<rp>(</rp><rt>ほ</rt><rp>)</rp></ruby>しいわ。
           </p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="困ってるときの吹き出し" />
+        </div>
+        <div className="sabanna w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]'>
+          わたしは、<span className='text-blue'><ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby></span>が<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きなの。カラカラとした<ruby>場<rp>(</rp><rt>ば</rt><rp>)</rp></ruby>
+          </p>
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]'>
+          <ruby>所<rp>(</rp><rt>しょ</rt><rp>)</rp></ruby>はわたしには<ruby>合<rp>(</rp><rt>あ</rt><rp>)</rp></ruby>わないわ！もっと<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うとこ
+          </p>
+          <p className='block text-left z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
+          &nbsp;&nbsp;&thinsp;ろにも<ruby>連<rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れて<ruby>行<rp>(</rp><rt>い</rt><rp>)</rp></ruby>ってちょうだい！
+          </p>
+          <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="嫌がってるときの吹き出し" />
+        </div>
+        <div className="doukutsu w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]'>
+          わたしは、<span className='text-blue'><ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby></span>が<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きなの。ここだと<ruby>天敵<rp>(</rp><rt>てんてき</rt><rp>)</rp></ruby>が<ruby>多<rp>(</rp><rt>おお</rt><rp>)</rp></ruby>
+          </p>
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]'>
+          すぎて<ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp></ruby>してご<ruby>飯<rp>(</rp><rt>はん</rt><rp>)</rp></ruby>も<ruby>食<rp>(</rp><rt>た</rt><rp>)</rp></ruby>べられないわ。もっ
+          </p>
+          <p className='block text-left z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
+          &nbsp;&nbsp;&thinsp;と<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うところにも<ruby>連<rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れて<ruby>行<rp>(</rp><rt>い</rt><rp>)</rp></ruby>ってちょうだい！
+          </p>
+          <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="嫌がってるときの吹き出し" />
+        </div>
+        <div className="mori w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
+        <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]'>
+        わたしは、<span className='text-blue'><ruby>柔<rp>(</rp><rt>やわ</rt><rp>)</rp></ruby>らかい<ruby>地面<rp>(</rp><rt>地面</rt><rp>)</rp></ruby></span>が<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きなの。<ruby>硬<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>すぎ
+          </p>
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]'>
+          ると<ruby>足<rp>(</rp><rt>あし</rt><rp>)</rp></ruby>をケガしてしまうわ。もっと<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うとこ
+          </p>
+          <p className='block text-left z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
+          &nbsp;&nbsp;&thinsp;ろにも<ruby>連<rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れて<ruby>行<rp>(</rp><rt>い</rt><rp>)</rp></ruby>ってちょうだい！
+          </p>
+          <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="嫌がってるときの吹き出し" />
         </div>
         <div className='animalbox hidden fixed z-[40] h-screen w-auto items-center'>
           <div className="happy fanimal hidden fixed left-[40%] top-[20%] translate-x-[-45%] translate-y-[-20%]">
@@ -397,10 +458,10 @@ function UIs() {
             <img className='fananimal hidden' src={Flafav2} alt="喜ぶフラミンゴ" />
             <img className='fananimal hidden lotfun' src={Flafav3} alt="喜ぶフラミンゴ" />
           </div>
-          <div className="sad sanimal hidden fixed left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-            <img className='sadanimal' src={Flasick} alt="悲しむフラミンゴ" />
+          <div className="sad sanimal hidden fixed left-1/2 top-[35%] translate-x-[-50%] translate-y-[-35%]">
+            <img className='sadanimal' src={Flazannen} alt="悲しむフラミンゴ" />
           </div>
-          <div className="komaru hidden w-[65%] fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+          <div className="komaru hidden w-[65%] fixed top-[40%] left-1/2 translate-x-[-50%] translate-y-[-40%]">
             <img className='koma' src={Flakomaru} alt="困るフラミンゴ" />
           </div>
         </div>
@@ -412,7 +473,7 @@ function UIs() {
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px] w-[100%]">
               <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-20px] w-[17%] h-[115px]' />
-              <img onClick={() => render(1,"ロープ")} src={rope} alt="ロープ" className='items mt-[-8px] w-[20%] h-[105px]' />
+              <img onClick={() => render(1,"ロープ")} src={rope} alt="ロープ" className='items mt-[-8px] ml-[-5%] w-[20%] h-[105px]' />
               <img onClick={() => render(2,"ダンボール")} src={cardboard} className='items w-[21%] mt-[-5px]' alt="ダンボール" />
               <img onClick={() => render(3,"ふくろ")} src={bag} alt="ふくろ" className='items mt-[-11px] w-[21%] h-[100px]' />
               <img onClick={() => render(4,"かがみ")} src={mirror} alt="かがみ" className='items mt-[-18px] w-[16%] h-[110px]' />
