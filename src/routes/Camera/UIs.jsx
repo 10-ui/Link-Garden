@@ -384,10 +384,10 @@ function UIs() {
           わたしはたくさんの<ruby>友達<rp>(</rp><rt>ともだち</rt><rp>)</rp></ruby>といるのが<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きな
           </p>
           <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]'>
-            の。こんなものがあっても<ruby>足<rp>(</rp><rt>あし</rt><rp>)</rp></ruby>をケガするだけ
+          の。こんなものがあっても<ruby>足<rp>(</rp><rt>あし</rt><rp>)</rp></ruby>をケガするだけ
           </p>
           <p className='block text-left z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
-          だわ。<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うものが<ruby>欲<rp>(</rp><rt>ほ</rt><rp>)</rp></ruby>しいわ。
+          &emsp;だわ。<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うものが<ruby>欲<rp>(</rp><rt>ほ</rt><rp>)</rp></ruby>しいわ。
           </p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="困ってるときの吹き出し" />
         </div>
