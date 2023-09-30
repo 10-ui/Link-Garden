@@ -96,7 +96,7 @@ function UIs() {
   async function Check() {
     // const animalnum = pro;
     // alert(animalnum);
-    const normal = document.getElementById('animals')
+    const normal = document.getElementById('animals');
     const animal = document.querySelector(".check");
     const fun = document.querySelector(".fanimal");
     const sad = document.querySelector(".sanimal");

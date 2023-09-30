@@ -13,6 +13,27 @@ function Found(){
     whatNextDo.classList.add('grid');
   }
 
+  function resets(){
+    const imgs = Array.from(document.querySelectorAll('.items'));
+    for(let i = 0; i < imgs.length; i++){
+      imgs[i].classList.remove('scale-125');
+      imgs[i].classList.remove('scale-90');
+      imgs[i].classList.remove('opacity-90');
+    };
+  }
+
+  function playSameAnimal(){
+    const whatNextDo = document.querySelector('.whatNextDo');
+    const holder = document.querySelector('.itemholder');
+    const normal = document.getElementById('animals');
+    whatNextDo.classList.remove('grid');
+    whatNextDo.classList.add('hidden');
+    holder.classList.remove('hidden');
+    normal.classList.remove('hidden');
+    document.querySelector('.seemore').classList.add('hidden');
+    resets();
+  }
+
 
   return (
     <>
@@ -50,7 +71,7 @@ function Found(){
           <h1 className='text-btntext  font-bold font-main text-[24px] mb-[24px]'>フラミンゴの一番好きな場所と<br/>アイテムを見つけられたよ！</h1>
           <img className='w-[50%] block ml-[calc(100%-80%)] mr-auto mb-[34px]' src={flamingo} alt="喜んでるフラミンゴ" />
           <p className='text-btntext block mx-auto text-center w-fit font-bold font-main text-[24px] mb-[23px]'>次は何をする？</p>
-          <a className='text-btntext border-main block mx-auto rounded text-center border-2 w-[90%] py-[10px] font-bold font-main text-[24px] mb-[10px]'>同じ動物で続ける！</a>
+          <a className='text-btntext border-main block mx-auto rounded text-center border-2 w-[90%] py-[10px] font-bold font-main text-[24px] mb-[10px]' onClick={() => playSameAnimal()}>同じ動物で続ける！</a>
           <Link to="/Cushion" className='text-btntext border-main block mx-auto rounded text-center border-2 w-[90%] py-[10px] font-bold font-main text-[24px] mb-[10px]'>違う動物を見てみる！</Link>
           <a className='text-btntext block mx-auto border-main rounded text-center border-2 w-[90%] py-[10px] font-bold font-main text-[24px] mb-[10px]'>おわる</a>
         </div>
