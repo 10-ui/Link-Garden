@@ -4,6 +4,7 @@ import Bluetooth from './routes/Bluetooth.jsx';
 import Items from './routes/Get.jsx';
 import Result from './routes/Result.jsx';
 import Camera from './routes/Camera.jsx';
+import Cushion from './routes/Cushion.jsx';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Getitem" element={ < Items /> } />
         <Route path="/Result" element={ < Result /> } />
         <Route path="/Nuriecamera" element={ <Camera /> } />
+        <Route path="/Cushion" element={ <Cushion /> } />
       </Routes>
     </>
   )

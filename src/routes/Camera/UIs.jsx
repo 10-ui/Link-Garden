@@ -338,6 +338,7 @@ function UIs() {
         const mirrors = document.querySelector('.mirror');
         const lotfun = document.querySelector('.lotfun')
         nice.classList.remove('hidden');
+        nice.classList.add('grid');
         lotfun.classList.add('hidden');
         mirrors.classList.add('hidden');
         comments.classList.add('hidden');
