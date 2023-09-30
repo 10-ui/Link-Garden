@@ -13,7 +13,7 @@ function Found(){
     whatNextDo.classList.add('grid');
   }
 
-  function resets(){
+  function retries(){
     const imgs = Array.from(document.querySelectorAll('.items'));
     for(let i = 0; i < imgs.length; i++){
       imgs[i].classList.remove('scale-125');
@@ -31,7 +31,7 @@ function Found(){
     holder.classList.remove('hidden');
     normal.classList.remove('hidden');
     document.querySelector('.seemore').classList.add('hidden');
-    resets();
+    retries();
   }
 
 

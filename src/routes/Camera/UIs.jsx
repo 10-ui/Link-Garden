@@ -108,6 +108,7 @@ function UIs() {
     const mirror = document.querySelector('.mirror');
     const holder = document.querySelector('.itemholder');
     const comment = document.querySelector('.comment');
+    const mizube = document.querySelector('.mizube');
     const sabanna = document.querySelector('.sabanna');
     const doukutsu = document.querySelector('.doukutsu');
     const mori = document.querySelector('.mori');
@@ -119,6 +120,7 @@ function UIs() {
       mirror.classList.remove('hidden');
       comment.classList.remove('hidden');
       fun.classList.remove("hidden");
+      setName(null);
       for (let i = 0; i < funs.length; i++) {
         funs[i].classList.remove('hidden');
         funs[i].classList.add('animate-yurayura');
@@ -129,6 +131,22 @@ function UIs() {
         } else funs[i].classList.add('hidden');
         funs[i].classList.remove('animate-yurayura');
       }
+    }
+    //みずべのとき
+    else if(now_env === "水辺" ){
+      holder.classList.add('hidden');
+      fun.classList.remove("hidden");
+      mizube.classList.remove('hidden');
+      funs[0].classList.remove('hidden');
+      funs[0].classList.add('animate-yurayura');
+      await sleep(5000); 
+      funs[0].classList.remove('animate-yurayura');
+      funs[0].classList.add('hidden');
+      fun.classList.add('hidden');
+      mizube.classList.add('hidden');
+      holder.classList.remove('hidden');
+      normal.classList.remove('hidden');
+      resets();
     }
     //サバンナのとき
     else if(now_env === "サバンナ" ){
@@ -415,6 +433,18 @@ function UIs() {
           &nbsp;&nbsp;&thinsp;だわ。<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うものが<ruby>欲<rp>(</rp><rt>ほ</rt><rp>)</rp></ruby>しいわ。
           </p>
           <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="困ってるときの吹き出し" />
+        </div>
+        <div className="mizube w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]'>
+          わたしは、きれい<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きなの！<ruby>羽<rp>(</rp><rt>はね</rt><rp>)</rp></ruby>を<ruby>綺麗<rp>(</rp><rt>きれい</rt><rp>)</rp></ruby>にする
+          </p>
+          <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]'>
+          ためによく<ruby>水浴<rp>(</rp><rt>みずあ</rt><rp>)</rp></ruby>びをするの。<ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>のある<ruby>場所<rp>(</rp><rt>ばしょ</rt><rp>)</rp></ruby>に
+          </p>
+          <p className='block text-left z-[50] w-[95%] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]'>
+          &nbsp;&nbsp;&thinsp;<ruby>連<rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れてきてくれてありがとう！
+          </p>
+          <img className='z-[49] w-[95%] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]' src={Comment} alt="嬉しいときの吹き出し" />
         </div>
         <div className="sabanna w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
           <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]'>
