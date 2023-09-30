@@ -132,6 +132,20 @@ function UIs() {
         funs[i].classList.remove('animate-yurayura');
       }
     }
+    //道具違うとき
+    else if(now_env==="水辺" && name === "ダンボール"){
+      holder.classList.add('hidden');
+      komaru.classList.remove("hidden");
+      cardcomment.classList.remove('hidden');
+      koma.classList.add('animate-sayu');
+      await sleep(5000);
+      koma.classList.remove('animate-sayu');
+      komaru.classList.add('hidden');
+      cardcomment.classList.add('hidden');
+      holder.classList.remove('hidden');
+      normal.classList.remove('hidden');
+      resets();
+    }
     //みずべのとき
     else if(now_env === "水辺" ){
       holder.classList.add('hidden');
@@ -186,20 +200,6 @@ function UIs() {
       sads.classList.remove('animate-sayu');
       sad.classList.add('hidden');
       doukutsu.classList.add('hidden');
-      holder.classList.remove('hidden');
-      normal.classList.remove('hidden');
-      resets();
-    }
-    //道具違うとき
-    else if(now_env==="水辺" && name === "ダンボール"){
-      holder.classList.add('hidden');
-      komaru.classList.remove("hidden");
-      cardcomment.classList.remove('hidden');
-      koma.classList.add('animate-sayu');
-      await sleep(5000);
-      koma.classList.remove('animate-sayu');
-      komaru.classList.add('hidden');
-      cardcomment.classList.add('hidden');
       holder.classList.remove('hidden');
       normal.classList.remove('hidden');
       resets();
