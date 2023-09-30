@@ -21,7 +21,7 @@ function UIs() {
 
   const [num, setNum] = useState(null);
   const [name, setName] = useState(null);
-  let Beacon_num = 24 ;
+  let Beacon_num = 21 ;
   // let choose = 1;
   let area = {
     name:"初期値",
@@ -195,17 +195,17 @@ function UIs() {
     }
   }
   
-    async function Timer(device) {
-      device.watchAdvertisements()
-      const num = document.getElementById('num');
-      let percent = null
-      await sleep(1500);
-      for(let i = 0; i < 101; i++){
-        await sleep(100);
-        percent = `${i}%`;
-        num.innerHTML = percent;
-      }
+  async function Timer(device) {
+    device.watchAdvertisements()
+    const num = document.getElementById('num');
+    let percent = null
+    await sleep(1500);
+    for(let i = 0; i < 101; i++){
+      await sleep(100);
+      percent = `${i}%`;
+      num.innerHTML = percent;
     }
+  }
   
 
       // ビーコンの名前
