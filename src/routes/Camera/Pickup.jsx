@@ -118,9 +118,6 @@ function Pickup() {
   // ここに現在のピクセル情報を入れていく
   const currentColor = {};
 
-  // const text_brown = document.getElementById("text_brown");
-  // const text_blue = document.getElementById("text_blue");
-
   // 1ピクセルずつ確認していく
   for (let i = 0, len = data.length; i < len; i += 4) {
     currentColor.r = data[i];
@@ -179,37 +176,6 @@ function Pickup() {
   
   console.log ('color_select =' + color_select.name);
   console.log(color_array); 
-
-  // if (brown > blue && brown > red && brown > green && brown > yellow) {
-  // // 茶色が一番多い
-  // // text_brown.style.background = 'brown';
-  // console.log('茶色が一番多い');
-  // } else if (blue > red && blue > green && blue > yellow) {
-  // // 青色が一番多い
-  // // text_blue.style.background = 'blue';
-  // console.log('青色が一番多い');
-  // } else if (red > green && red > yellow) {
-  // // 赤色が一番多い
-  // // text_red.style.background = 'red';
-  // console.log('赤色が一番多い');
-  // } else if (green > yellow) {
-  // // 緑色が一番多い
-  // // text_green.style.background = 'green';
-  // console.log('緑色が一番多い');
-  // } else if (yellow > green) {
-  // // 黄色が一番多い
-  // // text_yellow.style.background = 'yellow';
-  // console.log('黄色が一番多い');
-  // } else {
-  // console.log('色が検出されませんでした');
-  // }
-
-  // console.log('茶色 ' + brown);
-  // console.log('青色 ' + blue);
-  // console.log('赤色 ' + red);
-  // console.log('緑色 ' + green);
-  // console.log('黄色 ' + yellow);
-  // console.log(' ');
 
   function _checkTargetColor(current, min, max) {
   if (min.r > current.r || current.r > max.r) return;
