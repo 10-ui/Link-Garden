@@ -27,52 +27,52 @@ function UIs() {
     num:999
   };
 
-  let Beacon_num = 21 ;
+  let Beacon_num = null ;
 
-  switch(Beacon_num){
-    case 21:
-      area.name = "水辺";
-      area.num = Beacon_num;
-      break;
-    case 22:
-      area.name = "洞窟";
-      area.num = Beacon_num;
-      break;
-    case 23:
-      area.name = "サバンナ";
-      area.num = Beacon_num;
-      break;
-    case 24:
-      area.name = "森";
-      area.num = Beacon_num;
-      break;
-    default:
-      alert('error');
-  };
+  // switch(Beacon_num){
+  //   case 21:
+  //     area.name = "水辺";
+  //     area.num = Beacon_num;
+  //     break;
+  //   case 22:
+  //     area.name = "洞窟";
+  //     area.num = Beacon_num;
+  //     break;
+  //   case 23:
+  //     area.name = "サバンナ";
+  //     area.num = Beacon_num;
+  //     break;
+  //   case 24:
+  //     area.name = "森";
+  //     area.num = Beacon_num;
+  //     break;
+  //   default:
+  //     alert('error');
+  // };
 
-  useEffect(() => {
-    switch(Beacon_num){
-      case 21:
-        area.name = "水辺";
-        area.num = Beacon_num;
-        break;
-      case 22:
-        area.name = "洞窟";
-        area.num = Beacon_num;
-        break;
-      case 23:
-        area.name = "サバンナ";
-        area.num = Beacon_num;
-        break;
-      case 24:
-        area.name = "森";
-        area.num = Beacon_num;
-        break;
-      default:
-        alert('error');
-    };
-    console.log('useEffectが実行されました');
-  }, [Beacon_num]);
+  // useEffect(() => {
+  //   switch(Beacon_num){
+  //     case 21:
+  //       area.name = "水辺";
+  //       area.num = Beacon_num;
+  //       break;
+  //     case 22:
+  //       area.name = "洞窟";
+  //       area.num = Beacon_num;
+  //       break;
+  //     case 23:
+  //       area.name = "サバンナ";
+  //       area.num = Beacon_num;
+  //       break;
+  //     case 24:
+  //       area.name = "森";
+  //       area.num = Beacon_num;
+  //       break;
+  //     default:
+  //       alert('error');
+  //   };
+  //   console.log('useEffectが実行されました');
+  // }, [Beacon_num]);
 
   let now_env = area.name; //environment
   
@@ -165,6 +165,7 @@ function UIs() {
       // 一番近いビーコン　かつ　ビーコンの電波強度が -67よりも小さい時が beacon_count(今は5回)よりも多いとき
       if (beacon_select.name == beacon_check.name && beacon_select.count > beacon_count ) {
         console.log("選ばれたのは君だ！！" + beacon_select.name);
+        
         beacon = beacon_select;
         
         // すべてのビーコンの中にある count を 0 にリセット
@@ -178,7 +179,28 @@ function UIs() {
         else if(beacon.name === name03){
           Beacon_num = 22;
         }
-        
+        console.log(Beacon_num);
+        switch(Beacon_num){
+          case 21:
+            area.name = "水辺";
+            area.num = Beacon_num;
+            break;
+          case 22:
+            area.name = "洞窟";
+            area.num = Beacon_num;
+            break;
+          case 23:
+            area.name = "サバンナ";
+            area.num = Beacon_num;
+            break;
+          case 24:
+            area.name = "森";
+            area.num = Beacon_num;
+            break;
+          default:
+            alert('error');
+        };
+        now_env = area.name;
       }
       
       beacon_check = beacon_select;
