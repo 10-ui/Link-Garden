@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Link } from "react-router-dom";
 import cardboard from '../../assets/icon/tool_cardboard.svg';
 import rope from '../../assets/icon/tool_rope.svg';
 import mirror from '../../assets/icon/tool_mirror.svg';
@@ -29,7 +28,30 @@ function UIs() {
 
   let Beacon_num = 21 ;
 
-  let now_env; //environment
+  l
+
+  switch(Beacon_num){
+    case 21:
+      area.name = "水辺";
+      area.num = Beacon_num;
+      break;
+    case 22:
+      area.name = "洞窟";
+      area.num = Beacon_num;
+      break;
+    case 23:
+      area.name = "サバンナ";
+      area.num = Beacon_num;
+      break;
+    case 24:
+      area.name = "森";
+      area.num = Beacon_num;
+      break;
+    default:
+      alert('error');
+  };
+
+  let now_env = area.name; //environment
   
   async function Timer(device) {
     device.watchAdvertisements()
