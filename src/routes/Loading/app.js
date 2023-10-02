@@ -16,12 +16,12 @@ buttonConnect.addEventListener('click', function () { //leafonyと接続
   leafony.connect();
   // buttonConnect.style.display = 'none';
   // buttonDisconnect.style.display = '';
-  navigator.bluetooth.requestDevice({
-    filters: [
-      {
-        name: 'Deafony_AC02'
-      }],  //< - Prefer filters to save energy & show relevant devices.
-  })
+  // navigator.bluetooth.requestDevice({
+  //   filters: [
+  //     {
+  //       name: 'Deafony_AC02'
+  //     }],  //< - Prefer filters to save energy & show relevant devices.
+  // })
 });
 function updateTable(state) {
   item11 = state.item11;

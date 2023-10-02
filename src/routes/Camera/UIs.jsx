@@ -253,7 +253,7 @@ function UIs() {
       
       
     function onWatchAdvertisementsButtonClick() {
-      
+
       
       console.log('Requesting any Bluetooth device...');
       navigator.bluetooth.requestDevice({
@@ -332,7 +332,6 @@ function UIs() {
       var elm = document.getElementById('test_line');
         elm.textContent = event.device.name;
       });
-      
       
       
       //device.onavailabilitychanged = (event) => {

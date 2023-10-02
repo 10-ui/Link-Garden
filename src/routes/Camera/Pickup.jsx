@@ -166,11 +166,17 @@ function Pickup() {
 
   let color_select = color_array[0];
           
-  for (let i = 1; i < 5; i++) {
+  for (let i = 1; i < color_array.length; i++) {
     if (color_select.count < color_array[i].count) {
       color_select = color_array[i];
     }
   }
+  for (let i = 0; i < color_array.length; i++) {
+    if(color_select.name === color_array[i].name)
+    console.log(`Most color is ${color_array[i].name}`);
+    else console.log('++++++');
+  }
+  
   console.log ('color_select =' + color_select.name);
   console.log(color_array); 
 

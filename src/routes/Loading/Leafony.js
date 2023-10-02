@@ -6,7 +6,7 @@
  * Leafonyクラス
  * @param none
  */
-function Leafony() {
+    function Leafony() {
 
     const SERVICE_UUID = "442f1570-8a00-9a28-cbe1-e1d4212d53eb";
     const CHARACTERISTIC_READ_UUID = "442f1571-8a00-9a28-cbe1-e1d4212d53eb";
@@ -75,7 +75,7 @@ function Leafony() {
         //データを受信した時に呼び出される関数を指定
         char.read.addEventListener('characteristicvaluechanged', handleData);
 
-        setTimeout(sendCommand, 1000, 'SND');
+        setInterval(sendCommand, 1000, 'SND');
     }
 
     /**
