@@ -132,7 +132,7 @@ function UIs() {
           Beacon_num = 22;
         }
         else if(beacon.name === name03){
-          Beacon_num = 22;
+          Beacon_num = 21;
         }
         console.log(Beacon_num);
         switch(Beacon_num){
@@ -372,8 +372,7 @@ function UIs() {
           sads.classList.remove('animate-sayu');
         }
       }
-
-
+        }
       function Found(){
         const nice = document.querySelector('.nice');
         const comments = document.querySelector('.comment');
@@ -385,8 +384,6 @@ function UIs() {
         mirrors.classList.add('hidden');
         comments.classList.add('hidden');
       }
-        }
-
 
   return (
     <>
