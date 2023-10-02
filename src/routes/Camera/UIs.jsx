@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import { Link } from "react-router-dom";
 import cardboard from '../../assets/icon/tool_cardboard.svg';
 import rope from '../../assets/icon/tool_rope.svg';
@@ -21,12 +21,14 @@ function UIs() {
 
   const [num, setNum] = useState(null);
   const [name, setName] = useState(null);
-  let Beacon_num = 21 ;
-  // let choose = 1;
+
   let area = {
     name:"初期値",
     num:999
   };
+
+  let Beacon_num = 21 ;
+
   switch(Beacon_num){
     case 21:
       area.name = "水辺";
@@ -48,173 +50,31 @@ function UIs() {
       alert('error');
   };
 
+  useEffect(() => {
+    switch(Beacon_num){
+      case 21:
+        area.name = "水辺";
+        area.num = Beacon_num;
+        break;
+      case 22:
+        area.name = "洞窟";
+        area.num = Beacon_num;
+        break;
+      case 23:
+        area.name = "サバンナ";
+        area.num = Beacon_num;
+        break;
+      case 24:
+        area.name = "森";
+        area.num = Beacon_num;
+        break;
+      default:
+        alert('error');
+    };
+    console.log('useEffectが実行されました');
+  }, [Beacon_num]);
+
   let now_env = area.name; //environment
-
-  function render(props,name) {
-    Clicked(props)
-    setNum(props)
-    setName(name)
-  }
-
-  function Clicked(props) {
-
-    let imgs = Array.from(document.querySelectorAll('.items'));
-    let fun = document.querySelector(".fanimal");
-    let sad = document.querySelector(".sanimal");
-    let animal = document.querySelector(".check");
-    console.log(animal);
-
-    fun.classList.add("hidden");
-    sad.classList.add("hidden");
-    animal.classList.remove("hidden");
-
-    for(let i = 0; i < imgs.length; i++){
-      imgs[i].classList.remove('scale-125');
-      imgs[i].classList.remove('scale-90');
-      imgs[i].classList.remove('opacity-90');
-    };
-  
-    imgs[props].classList.add('scale-125');
-  
-    imgs.splice(props,1)
-  
-    for(let i = 0; i <=3; i++){
-      imgs[i].classList.add('scale-90');
-      imgs[i].classList.add('opacity-90');
-    };
-  };
-
-  function resets(){
-    const imgs = Array.from(document.querySelectorAll('.items'));
-    for(let i = 0; i < imgs.length; i++){
-      imgs[i].classList.remove('scale-125');
-      imgs[i].classList.remove('scale-90');
-      imgs[i].classList.remove('opacity-90');
-    };
-  }
-
-  async function Check() {
-    const Area = document.querySelector('.Area');
-    if(Beacon_num === 21){
-      Area.classList.add('hidden');
-    } else console.log('-----------');
-
-    const normal = document.getElementById('animals');
-    const animal = document.querySelector(".check");
-    const fun = document.querySelector(".fanimal");
-    const sad = document.querySelector(".sanimal");
-    const koma = document.querySelector('.koma');
-    const komaru = document.querySelector('.komaru');
-    const cardcomment = document.querySelector('.cardboard')
-    const funs = [...document.querySelectorAll(".fananimal")];
-    const sads = document.querySelector(".sadanimal");
-    const mirror = document.querySelector('.mirror');
-    const holder = document.querySelector('.itemholder');
-    const comment = document.querySelector('.comment');
-    const mizube = document.querySelector('.mizube');
-    const sabanna = document.querySelector('.sabanna');
-    const doukutsu = document.querySelector('.doukutsu');
-    const mori = document.querySelector('.mori');
-    animal.classList.add("hidden");
-
-    //どっちもあってる
-    if((name==="かがみ") && (now_env==="水辺")){
-      holder.classList.add('hidden');
-      mirror.classList.remove('hidden');
-      comment.classList.remove('hidden');
-      fun.classList.remove("hidden");
-      setName(null);
-      for (let i = 0; i < funs.length; i++) {
-        funs[i].classList.remove('hidden');
-        funs[i].classList.add('animate-yurayura');
-        await sleep(2000);
-        if(i == 2){
-          document.querySelector('.seemore').classList.remove('hidden');
-          document.querySelector('.seemore').classList.add('block');
-        } else funs[i].classList.add('hidden');
-        funs[i].classList.remove('animate-yurayura');
-      }
-    }
-    //道具違うとき
-    else if(now_env==="水辺" && name === "ダンボール"){
-      holder.classList.add('hidden');
-      komaru.classList.remove("hidden");
-      cardcomment.classList.remove('hidden');
-      koma.classList.add('animate-sayu');
-      await sleep(5000);
-      koma.classList.remove('animate-sayu');
-      komaru.classList.add('hidden');
-      cardcomment.classList.add('hidden');
-      holder.classList.remove('hidden');
-      normal.classList.remove('hidden');
-      resets();
-    }
-    //みずべのとき
-    else if(now_env === "水辺" ){
-      holder.classList.add('hidden');
-      fun.classList.remove("hidden");
-      mizube.classList.remove('hidden');
-      funs[0].classList.remove('hidden');
-      funs[0].classList.add('animate-yurayura');
-      await sleep(5000); 
-      funs[0].classList.remove('animate-yurayura');
-      funs[0].classList.add('hidden');
-      fun.classList.add('hidden');
-      mizube.classList.add('hidden');
-      holder.classList.remove('hidden');
-      normal.classList.remove('hidden');
-      resets();
-    }
-    //サバンナのとき
-    else if(now_env === "サバンナ" ){
-      holder.classList.add('hidden');
-      sad.classList.remove("hidden");
-      sabanna.classList.remove('hidden');
-      sads.classList.add('animate-sayu');
-      await sleep(5000);
-      sads.classList.remove('animate-sayu');
-      sad.classList.add('hidden');
-      sabanna.classList.add('hidden');
-      holder.classList.remove('hidden');
-      normal.classList.remove('hidden');
-      resets();
-    }
-    //森のとき
-    else if(now_env === "森" ){
-      holder.classList.add('hidden');
-      sad.classList.remove("hidden");
-      mori.classList.remove('hidden');
-      sads.classList.add('animate-sayu');
-      await sleep(5000);
-      sads.classList.remove('animate-sayu');
-      sad.classList.add('hidden');
-      mori.classList.add('hidden');
-      holder.classList.remove('hidden');
-      normal.classList.remove('hidden');
-      resets();
-    }
-    //洞窟のとき
-    else if(now_env === "洞窟" ){
-      holder.classList.add('hidden');
-      sad.classList.remove("hidden");
-      doukutsu.classList.remove('hidden');
-      sads.classList.add('animate-sayu');
-      await sleep(5000);
-      sads.classList.remove('animate-sayu');
-      sad.classList.add('hidden');
-      doukutsu.classList.add('hidden');
-      holder.classList.remove('hidden');
-      normal.classList.remove('hidden');
-      resets();
-    }
-    //どっちも違う
-    else {
-      sad.classList.remove("hidden");
-      sads.classList.add('animate-sayu');
-      await sleep(3000);
-      sads.classList.remove('animate-sayu');
-    }
-  }
   
   async function Timer(device) {
     device.watchAdvertisements()
@@ -247,7 +107,7 @@ function UIs() {
       const beacon_count = 5;
 
       // ビーコンの数
-      const beacon_num = 2;
+      const beacon_val = 2;
 
       // beacon_distance よりも値が小さい時に判定させる
       const beacon_distance = -67;
@@ -262,10 +122,10 @@ function UIs() {
       navigator.bluetooth.requestDevice({
       filters: [
       {
-        name: 'FSC_BP103_2'
+        name: name02
       },
       {
-        name: 'FSC_BP103_3'
+        name: name03
       }],  //< - Prefer filters to save energy & show relevant devices.
       
       })
@@ -291,7 +151,7 @@ function UIs() {
       
       // どのビーコンが一番近いか判定して beacon_selectにいれる
       beacon_select = beacon_array[0];
-      for (let i = 1; i < 2; i++) {
+      for (let i = 1; i < beacon_array.length; i++) {
         if (beacon_select.rssi < beacon_array[i].rssi) {
           beacon_select = beacon_array[i];
         }
@@ -308,8 +168,15 @@ function UIs() {
         beacon = beacon_select;
         
         // すべてのビーコンの中にある count を 0 にリセット
-        for (let i = 0; i < beacon_num; i++) {
+        for (let i = 0; i < beacon_val; i++) {
           beacon_array[i].count = 0;
+        }
+
+        if(beacon.name === name02){
+          Beacon_num = 22;
+        }
+        else if(beacon.name === name03){
+          Beacon_num = 22;
         }
         
       }
@@ -319,10 +186,7 @@ function UIs() {
       
       console.log(beacon_array[0]);
       console.log(beacon_array[1]);
-      console.log(beacon_select);
-
-      // elm02.textContent = beacon_array[0].name + beacon_array[0].rssi + beacon_array[0].count + beacon.name;                                    
-      // elm03.textContent = beacon_array[1].name + beacon_array[1].rssi + beacon_array[1].count;                                
+      console.log(beacon_select);                            
 
       event.manufacturerData.forEach((valueDataView, key) => {
       logDataView('Manufacturer', key, valueDataView);
@@ -332,26 +196,9 @@ function UIs() {
       });
       
       
-      var elm = document.getElementById('test_line');
-        elm.textContent = event.device.name;
+      // var elm = document.getElementById('test_line');
+      //   elm.textContent = event.device.name;
       });
-      
-      
-      //device.onavailabilitychanged = (event) => {
-      //  console.log('Advertisement received.');
-      //    console.log('  Device Name: ' + event.device.name);
-      //    console.log('  Device ID: ' + event.device.id);
-      //    console.log('  RSSI: ' + event.rssi);
-      //    console.log('  TX Power: ' + event.txPower);
-      //    console.log('  UUIDs: ' + event.uuids);
-      //    event.manufacturerData.forEach((valueDataView, key) => {
-      //        logDataView('Manufacturer', key, valueDataView);
-      //    });
-      //    event.serviceData.forEach((valueDataView, key) => {
-      //        logDataView('Service', key, valueDataView);
-      //    });
-      //};
-      
       
       console.log(device.id);
       console.log('Watching advertisements from "' + device.name + '"...');
@@ -376,6 +223,173 @@ function UIs() {
       '\n    (Hex) ' + hexString +
       '\n    (ASCII) ' + asciiString);
       };
+
+
+      function render(props,name) {
+        Clicked(props)
+        setNum(props)
+        setName(name)
+      }
+    
+      function Clicked(props) {
+    
+        let imgs = Array.from(document.querySelectorAll('.items'));
+        let fun = document.querySelector(".fanimal");
+        let sad = document.querySelector(".sanimal");
+        let animal = document.querySelector(".check");
+        console.log(animal);
+    
+        fun.classList.add("hidden");
+        sad.classList.add("hidden");
+        animal.classList.remove("hidden");
+    
+        for(let i = 0; i < imgs.length; i++){
+          imgs[i].classList.remove('scale-125');
+          imgs[i].classList.remove('scale-90');
+          imgs[i].classList.remove('opacity-90');
+        };
+      
+        imgs[props].classList.add('scale-125');
+      
+        imgs.splice(props,1)
+      
+        for(let i = 0; i <=3; i++){
+          imgs[i].classList.add('scale-90');
+          imgs[i].classList.add('opacity-90');
+        };
+      };
+    
+      function resets(){
+        const imgs = Array.from(document.querySelectorAll('.items'));
+        for(let i = 0; i < imgs.length; i++){
+          imgs[i].classList.remove('scale-125');
+          imgs[i].classList.remove('scale-90');
+          imgs[i].classList.remove('opacity-90');
+        };
+      }
+    
+      async function Check() {
+        const Area = document.querySelector('.Area');
+        if(Beacon_num === 21){
+          Area.classList.add('hidden');
+        } else console.log('-----------');
+    
+        const normal = document.getElementById('animals');
+        const animal = document.querySelector(".check");
+        const fun = document.querySelector(".fanimal");
+        const sad = document.querySelector(".sanimal");
+        const koma = document.querySelector('.koma');
+        const komaru = document.querySelector('.komaru');
+        const cardcomment = document.querySelector('.cardboard')
+        const funs = [...document.querySelectorAll(".fananimal")];
+        const sads = document.querySelector(".sadanimal");
+        const mirror = document.querySelector('.mirror');
+        const holder = document.querySelector('.itemholder');
+        const comment = document.querySelector('.comment');
+        const mizube = document.querySelector('.mizube');
+        const sabanna = document.querySelector('.sabanna');
+        const doukutsu = document.querySelector('.doukutsu');
+        const mori = document.querySelector('.mori');
+        animal.classList.add("hidden");
+    
+        //どっちもあってる
+        if((name==="かがみ") && (now_env==="水辺")){
+          holder.classList.add('hidden');
+          mirror.classList.remove('hidden');
+          comment.classList.remove('hidden');
+          fun.classList.remove("hidden");
+          setName(null);
+          for (let i = 0; i < funs.length; i++) {
+            funs[i].classList.remove('hidden');
+            funs[i].classList.add('animate-yurayura');
+            await sleep(2000);
+            if(i == 2){
+              document.querySelector('.seemore').classList.remove('hidden');
+              document.querySelector('.seemore').classList.add('block');
+            } else funs[i].classList.add('hidden');
+            funs[i].classList.remove('animate-yurayura');
+          }
+        }
+        //道具違うとき
+        else if(now_env==="水辺" && name === "ダンボール"){
+          holder.classList.add('hidden');
+          komaru.classList.remove("hidden");
+          cardcomment.classList.remove('hidden');
+          koma.classList.add('animate-sayu');
+          await sleep(5000);
+          koma.classList.remove('animate-sayu');
+          komaru.classList.add('hidden');
+          cardcomment.classList.add('hidden');
+          holder.classList.remove('hidden');
+          normal.classList.remove('hidden');
+          resets();
+        }
+        //みずべのとき
+        else if(now_env === "水辺" ){
+          holder.classList.add('hidden');
+          fun.classList.remove("hidden");
+          mizube.classList.remove('hidden');
+          funs[0].classList.remove('hidden');
+          funs[0].classList.add('animate-yurayura');
+          await sleep(5000); 
+          funs[0].classList.remove('animate-yurayura');
+          funs[0].classList.add('hidden');
+          fun.classList.add('hidden');
+          mizube.classList.add('hidden');
+          holder.classList.remove('hidden');
+          normal.classList.remove('hidden');
+          resets();
+        }
+        //サバンナのとき
+        else if(now_env === "サバンナ" ){
+          holder.classList.add('hidden');
+          sad.classList.remove("hidden");
+          sabanna.classList.remove('hidden');
+          sads.classList.add('animate-sayu');
+          await sleep(5000);
+          sads.classList.remove('animate-sayu');
+          sad.classList.add('hidden');
+          sabanna.classList.add('hidden');
+          holder.classList.remove('hidden');
+          normal.classList.remove('hidden');
+          resets();
+        }
+        //森のとき
+        else if(now_env === "森" ){
+          holder.classList.add('hidden');
+          sad.classList.remove("hidden");
+          mori.classList.remove('hidden');
+          sads.classList.add('animate-sayu');
+          await sleep(5000);
+          sads.classList.remove('animate-sayu');
+          sad.classList.add('hidden');
+          mori.classList.add('hidden');
+          holder.classList.remove('hidden');
+          normal.classList.remove('hidden');
+          resets();
+        }
+        //洞窟のとき
+        else if(now_env === "洞窟" ){
+          holder.classList.add('hidden');
+          sad.classList.remove("hidden");
+          doukutsu.classList.remove('hidden');
+          sads.classList.add('animate-sayu');
+          await sleep(5000);
+          sads.classList.remove('animate-sayu');
+          sad.classList.add('hidden');
+          doukutsu.classList.add('hidden');
+          holder.classList.remove('hidden');
+          normal.classList.remove('hidden');
+          resets();
+        }
+        //どっちも違う
+        else {
+          sad.classList.remove("hidden");
+          sads.classList.add('animate-sayu');
+          await sleep(3000);
+          sads.classList.remove('animate-sayu');
+        }
+      }
 
 
       function Found(){
@@ -496,11 +510,11 @@ function UIs() {
             <img className='koma' src={Flakomaru} alt="困るフラミンゴ" />
           </div>
         </div>
-        {/* <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
+        <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
         <p id="num">0%</p>
         <p id="test_name">接続するデバイスの名前</p>
         <p id="test_line02">02デバイス</p>        
-        <p id="test_line03">03デバイス</p> */}
+        <p id="test_line03">03デバイス</p>
         <div className='Area h-[110px] w-[100%] z-50 fixed bottom-0 left-0'></div>
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px] w-[100%]">
