@@ -514,11 +514,11 @@ function UIs() {
             <img className='koma' src={Flakomaru} alt="困るフラミンゴ" />
           </div>
         </div>
-        <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
+        {/* <input type="button" value="/接続/" onClick={() => onWatchAdvertisementsButtonClick() }/>
         <p id="num">0%</p>
         <p id="test_name">接続するデバイスの名前</p>
         <p id="test_line02">02デバイス</p>        
-        <p id="test_line03">03デバイス</p>
+        <p id="test_line03">03デバイス</p> */}
         <div className='Area h-[110px] w-[100%] z-50 fixed bottom-0 left-0'></div>
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px] w-[100%]">
