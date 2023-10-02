@@ -94,8 +94,11 @@ function UIs() {
   }
 
   async function Check() {
-    // const animalnum = pro;
-    // alert(animalnum);
+    const Area = document.querySelector('.Area');
+    if(Beacon_num === 21){
+      Area.classList.add('hidden');
+    } else console.log('-----------');
+
     const normal = document.getElementById('animals');
     const animal = document.querySelector(".check");
     const fun = document.querySelector(".fanimal");
@@ -498,6 +501,7 @@ function UIs() {
         <p id="test_name">接続するデバイスの名前</p>
         <p id="test_line02">02デバイス</p>        
         <p id="test_line03">03デバイス</p> */}
+        <div className='Area h-[110px] w-[100%] z-50 fixed bottom-0 left-0'></div>
         <div className="itemholder h-[90px] w-[100%] rounded-t-[20px] fixed z-30 bottom-0 left-0 bg-main">
             <div className="flex justify-between mt-[-35px] w-[100%]">
               <img onClick={() => render(0,"えだ")} src={branch} alt="えだ" className='items mt-[-20px] w-[17%] h-[115px]' />
