@@ -28,8 +28,6 @@ function UIs() {
 
   let Beacon_num = 21 ;
 
-  l
-
   switch(Beacon_num){
     case 21:
       area.name = "水辺";
