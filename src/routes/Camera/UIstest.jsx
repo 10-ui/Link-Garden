@@ -27,7 +27,7 @@ function UIs() {
     num:999
   };
 
-  let Beacon_num = null ;
+  let Beacon_num = 21 ;
 
   let now_env; //environment
   
