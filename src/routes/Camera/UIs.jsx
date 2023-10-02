@@ -253,8 +253,7 @@ function UIs() {
       
       
     function onWatchAdvertisementsButtonClick() {
-  
-      let i = 0;
+      
       
       console.log('Requesting any Bluetooth device...');
       navigator.bluetooth.requestDevice({
