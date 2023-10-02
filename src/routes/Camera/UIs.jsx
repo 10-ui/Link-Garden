@@ -489,7 +489,7 @@ function UIs() {
           <div className="sad sanimal hidden fixed left-1/2 top-[35%] translate-x-[-50%] translate-y-[-35%]">
             <img className='sadanimal' src={Flazannen} alt="悲しむフラミンゴ" />
           </div>
-          <div className="komaru hidden w-[65%] fixed top-[40%] left-1/2 translate-x-[-50%] translate-y-[-40%]">
+          <div className="komaru hidden w-[75%] fixed top-[40%] left-1/2 translate-x-[-50%] translate-y-[-40%]">
             <img className='koma' src={Flakomaru} alt="困るフラミンゴ" />
           </div>
         </div>
