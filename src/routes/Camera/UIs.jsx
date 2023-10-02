@@ -29,52 +29,7 @@ function UIs() {
 
   let Beacon_num = null ;
 
-  // switch(Beacon_num){
-  //   case 21:
-  //     area.name = "水辺";
-  //     area.num = Beacon_num;
-  //     break;
-  //   case 22:
-  //     area.name = "洞窟";
-  //     area.num = Beacon_num;
-  //     break;
-  //   case 23:
-  //     area.name = "サバンナ";
-  //     area.num = Beacon_num;
-  //     break;
-  //   case 24:
-  //     area.name = "森";
-  //     area.num = Beacon_num;
-  //     break;
-  //   default:
-  //     alert('error');
-  // };
-
-  // useEffect(() => {
-  //   switch(Beacon_num){
-  //     case 21:
-  //       area.name = "水辺";
-  //       area.num = Beacon_num;
-  //       break;
-  //     case 22:
-  //       area.name = "洞窟";
-  //       area.num = Beacon_num;
-  //       break;
-  //     case 23:
-  //       area.name = "サバンナ";
-  //       area.num = Beacon_num;
-  //       break;
-  //     case 24:
-  //       area.name = "森";
-  //       area.num = Beacon_num;
-  //       break;
-  //     default:
-  //       alert('error');
-  //   };
-  //   console.log('useEffectが実行されました');
-  // }, [Beacon_num]);
-
-  let now_env = area.name; //environment
+  let now_env; //environment
   
   async function Timer(device) {
     device.watchAdvertisements()
@@ -291,7 +246,12 @@ function UIs() {
       }
     
       async function Check() {
-        const Area = document.querySelector('.Area');
+
+        if(Beacon_num === null){
+          alert('環境が指定されてないよ！エリアに近づいてみてね！')
+        }
+        else {
+          const Area = document.querySelector('.Area');
         if(Beacon_num === 21){
           Area.classList.add('hidden');
         } else console.log('-----------');
@@ -425,6 +385,7 @@ function UIs() {
         mirrors.classList.add('hidden');
         comments.classList.add('hidden');
       }
+        }
 
 
   return (
