@@ -248,7 +248,7 @@ function UIs() {
       async function Check() {
 
         if(Beacon_num === null){
-          alert('環境が指定されてないよ！エリアに近づいてみてね！')
+          alert('環境が指定されてないよ！\nエリアに近づいてみてね！')
         }
         else {
           const Area = document.querySelector('.Area');
