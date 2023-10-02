@@ -1,5 +1,5 @@
-import React, { useEffect,useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+// import { Link } from "react-router-dom";
 import cardboard from '../../assets/icon/tool_cardboard.svg';
 import rope from '../../assets/icon/tool_rope.svg';
 import mirror from '../../assets/icon/tool_mirror.svg';
@@ -246,11 +246,13 @@ function UIs() {
       }
     
       async function Check() {
+// -----------------------------------------------
+//         if(Beacon_num === null){
+//           alert('環境が指定されてないよ！\nエリアに近づいてみてね！')
+//         }
 
-        if(Beacon_num === null){
-          alert('環境が指定されてないよ！\nエリアに近づいてみてね！')
-        }
-        else {
+//         else {
+// -----------------------------------------
           const Area = document.querySelector('.Area');
         if(Beacon_num === 21){
           Area.classList.add('hidden');
@@ -371,13 +373,15 @@ function UIs() {
           await sleep(3000);
           sads.classList.remove('animate-sayu');
         }
-      }
+      //   ------------------
+      // }
+      //   ------------------
         }
       function Found(){
         const nice = document.querySelector('.nice');
         const comments = document.querySelector('.comment');
         const mirrors = document.querySelector('.mirror');
-        const lotfun = document.querySelector('.lotfun')
+        const lotfun = document.querySelector('.lotfun');
         nice.classList.remove('hidden');
         nice.classList.add('grid');
         lotfun.classList.add('hidden');
