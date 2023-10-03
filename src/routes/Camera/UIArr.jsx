@@ -14,7 +14,7 @@ import Flamirror from '../../assets/icon/animal_mirror.svg';
 import Comment from '../../assets/icon/animal_comment.svg';
 
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
-let Beacon_num = 24;
+let Beacon_num = 23;
 
 function UIArr() {
 
@@ -518,7 +518,7 @@ function UIArr() {
         </div>
         <div className="mori w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
         <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]'>
-        わたしは、<span className='text-blue'><ruby>柔<rp>(</rp><rt>やわ</rt><rp>)</rp></ruby>らかい<ruby>地面<rp>(</rp><rt>地面</rt><rp>)</rp></ruby></span>が<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きなの。<ruby>硬<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>すぎ
+        わたしは、<span className='text-blue'><ruby>柔<rp>(</rp><rt>やわ</rt><rp>)</rp></ruby>らかい<ruby>地面<rp>(</rp><rt>じめん</rt><rp>)</rp></ruby></span>が<ruby>好<rp>(</rp><rt>す</rt><rp>)</rp></ruby>きなの。<ruby>硬<rp>(</rp><rt>かた</rt><rp>)</rp></ruby>すぎ
           </p>
           <p className='block text-center z-[50] w-[95%] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]'>
           ると<ruby>足<rp>(</rp><rt>あし</rt><rp>)</rp></ruby>をケガしてしまうわ。もっと<ruby>違<rp>(</rp><rt>ちが</rt><rp>)</rp></ruby>うとこ
