@@ -353,26 +353,8 @@ function UIs() {
           holder.classList.remove('hidden');
           normal.classList.remove('hidden');
           Beacon_num = 21
-          switch(Beacon_num){
-            case 21:
-              area.name = "水辺";
-              area.num = Beacon_num;
-              break;
-            case 22:
-              area.name = "川辺";
-              area.num = Beacon_num;
-              break;
-            case 23:
-              area.name = "サバンナ";
-              area.num = Beacon_num;
-              break;
-            case 24:
-              area.name = "ジャングル";
-              area.num = Beacon_num;
-              break;
-            default:
-              alert('error');
-          };
+          area.name = "サバンナ";
+          area.num = Beacon_num;
           resets();
         }
         //森のとき
