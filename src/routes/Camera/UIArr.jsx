@@ -353,8 +353,17 @@ function UIs() {
           holder.classList.remove('hidden');
           normal.classList.remove('hidden');
           Beacon_num = 21
-          area.name = "サバンナ";
+          console.log("1");
+          console.log(Beacon_num);
+          console.log(now_env);
+          now_env = "水辺";
+          console.log("2");
+          console.log(Beacon_num);
+          console.log(now_env);
           area.num = Beacon_num;
+          console.log("3");
+          console.log(Beacon_num);
+          console.log(now_env);
           resets();
         }
         //森のとき
