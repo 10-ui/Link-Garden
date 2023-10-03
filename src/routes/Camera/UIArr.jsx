@@ -14,8 +14,9 @@ import Flamirror from '../../assets/icon/animal_mirror.svg';
 import Comment from '../../assets/icon/animal_comment.svg';
 
 const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
+let Beacon_num = 24;
 
-function UIs() {
+function UIArr() {
 
   const [num, setNum] = useState(null);
   const [name, setName] = useState(null);
@@ -24,8 +25,6 @@ function UIs() {
     name:"初期値",
     num:999
   };
-
-  let Beacon_num = 23 ;
 
   switch(Beacon_num){
     case 21:
@@ -48,7 +47,6 @@ function UIs() {
       alert('error');
   };
 
-  let now_env = area.name; //environment
   
   async function Timer(device) {
     device.watchAdvertisements()
@@ -174,7 +172,7 @@ function UIs() {
         //   default:
         //     alert('error');
         // };
-        // now_env = area.name;
+        // area.name = area.name;
       }
       
       beacon_check = beacon_select;
@@ -230,7 +228,7 @@ function UIs() {
         let fun = document.querySelector(".fanimal");
         let sad = document.querySelector(".sanimal");
         let animal = document.querySelector(".check");
-        console.log(animal);
+        // console.log(animal);
     
         fun.classList.add("hidden");
         sad.classList.add("hidden");
@@ -262,6 +260,28 @@ function UIs() {
       }
     
       async function Check() {
+        switch(Beacon_num){
+          case 21:
+            area.name = "水辺";
+            area.num = Beacon_num;
+            break;
+          case 22:
+            area.name = "川辺";
+            area.num = Beacon_num;
+            break;
+          case 23:
+            area.name = "サバンナ";
+            area.num = Beacon_num;
+            break;
+          case 24:
+            area.name = "ジャングル";
+            area.num = Beacon_num;
+            break;
+          default:
+            alert('error');
+        };
+        console.log(area.name);
+        console.log(Beacon_num);
 // -----------------------------------------------
 //         if(Beacon_num === null){
 //           alert('環境が指定されてないよ！\nエリアに近づいてみてね！')
@@ -270,8 +290,11 @@ function UIs() {
 //         else {
 // -----------------------------------------
         const Area = document.querySelector('.Area');
-        if(Beacon_num === 21){
+        if(area.num === 21){
           Area.classList.add('hidden');
+          console.log("突破");
+          console.log(area.name);
+          console.log(Beacon_num);
         } else console.log('-----------');
     
         const normal = document.getElementById('animals');
@@ -293,7 +316,7 @@ function UIs() {
         animal.classList.add("hidden");
     
         //どっちもあってる
-        if((name==="かがみ") && (now_env==="水辺")){
+        if((name==="かがみ") && (area.name==="水辺")){
           holder.classList.add('hidden');
           mirror.classList.remove('hidden');
           comment.classList.remove('hidden');
@@ -311,7 +334,7 @@ function UIs() {
           }
         }
         //道具違うとき
-        else if(now_env==="水辺" && name === "ダンボール"){
+        else if(area.name==="水辺" && name === "ダンボール"){
           holder.classList.add('hidden');
           komaru.classList.remove("hidden");
           cardcomment.classList.remove('hidden');
@@ -325,7 +348,7 @@ function UIs() {
           resets();
         }
         //みずべのとき
-        else if(now_env === "水辺" ){
+        else if(area.name === "水辺" ){
           holder.classList.add('hidden');
           fun.classList.remove("hidden");
           mizube.classList.remove('hidden');
@@ -341,7 +364,9 @@ function UIs() {
           resets();
         }
         //サバンナのとき
-        else if(now_env === "サバンナ" ){
+        else if(area.name === "サバンナ" ){
+          area.name = "水辺";
+          Beacon_num = 21;
           holder.classList.add('hidden');
           sad.classList.remove("hidden");
           sabanna.classList.remove('hidden');
@@ -352,22 +377,14 @@ function UIs() {
           sabanna.classList.add('hidden');
           holder.classList.remove('hidden');
           normal.classList.remove('hidden');
-          Beacon_num = 21
-          console.log("1");
-          console.log(Beacon_num);
-          console.log(now_env);
-          now_env = "水辺";
-          console.log("2");
-          console.log(Beacon_num);
-          console.log(now_env);
-          area.num = Beacon_num;
-          console.log("3");
-          console.log(Beacon_num);
-          console.log(now_env);
           resets();
+          console.log(area.name);
+          console.log(Beacon_num);
         }
         //森のとき
-        else if(now_env === "ジャングル" ){
+        else if(area.name === "ジャングル" ){
+          area.name = "水辺";
+          Beacon_num = 21;
           holder.classList.add('hidden');
           sad.classList.remove("hidden");
           mori.classList.remove('hidden');
@@ -379,9 +396,11 @@ function UIs() {
           holder.classList.remove('hidden');
           normal.classList.remove('hidden');
           resets();
+          console.log(area.name);
+          console.log(Beacon_num);
         }
         //洞窟のとき
-        else if(now_env === "川辺" ){
+        else if(area.name === "川辺" ){
           holder.classList.add('hidden');
           sad.classList.remove("hidden");
           doukutsu.classList.remove('hidden');
@@ -420,7 +439,7 @@ function UIs() {
   return (
     <>
 
-      {/* <p className='fixed top-0 left-0 current'>現在の環境：{now_env} , 環境番号：{area.num} ,<br/>選ばれてるアイテム：{name} , アイテム番号：{num}</p> */}
+      {/* <p className='fixed top-0 left-0 current'>現在の環境：{area.name} , 環境番号：{area.num} ,<br/>選ばれてるアイテム：{name} , アイテム番号：{num}</p> */}
       
       {/* <p 
       className='bg-main w-fit rounded-lg px-4 py-2 relative 
@@ -542,4 +561,4 @@ function UIs() {
   )
 }
 
-export default UIs
+export default UIArr
