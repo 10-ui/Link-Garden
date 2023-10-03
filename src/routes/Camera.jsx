@@ -5,6 +5,7 @@ import Delete from './Camera/Delete.jsx';
 import Pickup from './Camera/Pickup.jsx';
 import Found from './Camera/Found.jsx';
 import UItest from './Camera/UIstest.jsx';
+import UIArr from './Camera/UIArr.jsx';
 // import Beacon from './Camera/Beacon.jsx';
 
 
@@ -32,6 +33,7 @@ function Camera() {
       {/* <Beacon/> */}
       {/* <UIs/> */}
       <UItest/>
+      <UIArr/>
       <Found/>
       </>
   );
