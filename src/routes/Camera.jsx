@@ -32,7 +32,7 @@ function Camera() {
       <Delete/>
       {/* <Beacon/> */}
       {/* <UIs/> */}
-      <UItest/>
+      {/* <UItest/> */}
       <UIArr/>
       <Found/>
       </>
