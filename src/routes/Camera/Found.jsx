@@ -13,6 +13,8 @@ function Found(){
     whatNextDo.classList.add('grid');
   }
 
+  
+
   function retries(){
     const imgs = Array.from(document.querySelectorAll('.items'));
     for(let i = 0; i < imgs.length; i++){
