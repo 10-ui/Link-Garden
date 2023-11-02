@@ -32,7 +32,7 @@ function Found(){
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowFullScreen>
           </iframe>
-          <img className='block mx-auto pt-[20px]' src={close} alt="閉じるボタン" onClick={() => Choosenext()}/>
+          <Link to='/'><img className='block mx-auto pt-[20px]' src={close} alt="閉じるボタン"/></Link>
         </div>
       </div>
       <div className='whatNextDo h-screen hidden items-center mx-[calc(100%-97%)] mt-[-20px]'>
