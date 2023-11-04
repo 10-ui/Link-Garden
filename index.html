@@ -1,15 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja" class="overflow-clip">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./src/assets/icon/mark_logo.svg">
-    <link rel="apple-touch-icon" href="./src/assets/icon/mark_logo.svg">
+    <link rel="icon" href="./src/assets/icon/mark_logo.svg" />
+    <link rel="apple-touch-icon" href="./src/assets/icon/mark_logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Link&&Garden</title>
   </head>
-  <body class="overflow-clip"> 
+  <body class="overflow-clip">
+    <a href="/"
+      ><img
+        class="fixed w-20 left-0 top-0"
+        src="./src/assets/icon/mark_logo.svg"
+        alt="ロゴアイコン"
+    /></a>
+    <div class=" hides fixed w-20 h-24 bg-btntext left-0 top-0"></div>
     <div class="w-screen h-screen overflow-clip" id="screen"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      function hide() {
+        document.querySelector('.hides').classList.remove('hidden')
+      }
+    </script>
   </body>
 </html>
-
