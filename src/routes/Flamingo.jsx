@@ -1,4 +1,5 @@
 import close from '../assets/icon/mark_close.svg';
+import logo from '../assets/icon/mark_logo.svg';
 import { Link } from 'react-router-dom';
 
 function Found() {
@@ -8,7 +9,7 @@ function Found() {
       <Link to="/">
         <img
           class="fixed w-28 right-7 top-3 z-[12]"
-          src="./src/assets/icon/mark_logo.svg"
+          src={logo}
           alt="ロゴアイコン"
         />
       </Link>
