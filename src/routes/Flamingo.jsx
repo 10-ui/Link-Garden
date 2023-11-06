@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 function Found() {
   return (
     <>
-      <div className="bg-housescreen nice relative items-center h-screen w-screen z-[0] pt-[-20px]">
-      <Link to="/">
-        <img
-          class="fixed w-28 right-7 top-2 z-[12]"
-          src={logo}
-          alt="ロゴアイコン"
-        />
-      </Link>
+      <div className="bg-housescreen nice relative items-center h-[100dvh] w-[100dvw] z-[0]">
+        <Link to="/">
+          <img
+            class="fixed w-28 right-7 top-2 z-[12]"
+            src={logo}
+            alt="ロゴアイコン"
+          />
+        </Link>
         <div className="mx-[20px] pt-[30px]">
           <h1 className="text-btntext text-[24px] text-left">
             フラミンゴと
