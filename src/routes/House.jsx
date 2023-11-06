@@ -34,14 +34,14 @@ function Result() {
 
   return (
     <>
-      <Link to="/">
-        <img
-          className="fixed w-40 left-1/2 top-10 translate-x-[-50%]"
-          src="./src/assets/icon/mark_logo.svg"
-          alt="ロゴアイコン"
-        />
-      </Link>
       <div className="w-auto">
+        <Link to="/">
+          <img
+            className="fixed w-40 left-1/2 top-10 translate-x-[-50%]"
+            src="./src/assets/icon/mark_logo.svg"
+            alt="ロゴアイコン"
+          />
+        </Link>
         <div className="h-screen w-auto  mx-[20px] grid items-center">
           <div className="w-[100%] mx-auto">
             <h1 className=" text-white font-main font-bold text-3xl text-center mb-[48px]">

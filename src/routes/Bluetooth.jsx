@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 function Bluetooth() {
   return (
     <>
-      <Link to="/">
-        <img
-          className="fixed w-32 left-1/2 top-8 translate-x-[-50%]"
-          src="./src/assets/icon/mark_logo.svg"
-          alt="ロゴアイコン"
-        />
-      </Link>
       <div className="h-screen w-auto mx-[30px] grid items-center">
+        <Link to="/">
+          <img
+            className="fixed w-32 left-1/2 top-8 translate-x-[-50%]"
+            src="./src/assets/icon/mark_logo.svg"
+            alt="ロゴアイコン"
+          />
+        </Link>
         <div className="w-[100%] mx-auto">
           <img
             className="mx-auto mb-[42px] w-[67%]"
