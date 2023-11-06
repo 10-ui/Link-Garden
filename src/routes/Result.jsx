@@ -36,9 +36,9 @@ function Result() {
   return (
     <>
       <div className="w-auto">
-      <Link to="/">
+        <Link to="/">
           <img
-            className="fixed w-40 left-1/2 top-10 translate-x-[-50%]"
+            className="fixed w-32 left-1/2 top-10 translate-x-[-50%]"
             src={logo}
             alt="ロゴアイコン"
           />
