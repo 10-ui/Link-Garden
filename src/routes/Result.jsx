@@ -35,10 +35,10 @@ function Result() {
   return (
     <>
       <div className="w-auto">
-        <Link to="/">
+      <Link to="/">
           <img
-            className="fixed w-32 left-1/2 top-8 translate-x-[-50%]"
-            src="./src/assets/icon/mark_logo.svg"
+            class="fixed w-28 right-7 top-3 z-[12]"
+            src={logo}
             alt="ロゴアイコン"
           />
         </Link>

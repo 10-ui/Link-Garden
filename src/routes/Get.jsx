@@ -1,5 +1,6 @@
 import link from '../assets/icon/mark_link.svg';
 import pn from '../assets/icon/pagenation_2.svg';
+import logo from '../assets/icon/mark_logo.svg';
 import { Link } from 'react-router-dom';
 
 function Items() {
@@ -320,8 +321,8 @@ function Items() {
       <div className="h-screen w-auto mx-[20px] grid items-center">
         <Link to="/">
           <img
-            className="fixed w-32 left-1/2 top-8 translate-x-[-50%]"
-            src="./src/assets/icon/mark_logo.svg"
+            class="fixed w-28 right-7 top-3 z-[12]"
+            src={logo}
             alt="ロゴアイコン"
           />
         </Link>
