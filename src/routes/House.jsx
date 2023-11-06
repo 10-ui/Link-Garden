@@ -37,16 +37,16 @@ function Result() {
       <div className="w-auto">
         <div className="h-screen w-auto  mx-[20px] grid items-center">
           <div className="w-[100%] mx-auto">
-            <h1 className=" text-white font-main font-bold text-[20px] text-center mb-[48px]">
+            <h1 className=" text-white font-main font-bold text-3xl text-center mb-[48px]">
               アイテムを選んでね！
             </h1>
-            <p className="text-[12px] text-center font-main font-bold mb-[45px]">
+            <p className="text-[18px] text-center font-main font-bold mb-[45px]">
               アイテムで幸せになれる動物がいるよ！
             </p> 
-            <div className="scale-95 wrapper grid grid-cols-3 items-center justify-center w-fit gap-4 mx-auto mb-[55px]">
+            <div className="scale-[1.15] wrapper grid grid-cols-3 items-center justify-center w-fit gap-4 mx-auto mb-[55px]">
               <img src={rope} alt="縄" />
               <img src={cardboard} alt="ダンボール" />
-              <Link to="/Found">
+              <Link to="/Found" onClick={() => next()}>
                 <img src={mirror} alt="鏡" />
               </Link>
               <img src={branch} alt="木の枝" />
