@@ -8,7 +8,7 @@ import no_cardboard from '../assets/icon/item_no_cardboard.svg';
 import no_mirror from '../assets/icon/item_no_mirror.svg';
 import no_branch from '../assets/icon/item_no_branch.svg';
 import no_bag from '../assets/icon/item_no_bag.svg';
-import logo from '../assets/icon/mark_logo.svg';
+// import logo from '../assets/icon/mark_logo.svg';
 import { Link } from 'react-router-dom';
 
 function Result() {

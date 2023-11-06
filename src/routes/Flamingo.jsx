@@ -2,10 +2,6 @@ import close from '../assets/icon/mark_close.svg';
 import { Link } from 'react-router-dom';
 
 function Found() {
-  function next() {
-    document.querySelector('.hides').classList.remove('hidden');
-  }
-
   return (
     <>
       <Link to="/">
@@ -194,7 +190,6 @@ function Found() {
               className="block mx-auto pt-[30px] scale-90"
               src={close}
               alt="閉じるボタン"
-              onClick={() => next()}
             />
           </Link>
         </div>
