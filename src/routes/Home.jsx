@@ -1,12 +1,7 @@
-import logo from "../assets/icon/mark_logo.svg";
-import { Link } from "react-router-dom";
+import logo from '../assets/icon/mark_logo.svg';
+import { Link } from 'react-router-dom';
 
 function Home() {
-
-  function hide() {
-    document.querySelector('.hides').classList.add('hidden');
-  }
-
   return (
     <>
       <div className="h-screen  mx-[25px] grid items-center box-border">
@@ -23,14 +18,12 @@ function Home() {
           <Link
             to="/Bluetooth"
             className="text-[20px] text-white w-[100%] mb-[12px] block mx-auto text-center py-[13px] bg-accent font-main font-bold rounded"
-            onClick={() => hide()}
           >
             イベントで遊ぶ
           </Link>
           <Link
             to="/House"
             className="text-[20px] text-white w-[100%] mb-[26px] block mx-auto text-center py-[13px] bg-accent font-main font-bold rounded"
-            onClick={() => hide()}
           >
             おうちで学ぶ
           </Link>
