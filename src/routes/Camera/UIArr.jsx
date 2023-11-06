@@ -440,7 +440,7 @@ function UIArr() {
       className='bg-main w-fit rounded-lg px-4 py-2 relative 
       after:block after:w-3 after:y-3 after:rotate-45 after:absolute after:bottom-[-20px] after:bg-main after:left-[50%] after:translate-x-[-50%]'
       >動物をタップ！</p> */}
-      <div className="UI">
+      <div className="UI hidden">
         <img
           onClick={() => Check()}
           id="animals"
