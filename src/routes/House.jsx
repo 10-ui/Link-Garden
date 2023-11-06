@@ -32,6 +32,10 @@ function Result() {
 
   let num = 5;
 
+  function next() {
+    document.querySelector('.hides').classList.remove('hidden');
+  }
+
   return (
     <>
       <div className="w-auto">
