@@ -319,9 +319,9 @@ function Items() {
   return (
     <>
       <div className="h-screen w-auto mx-[20px] grid items-center">
-        <Link to="/">
+      <Link to="/">
           <img
-            class="fixed w-28 right-7 top-3 z-[12]"
+            className="fixed w-40 left-1/2 top-10 translate-x-[-50%]"
             src={logo}
             alt="ロゴアイコン"
           />
