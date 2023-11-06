@@ -524,7 +524,7 @@ function UIArr() {
           />
         </div>
         <div className="cardboard w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[30%] translate-x-[-50%] translate-y-[-30%]">
             わたしはたくさんの
             <ruby>
               友達<rp>(</rp>
@@ -539,7 +539,7 @@ function UIArr() {
             </ruby>
             きな
           </p>
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[52%] translate-x-[-50%] translate-y-[-52%]">
             の。こんなものがあっても
             <ruby>
               足<rp>(</rp>
@@ -570,7 +570,7 @@ function UIArr() {
           />
         </div>
         <div className="mizube w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[30%] translate-x-[-50%] translate-y-[-30%]">
             わたしは、きれい
             <ruby>
               好<rp>(</rp>
@@ -591,7 +591,7 @@ function UIArr() {
             </ruby>
             にする
           </p>
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[52%] translate-x-[-50%] translate-y-[-52%]">
             ためによく
             <ruby>
               水浴<rp>(</rp>
@@ -630,7 +630,7 @@ function UIArr() {
           />
         </div>
         <div className="sabanna w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[30%] translate-x-[-50%] translate-y-[-30%]">
             わたしは、
             <span className="text-blue">
               <ruby>
@@ -652,7 +652,7 @@ function UIArr() {
               <rp>)</rp>
             </ruby>
           </p>
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[52%] translate-x-[-50%] translate-y-[-52%]">
             <ruby>
               所<rp>(</rp>
               <rt>しょ</rt>
@@ -694,7 +694,7 @@ function UIArr() {
           />
         </div>
         <div className="doukutsu w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[30%] translate-x-[-50%] translate-y-[-30%]">
             わたしは、
             <span className="text-blue">
               <ruby>
@@ -722,7 +722,7 @@ function UIArr() {
               <rp>)</rp>
             </ruby>
           </p>
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[52%] translate-x-[-50%] translate-y-[-52%]">
             すぎて
             <ruby>
               安心<rp>(</rp>
@@ -771,7 +771,7 @@ function UIArr() {
           />
         </div>
         <div className="mori w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[33%] translate-x-[-50%] translate-y-[-33%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[30%] translate-x-[-50%] translate-y-[-30%]">
             わたしは、
             <span className="text-blue">
               <ruby>
@@ -800,7 +800,7 @@ function UIArr() {
             </ruby>
             すぎ
           </p>
-          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[55%] translate-x-[-50%] translate-y-[-55%]">
+          <p className="block text-center z-[50] w-[89dvw] fixed left-1/2 top-[52%] translate-x-[-50%] translate-y-[-52%]">
             ると
             <ruby>
               足<rp>(</rp>
