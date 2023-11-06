@@ -21,7 +21,7 @@ function App() {
         <Route path="/Result" element={ < Result /> } />
         <Route path="/Nuriecamera" element={ <Camera /> } />
         <Route path="/Cushion" element={ <Cushion /> } />
-        <Route path="/Found" element={ <Flamingo /> } />
+        <Route path="/Flamingo" element={ <Flamingo /> } />
       </Routes>
     </>
   )

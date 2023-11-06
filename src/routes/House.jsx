@@ -46,7 +46,7 @@ function Result() {
             <div className="scale-[1.15] wrapper grid grid-cols-3 items-center justify-center w-fit gap-4 mx-auto mb-[55px]">
               <img src={rope} alt="縄" />
               <img src={cardboard} alt="ダンボール" />
-              <Link to="/Found" onClick={() => next()}>
+              <Link to="/Flamingo" onClick={() => next()}>
                 <img src={mirror} alt="鏡" />
               </Link>
               <img src={branch} alt="木の枝" />
