@@ -8,7 +8,7 @@ function Found() {
       <div className="bg-housescreen nice relative items-center h-screen w-screen z-[0] pt-[-20px]">
       <Link to="/">
         <img
-          class="fixed w-28 right-7 top-3 z-[12]"
+          class="fixed w-28 right-7 top-2 z-[12]"
           src={logo}
           alt="ロゴアイコン"
         />
