@@ -35,37 +35,37 @@ function Result() {
 
   return (
     <>
-      <div className="w-auto">
+      <div className="h-[100dvh] w-auto  mx-[20px] grid items-center">
+        <div className="w-[100%] mx-auto">
         <Link to="/">
           <img
-            className="fixed w-28 left-1/2 top-10 translate-x-[-50%]"
+            className="fixed w-[24dvw] left-1/2 top-[2dvh] translate-x-[-50%]"
             src={logo}
             alt="ロゴアイコン"
           />
         </Link>
-        <div className="h-screen w-auto  mx-[20px] grid items-center">
-          <div className="w-[100%] mx-auto">
-            <p className=" text-white font-main font-bold text-[20px] text-center mb-[48px]">
-              {num}つのアイテムを取得しました！
-            </p>
-            <div className="wrapper grid grid-cols-3 items-center justify-center w-fit gap-4 mx-auto mb-[55px]">
-              <img src={rope} alt="縄" />
-              <img src={cardboard} alt="ダンボール" />
-              <img src={mirror} alt="鏡" />
-              <img src={branch} alt="木の枝" />
-              <img src={bag} alt="袋" />
-            </div>
-            <p className="text-[18px] font-main font-bold mb-[55px]">
-              さっそくアイテムを使ってどうぶつが好きなアイテムを見つけに行こう！
-            </p>
-            <img className="block mx-auto mb-[24px]" src={pn} alt="ページ３" />
-            <Link
-              to="/Nuriecamera"
-              className="text-[20px] w-[100%] mx-auto block bg-accent text-center py-[13px] font-main font-bold rounded"
-            >
-              Link&&Gardenの世界に入る
-            </Link>
+          <p className=" text-white font-main font-bold text-[20px] text-center mb-[48px]">
+            {num}つのアイテムを取得しました！
+          </p>
+          <div className="wrapper grid grid-cols-3 items-center justify-center w-fit gap-4 mx-auto mb-[55px]">
+            <img src={rope} alt="縄" />
+            <img src={cardboard} alt="ダンボール" />
+            <img src={mirror} alt="鏡" />
+            <img src={branch} alt="木の枝" />
+            <img src={bag} alt="袋" />
           </div>
+          <p className="text-[18px] font-main font-bold mb-[55px]">
+            さっそくアイテムを使ってどうぶつが
+            <br />
+            好きなアイテムを見つけに行こう！
+          </p>
+          <img className="block mx-auto mb-[24px]" src={pn} alt="ページ３" />
+          <Link
+            to="/Nuriecamera"
+            className="text-[20px] w-[100%] mx-auto block bg-accent text-center py-[13px] font-main font-bold rounded"
+          >
+            Link&&Gardenの世界に入る
+          </Link>
         </div>
       </div>
     </>

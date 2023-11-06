@@ -7,6 +7,7 @@ import Camera from './routes/Camera.jsx';
 import Cushion from './routes/Cushion.jsx';
 import House from './routes/House.jsx'
 import Flamingo from "./routes/Flamingo.jsx";
+import UIArr from "./routes/Camera/UIArr.jsx";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Nuriecamera" element={ <Camera /> } />
         <Route path="/Cushion" element={ <Cushion /> } />
         <Route path="/Flamingo" element={ <Flamingo /> } />
+        <Route path="/Test" element={ <UIArr /> } ></Route>
       </Routes>
     </>
   )

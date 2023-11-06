@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 function Bluetooth() {
   return (
     <>
-      <div className="h-screen w-auto mx-[30px] grid items-center">
+      <div className="h-[100dvh] w-auto mx-[30px] grid items-center">
       <Link to="/">
           <img
-            className="fixed w-40 left-1/2 top-10 translate-x-[-50%]"
+            className="fixed w-[30dvw] left-1/2 top-[2dvh] translate-x-[-50%]"
             src={logo}
             alt="ロゴアイコン"
           />

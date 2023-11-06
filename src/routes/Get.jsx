@@ -318,10 +318,10 @@ function Items() {
 
   return (
     <>
-      <div className="h-screen w-auto mx-[20px] grid items-center">
-      <Link to="/">
+      <div className="h-[100dvh] w-auto mx-[20px] grid items-center">
+        <Link to="/">
           <img
-            className="fixed w-40 left-1/2 top-10 translate-x-[-50%]"
+            className="fixed w-[31dvw] left-1/2 top-[2dvh] translate-x-[-50%]"
             src={logo}
             alt="ロゴアイコン"
           />
