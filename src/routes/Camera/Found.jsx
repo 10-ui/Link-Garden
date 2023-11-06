@@ -3,11 +3,6 @@ import flamingo from '../../assets/icon/animal_funflamingo3.svg';
 import { Link } from "react-router-dom";
 
 function Found(){
-
-  function next() {
-    document.querySelector('.hides').classList.remove('hidden');
-  }
-
   function Choosenext() {
     const nice = document.querySelector('.nice');
     nice.classList.add('hidden');

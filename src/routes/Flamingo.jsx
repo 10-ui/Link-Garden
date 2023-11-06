@@ -1,5 +1,4 @@
 import close from '../assets/icon/mark_close.svg';
-import flamingo from '../assets/icon/animal_funflamingo3.svg';
 import { Link } from 'react-router-dom';
 
 function Found() {
@@ -9,6 +8,13 @@ function Found() {
 
   return (
     <>
+      <Link to="/">
+        <img
+          class="fixed w-28 right-7 top-3 z-[12]"
+          src="./src/assets/icon/mark_logo.svg"
+          alt="ロゴアイコン"
+        />
+      </Link>
       <div className="bg-housescreen nice relative items-center h-screen w-screen z-[0] pt-[-20px]">
         <div className="mx-[20px] pt-[30px]">
           <h1 className="text-btntext text-[24px] text-left">
