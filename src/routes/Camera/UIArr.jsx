@@ -549,7 +549,7 @@ function UIArr() {
             をケガするだけ
           </p>
           <p className="block text-left z-[50] w-[89dvw] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]">
-            &nbsp;&nbsp;&thinsp;だわ。
+            だわ。
             <ruby>
               違<rp>(</rp>
               <rt>ちが</rt>
@@ -615,7 +615,7 @@ function UIArr() {
             に
           </p>
           <p className="block text-left z-[50] w-[89dvw] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]">
-            &nbsp;&nbsp;&thinsp;
+            
             <ruby>
               連<rp>(</rp>
               <rt>つ</rt>
@@ -673,7 +673,7 @@ function UIArr() {
             うとこ
           </p>
           <p className="block text-left z-[50] w-[89dvw] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]">
-            &nbsp;&nbsp;&thinsp;ろにも
+            ろにも
             <ruby>
               連<rp>(</rp>
               <rt>つ</rt>
@@ -744,7 +744,7 @@ function UIArr() {
             べられないわ。もっ
           </p>
           <p className="block text-left z-[50] w-[89dvw] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]">
-            &nbsp;&nbsp;&thinsp;と
+            と
             <ruby>
               違<rp>(</rp>
               <rt>ちが</rt>
@@ -816,7 +816,7 @@ function UIArr() {
             うとこ
           </p>
           <p className="block text-left z-[50] w-[89dvw] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]">
-            &nbsp;&nbsp;&thinsp;ろにも
+            ろにも
             <ruby>
               連<rp>(</rp>
               <rt>つ</rt>
