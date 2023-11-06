@@ -9,6 +9,7 @@ import no_mirror from '../assets/icon/item_no_mirror.svg';
 import no_branch from '../assets/icon/item_no_branch.svg';
 import no_bag from '../assets/icon/item_no_bag.svg';
 import pn from '../assets/icon/pagenation_3.svg';
+import logo from '../assets/icon/mark_logo.svg';
 import { Link } from 'react-router-dom';
 
 function Result() {
