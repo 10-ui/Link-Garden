@@ -4,8 +4,7 @@ import Decide from './Camera/Decide.jsx';
 import Delete from './Camera/Delete.jsx';
 import Pickup from './Camera/Pickup.jsx';
 import Found from './Camera/Found.jsx';
-import UItest from './Camera/UIstest.jsx';
-import UIArr from './Camera/UIArr.jsx';
+import UI from './Camera/UI.jsx';
 // import Beacon from './Camera/Beacon.jsx';
 
 function Camera() {
@@ -58,7 +57,7 @@ function Camera() {
       {/* <Beacon/> */}
       {/* <UIs/> */}
       {/* <UItest/> */}
-      <UIArr />
+      <UI />
       <Found />
     </>
   );

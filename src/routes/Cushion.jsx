@@ -6,7 +6,7 @@ function Cushion() {
   const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
 
   async function jump(){
-    await sleep(6000);
+    await sleep(2000);
     location.href='/NurieCamera';
   }
 

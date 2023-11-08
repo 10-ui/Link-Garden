@@ -72,7 +72,7 @@ function Found(){
           <p className='text-btntext block mx-auto text-center w-fit font-bold font-main text-[24px] mb-[23px]'>次は何をする？</p>
           <a className='text-btntext border-main block mx-auto rounded text-center border-2 w-[90%] py-[10px] font-bold font-main text-[24px] mb-[10px]' onClick={() => playSameAnimal()}>同じ動物で続ける！</a>
           <Link to="/Cushion" className='text-btntext border-main block mx-auto rounded text-center border-2 w-[90%] py-[10px] font-bold font-main text-[24px] mb-[10px]'>違う動物を見てみる！</Link>
-          <a className='text-btntext block mx-auto border-main rounded text-center border-2 w-[90%] py-[10px] font-bold font-main text-[24px] mb-[10px]'>おわる</a>
+          <Link to="/" className='text-btntext block mx-auto border-main rounded text-center border-2 w-[90%] py-[10px] font-bold font-main text-[24px] mb-[10px]'>おわる</Link>
         </div>
       </div>
     </>
