@@ -22,7 +22,7 @@ function Found() {
               <rp>)</rp>
             </ruby>
           </h1>
-          <p className="text-btntext pt-[30px] mb-[40px] leading-[50px] text-[16px]">
+          <p className="text-btntext pt-[30px] mb-[20px] leading-[35px] text-[16px]">
             <ruby>
               自然界<rp>(</rp>
               <rt>しぜんかい</rt>
@@ -180,15 +180,15 @@ function Found() {
             className="block mx-auto"
             src="https://www.youtube.com/embed/u2TRshJ51jg?si=DmwS5jLo-m2vlyZ8"
             title="YouTube video player"
-            width="340"
-            height="190"
+            // width="340"
+            // height="190"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
           <Link to="/">
             <img
-              className="block mx-auto pt-[30px] scale-90"
+              className="block mx-auto pt-[15px] scale-90"
               src={close}
               alt="閉じるボタン"
             />
