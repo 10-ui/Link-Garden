@@ -569,7 +569,7 @@ function UIArr() {
             alt="困ってるときの吹き出し"
           />
         </div>
-        <div className="mizube w-[93dvw] h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%]">
+        <div className="mizube w-[93dvw] h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
           <p className="mx-auto z-[50] w-[89dvw] fixed left-1/2 top-[30%] translate-x-[-50%] translate-y-[-30%]">
             わたしは、きれい
             <ruby>
