@@ -72,7 +72,7 @@ function Items() {
           </p>
           <img className="block mx-auto mb-[24px]" src={pn} alt="pagenation" />
           <Link
-            // to="/Result"
+            to="/Result"
             className="text-[20px] w-[97%] block mx-auto text-center py-[13px] bg-accent font-main font-bold rounded"
             onClick={() => leaf()}
           >
