@@ -7,7 +7,8 @@ import Camera from './routes/Camera.jsx';
 import Cushion from './routes/Cushion.jsx';
 import House from './routes/House.jsx'
 import Flamingo from "./routes/Flamingo.jsx";
-import Found from "./routes/Camera/Found.jsx";
+// import Found from "./routes/Camera/Found.jsx";
+import Test from "./routes/Test.jsx";
 
 
 
@@ -24,7 +25,8 @@ function App() {
         <Route path="/Nuriecamera" element={ <Camera /> } />
         <Route path="/Cushion" element={ <Cushion /> } />
         <Route path="/Flamingo" element={ <Flamingo /> } />
-        <Route path="/Test" element={ <Found /> } ></Route>
+        {/* <Route path="/Test" element={ <Found /> } ></Route> */}
+        <Route path="/Test" element={ <Test /> } ></Route>
       </Routes>
     </>
   )

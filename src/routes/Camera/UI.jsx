@@ -569,8 +569,8 @@ function UIArr() {
             alt="困ってるときの吹き出し"
           />
         </div>
-        <div className="mizube w-screen h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%] hidden">
-          <p className="block z-[50] w-[89dvw] fixed left-1/2 top-[30%] translate-x-[-50%] translate-y-[-30%]">
+        <div className="mizube w-[93dvw] h-[190px] fixed left-1/2 top-[60%] translate-x-[-50%]">
+          <p className="mx-auto z-[50] w-[89dvw] fixed left-1/2 top-[30%] translate-x-[-50%] translate-y-[-30%]">
             わたしは、きれい
             <ruby>
               好<rp>(</rp>
@@ -615,7 +615,6 @@ function UIArr() {
             に
           </p>
           <p className="block z-[50] w-[89dvw] fixed left-1/2 top-[75%] translate-x-[-50%] translate-y-[-75%]">
-            
             <ruby>
               連<rp>(</rp>
               <rt>つ</rt>
@@ -624,7 +623,7 @@ function UIArr() {
             れてきてくれてありがとう！
           </p>
           <img
-            className="z-[49] w-[89dvw] fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]"
+            className="z-[49] w-screen fixed left-1/2 top-[40%] translate-x-[-50%] translate-y-[-40%]"
             src={Comment}
             alt="嬉しいときの吹き出し"
           />

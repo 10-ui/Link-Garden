@@ -16,7 +16,6 @@ function Cushion() {
       <div className="h-screen grid items-center">
         <figure>
           <img className="w-[90%] mx-auto" src={logo} alt="ロゴ" />
-          <figcaption>カメラへ戻ります</figcaption>
         </figure>
       </div>
     </>
