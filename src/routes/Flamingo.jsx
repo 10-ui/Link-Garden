@@ -8,13 +8,13 @@ function Found() {
       <div className="bg-housescreen grid content-center nice relative items-center h-[100dvh] w-[100dvw] z-[0]">
         <Link to="/">
           <img
-            class="fixed w-28 right-7 top-2 z-[12]"
+            class="fixed w-28 right-7 top-3 z-[12]"
             src={logo}
             alt="ロゴアイコン"
           />
         </Link>
         <div className="mx-[20px] pt-[20px]">
-          <h1 className="text-btntext text-[24px] text-left">
+          <h1 className="text-btntext text-[24px] text-left font-bold">
             フラミンゴと
             <ruby>
               鏡<rp>(</rp>

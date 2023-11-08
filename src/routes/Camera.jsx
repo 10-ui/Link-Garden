@@ -36,7 +36,7 @@ function Camera() {
         id="border"
       ></div>
       <div
-        className="border-btntext borders hidden absolute top-[5%] left-[5%] w-[40px] h-[35px] border-solid border-[4px]"
+        className="border-btntext borders hidden absolute top-[4.4%] left-[2.7%] w-[40px] h-[35px] border-solid border-[4px]"
         id="border_marker"
       ></div>
 
