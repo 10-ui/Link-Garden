@@ -1,4 +1,3 @@
-import UIs from './Camera/UIs.jsx';
 import Begin from './Camera/Begin.jsx';
 import Decide from './Camera/Decide.jsx';
 import Delete from './Camera/Delete.jsx';
@@ -55,7 +54,6 @@ function Camera() {
       <Decide />
       <Delete />
       {/* <Beacon/> */}
-      {/* <UIs/> */}
       {/* <UItest/> */}
       <UI />
       <Found />

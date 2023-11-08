@@ -74,7 +74,7 @@ function Items() {
           <Link
             to="/Result"
             className="text-[20px] w-[97%] block mx-auto text-center py-[13px] bg-accent font-main font-bold rounded"
-            onClick={() => leaf()}
+            // onClick={() => leaf()}
           >
             アイテムの取得開始
           </Link>

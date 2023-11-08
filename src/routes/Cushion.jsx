@@ -1,24 +1,26 @@
 import logo from '../assets/icon/mark_logo.svg';
 
-
 function Cushion() {
+  const sleep = (waitTime) =>
+    new Promise((resolve) => setTimeout(resolve, waitTime));
 
-  const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
-
-  async function jump(){
+  async function jump() {
     await sleep(2000);
-    location.href='/NurieCamera';
+    location.href = '/NurieCamera';
   }
 
-  window.addEventListener('load',jump());
+  window.addEventListener('load', jump());
 
   return (
     <>
-      <div className='h-screen grid items-center'>
-      <img  className='w-[90%] mx-auto' src={logo} alt="ロゴ" />
+      <div className="h-screen grid items-center">
+        <figure>
+          <img className="w-[90%] mx-auto" src={logo} alt="ロゴ" />
+          <figcaption>カメラへ戻ります</figcaption>
+        </figure>
       </div>
     </>
-  )
+  );
 }
 
-export default Cushion
+export default Cushion;
