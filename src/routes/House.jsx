@@ -47,7 +47,7 @@ function Result() {
             <h1 className=" text-white font-main font-bold text-3xl text-center mb-[48px]">
               アイテムを選んでね！
             </h1>
-            <p className="text-[18px] text-center font-main font-bold mb-[45px]">
+            <p className="text-[17px] text-center font-main font-bold mb-[45px]">
               アイテムで幸せになれる動物がいるよ！
             </p>
             <div className="scale-[1.15] wrapper grid grid-cols-3 items-center justify-center w-fit gap-4 mx-auto mb-[55px]">
